@@ -38,6 +38,9 @@ namespace HRMS
             builder.Services.AddScoped<IAlevelRepo, AlevelRepository>();
             builder.Services.AddScoped<IAlevelService, AlevelService >();
 
+            builder.Services.AddScoped<IHStudyRepo, HStudyRepository>();
+            builder.Services.AddScoped<IHStudeyService, HStudyService >();
+
 
             var app = builder.Build();
 

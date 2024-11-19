@@ -112,7 +112,18 @@ namespace HRMS.Service
                     GeneralEnglish = a.GeneralEnglish,
                     GeneralKnowledge = a.GeneralKnowledge,
                     GIT = a.GIT
-                }).ToList()
+                }).ToList(),
+                HStudeies = s.HigherStudies.Select(h => new HStudeiesResponseDtos
+                {
+                    Id= h.Id,
+                    Type = h.Type,
+                    Stream = h.Stream,
+                    Year= h.Year,
+                    Duration = h.Duration,
+                    Description = h.Description,
+                    Institute = h.Institute,
+                    Grade = h.Grade,
+                }).ToList(),
 
             }).ToList();
             return resstu;
@@ -185,7 +196,18 @@ namespace HRMS.Service
                     GeneralEnglish = a.GeneralEnglish,
                     GeneralKnowledge = a.GeneralKnowledge,
                     GIT = a.GIT
-                }).ToList()
+                }).ToList(),
+                HStudeies = data.HigherStudies.Select(h => new HStudeiesResponseDtos
+                {
+                    Id = h.Id,
+                    Type = h.Type,
+                    Stream = h.Stream,
+                    Year = h.Year,
+                    Duration = h.Duration,
+                    Description = h.Description,
+                    Institute = h.Institute,
+                    Grade = h.Grade,
+                }).ToList(),
             };
             return resstu;
         }

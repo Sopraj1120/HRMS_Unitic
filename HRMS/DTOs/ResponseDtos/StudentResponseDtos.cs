@@ -1,4 +1,6 @@
-﻿namespace HRMS.DTOs.ResponseDtos
+﻿using HRMS.Entities;
+
+namespace HRMS.DTOs.ResponseDtos
 {
     public class StudentResponseDtos
     {
@@ -17,6 +19,7 @@
 
         public List<OLResponseDtos> Olevels { get; set; }
         public List<ALevelResponseDtos> ALevels { get; set; }
+        public List<HStudeiesResponseDtos> HStudeies { get; set; }
 
      
     }
