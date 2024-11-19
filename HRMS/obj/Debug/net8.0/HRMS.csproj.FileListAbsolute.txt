@@ -134,3 +134,4 @@ C:\Users\marif\OneDrive\Desktop\HRM\HRMS\HRMS\obj\Debug\net8.0\refint\HRMS.dll
 C:\Users\marif\OneDrive\Desktop\HRM\HRMS\HRMS\obj\Debug\net8.0\HRMS.pdb
 C:\Users\marif\OneDrive\Desktop\HRM\HRMS\HRMS\obj\Debug\net8.0\HRMS.genruntimeconfig.cache
 C:\Users\marif\OneDrive\Desktop\HRM\HRMS\HRMS\obj\Debug\net8.0\ref\HRMS.dll
+C:\Users\marif\OneDrive\Desktop\HRM\HRMS\HRMS\obj\Debug\net8.0\HRMS.sourcelink.json

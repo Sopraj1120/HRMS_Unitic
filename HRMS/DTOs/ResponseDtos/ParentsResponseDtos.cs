@@ -8,5 +8,8 @@
         public string Job { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
+
+
+       
     }
 }
