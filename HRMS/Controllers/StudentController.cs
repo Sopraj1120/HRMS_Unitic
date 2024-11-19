@@ -33,7 +33,7 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
 
         public async Task<IActionResult> GetStudentById(Guid Id)
         {
@@ -42,7 +42,7 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{Id}")]
 
         public async Task<IActionResult> UpdateStudent (Guid Id ,StudentRequestDtos studentRequestDtos)
         {
@@ -50,7 +50,7 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> DeleteStudent(Guid Id)
         {
              await _studentService.DeleteStudent(Id);

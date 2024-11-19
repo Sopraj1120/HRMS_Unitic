@@ -27,8 +27,6 @@ namespace HRMS.Service
                 Email = studentRequestDtos.Email,
                 MaritalStatus = studentRequestDtos.MaritalStatus,
                 Mobile = studentRequestDtos.Mobile,
-                
-               
             };
 
             var data = await _studentrepo.AddStudent(student);
@@ -43,17 +41,9 @@ namespace HRMS.Service
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
-                Parents = data.Parents.Select(x => new ParentsResponseDtos
-                {
-                    Id = x.Id,
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    Job = x.Job,
-                    ContactNo = x.ContactNo,
-                    Address = x.Address
-                }).ToList(),
-               
+                
             };
+
             return resStudents;
 
         }
@@ -73,14 +63,9 @@ namespace HRMS.Service
                 MaritalStatus = s.MaritalStatus,
                 Mobile = s.Mobile,
                 IsDeleted = s.IsDeleted,
-                Parents = s.Parents.Select(p => new ParentsResponseDtos
+                Parents = s.Parents?.Select(p => new ParentsResponseDtos
                 {
-                    Id = p.Id,
-                    FirstName = p.FirstName,
-                    LastName = p.LastName,
-                    Job = p.Job,
-                    ContactNo = p.ContactNo,
-                    Address = p.Address
+                    Id = p.Id
                 }).ToList()
 
             }).ToList();
@@ -105,15 +90,7 @@ namespace HRMS.Service
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
-                Parents = data.Parents.Select(p => new ParentsResponseDtos
-                {
-                    Id= p.Id,
-                    FirstName = p.FirstName,
-                    LastName = p.LastName,
-                    Job = p.Job,
-                    ContactNo = p.ContactNo,
-                    Address = p.Address
-                }).ToList(),
+               
             };
             return resstu;
         }
@@ -145,15 +122,7 @@ namespace HRMS.Service
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
-                Parents = data.Parents.Select(p => new ParentsResponseDtos
-                {
-                    Id = p.Id,
-                    FirstName = p.FirstName,
-                    LastName = p.LastName,
-                    Job = p.Job,
-                    ContactNo = p.ContactNo,
-                    Address = p.Address
-                }).ToList()
+ 
             };
             return resstu;
         }
