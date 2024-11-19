@@ -69,7 +69,7 @@ namespace HRMS.Service
                     FirstName = p.FirstName,
                     LastName = p.LastName,
                     Job = p.Job,
-                    ContactNo =p.ContactNo,
+                    ContactNo = p.ContactNo,
                     Address = p.Address
                 }).ToList(),
                 Address = s.Address?.Select(a => new AddresResponseDto
@@ -82,9 +82,22 @@ namespace HRMS.Service
                     PostalCode = a.PostalCode,
                     City = a.City,
                     Country = a.Country
-
-
-
+                }).ToList(),
+                Olevels = s.OLs?.Select(o => new OLResponseDtos
+                {
+                    Id = o.Id,
+                    IndexNo = o.IndexNo,
+                    Year = o.Year,
+                    School = o.School,
+                    Tamil = o.Tamil,
+                    Science = o.Science,
+                    Maths = o.Maths,
+                    Religion = o.Religion,
+                    English = o.English,
+                    History = o.History,
+                    Basket1 = o.Basket1,
+                    Basket2 = o.Basket2,
+                    Basket3 = o.Basket3
                 }).ToList()
 
             }).ToList();
@@ -128,8 +141,23 @@ namespace HRMS.Service
                     PostalCode = a.PostalCode,
                     City = a.City,
                     Country = a.Country
+                }).ToList(),
+                Olevels = data.OLs?.Select(o => new OLResponseDtos
+                {
+                    Id = o.Id,
+                    IndexNo = o.IndexNo,
+                    Year = o.Year,
+                    School = o.School,
+                    Tamil = o.Tamil,
+                    Science = o.Science,
+                    Maths = o.Maths,
+                    Religion = o.Religion,
+                    English = o.English,
+                    History = o.History,
+                    Basket1 = o.Basket1,
+                    Basket2 = o.Basket2,
+                    Basket3 = o.Basket3
                 }).ToList()
-
             };
             return resstu;
         }
