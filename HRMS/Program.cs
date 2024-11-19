@@ -29,6 +29,9 @@ namespace HRMS
             builder.Services.AddScoped<IParentrepo, ParentsRepository>();
             builder.Services.AddScoped<IParentService, ParentService>();
 
+            builder.Services.AddScoped<IAddressRepo, AddressRepository>();
+            builder.Services.AddScoped<IAddressService, AdderssService>();
+
 
             var app = builder.Build();
 

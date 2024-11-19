@@ -65,7 +65,26 @@ namespace HRMS.Service
                 IsDeleted = s.IsDeleted,
                 Parents = s.Parents?.Select(p => new ParentsResponseDtos
                 {
-                    Id = p.Id
+                    Id = p.Id,
+                    FirstName = p.FirstName,
+                    LastName = p.LastName,
+                    Job = p.Job,
+                    ContactNo =p.ContactNo,
+                    Address = p.Address
+                }).ToList(),
+                Address = s.Address?.Select(a => new AddresResponseDto
+                {
+                    Id = a.Id,
+                    HouseNumber = a.HouseNumber,
+                    Street = a.Street,
+                    Lane = a.Lane,
+                    State = a.State,
+                    PostalCode = a.PostalCode,
+                    City = a.City,
+                    Country = a.Country
+
+
+
                 }).ToList()
 
             }).ToList();
@@ -90,7 +109,27 @@ namespace HRMS.Service
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
-               
+                Parents = data.Parents?.Select(p => new ParentsResponseDtos
+                {
+                    Id = p.Id,
+                    FirstName = p.FirstName,
+                    LastName = p.LastName,
+                    Job = p.Job,
+                    ContactNo = p.ContactNo,
+                    Address = p.Address
+                }).ToList(),
+                Address = data.Address?.Select(a => new AddresResponseDto
+                {
+                    Id = a.Id,
+                    HouseNumber = a.HouseNumber,
+                    Street = a.Street,
+                    Lane = a.Lane,
+                    State = a.State,
+                    PostalCode = a.PostalCode,
+                    City = a.City,
+                    Country = a.Country
+                }).ToList()
+
             };
             return resstu;
         }

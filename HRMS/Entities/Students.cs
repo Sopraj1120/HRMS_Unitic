@@ -13,6 +13,7 @@
         public bool IsDeleted { get; set; } = false;
 
         public ICollection<Parents> Parents { get; set; }
+        public ICollection<Address> Address { get; set; }
 
     }
 }

@@ -23,13 +23,13 @@ namespace HRMS.Repository
 
         public async Task<List<Students>> GetAllStudents ()
         {
-            var data = await _context.Students.Where(x => !x.IsDeleted).Include(p => p.Parents).ToListAsync();
+            var data = await _context.Students.Where(x => !x.IsDeleted).Include(p => p.Parents).Include(a => a.Address).ToListAsync();
             return data;
         }
 
         public async Task<Students> GetStudentById(Guid Id)
         {
-            var data = await _context.Students.Include(p => p.Parents).FirstOrDefaultAsync(a => a.Id == Id && !a.IsDeleted);
+            var data = await _context.Students.Include(p => p.Parents).Include(a => a.Address).FirstOrDefaultAsync(a => a.Id == Id && !a.IsDeleted);
             return data;
         }
 

@@ -13,6 +13,7 @@
         public bool IsDeleted { get; set; } = false;
 
         public List<ParentsResponseDtos> Parents { get; set; }
+        public List<AddresResponseDto> Address { get; set; }
 
      
     }
