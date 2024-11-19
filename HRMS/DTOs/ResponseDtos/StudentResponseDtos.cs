@@ -16,6 +16,7 @@
         public List<AddresResponseDto> Address { get; set; }
 
         public List<OLResponseDtos> Olevels { get; set; }
+        public List<ALevelResponseDtos> ALevels { get; set; }
 
      
     }

@@ -16,6 +16,7 @@
         public ICollection<Address> Address { get; set; }
 
         public ICollection<OLevel> OLs { get; set; }
+        public ICollection<ALevel> ALs { get; set; }
 
     }
 }

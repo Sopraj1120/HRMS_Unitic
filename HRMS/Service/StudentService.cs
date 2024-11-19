@@ -98,6 +98,20 @@ namespace HRMS.Service
                     Basket1 = o.Basket1,
                     Basket2 = o.Basket2,
                     Basket3 = o.Basket3
+                }).ToList(),
+                ALevels = s.ALs?.Select(a => new ALevelResponseDtos
+                {
+                    Id = a.Id,
+                    IndexNo = a.IndexNo,
+                    Year =  a.Year,
+                    School = a.School,
+                    Stream = a.Stream,
+                    Subject1 = a.Subject1,
+                    Subject2 = a.Subject2,
+                    Subject3 = a.Subject3,
+                    GeneralEnglish = a.GeneralEnglish,
+                    GeneralKnowledge = a.GeneralKnowledge,
+                    GIT = a.GIT
                 }).ToList()
 
             }).ToList();
@@ -157,6 +171,20 @@ namespace HRMS.Service
                     Basket1 = o.Basket1,
                     Basket2 = o.Basket2,
                     Basket3 = o.Basket3
+                }).ToList(),
+                ALevels = data.ALs?.Select(a => new ALevelResponseDtos
+                {
+                    Id = a.Id,
+                    IndexNo = a.IndexNo,
+                    Year = a.Year,
+                    School = a.School,
+                    Stream = a.Stream,
+                    Subject1 = a.Subject1,
+                    Subject2 = a.Subject2,
+                    Subject3 = a.Subject3,
+                    GeneralEnglish = a.GeneralEnglish,
+                    GeneralKnowledge = a.GeneralKnowledge,
+                    GIT = a.GIT
                 }).ToList()
             };
             return resstu;
