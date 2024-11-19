@@ -41,6 +41,9 @@ namespace HRMS
             builder.Services.AddScoped<IHStudyRepo, HStudyRepository>();
             builder.Services.AddScoped<IHStudeyService, HStudyService >();
 
+            builder.Services.AddScoped<IExperianceRepo, ExperianceRepository>();
+            builder.Services.AddScoped<IExperianceService, ExperianceService >();
+
 
             var app = builder.Build();
 

@@ -20,6 +20,7 @@ namespace HRMS.DTOs.ResponseDtos
         public List<OLResponseDtos> Olevels { get; set; }
         public List<ALevelResponseDtos> ALevels { get; set; }
         public List<HStudeiesResponseDtos> HStudeies { get; set; }
+        public List<ExperianceResponseDtos> Experiance { get; set; }
 
      
     }

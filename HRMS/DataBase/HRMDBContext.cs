@@ -19,6 +19,7 @@ namespace HRMS.DataBase
         public DbSet<OLevel> oLevels { get; set; }
         public DbSet<ALevel> aLevels { get; set; }
         public DbSet<HigherStudies> higherLevels { get; set; }
+        public DbSet<Experiance> experiances { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,6 +47,13 @@ namespace HRMS.DataBase
                 .HasMany(h => h.HigherStudies)
                 .WithOne(s => s.Student)
                 .HasForeignKey(s => s.StudentId);
+
+            modelBuilder.Entity<Students>()
+                .HasMany(e => e.Experiances)
+                .WithOne(s => s.Student)
+                .HasForeignKey(s => s.StudentId);
+
+
 
             base.OnModelCreating(modelBuilder);
         }

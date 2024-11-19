@@ -124,6 +124,15 @@ namespace HRMS.Service
                     Institute = h.Institute,
                     Grade = h.Grade,
                 }).ToList(),
+                Experiance = s.Experiances.Select(e => new ExperianceResponseDtos
+                {
+                    Id = e.Id,
+                    CompanyName = e.CompanyName,
+                    Position = e.Position,  
+                    StartDate = e.StartDate,
+                    EndDate = e.EndDate,
+                    Description = e.Description
+                }).ToList(),
 
             }).ToList();
             return resstu;
@@ -207,6 +216,15 @@ namespace HRMS.Service
                     Description = h.Description,
                     Institute = h.Institute,
                     Grade = h.Grade,
+                }).ToList(),
+                Experiance = data.Experiances.Select(e => new ExperianceResponseDtos
+                {
+                    Id = e.Id,
+                    CompanyName = e.CompanyName,
+                    Position = e.Position,
+                    StartDate = e.StartDate,
+                    EndDate = e.EndDate,
+                    Description = e.Description
                 }).ToList(),
             };
             return resstu;

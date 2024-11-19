@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241119154407_run")]
+    partial class run
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,39 +120,6 @@ namespace HRMS.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Address");
-                });
-
-            modelBuilder.Entity("HRMS.Entities.Experiance", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("experiances");
                 });
 
             modelBuilder.Entity("HRMS.Entities.HigherStudies", b =>
@@ -355,17 +325,6 @@ namespace HRMS.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.Experiance", b =>
-                {
-                    b.HasOne("HRMS.Entities.Students", "Student")
-                        .WithMany("Experiances")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("HRMS.Entities.HigherStudies", b =>
                 {
                     b.HasOne("HRMS.Entities.Students", "Student")
@@ -404,8 +363,6 @@ namespace HRMS.Migrations
                     b.Navigation("ALs");
 
                     b.Navigation("Address");
-
-                    b.Navigation("Experiances");
 
                     b.Navigation("HigherStudies");
 
