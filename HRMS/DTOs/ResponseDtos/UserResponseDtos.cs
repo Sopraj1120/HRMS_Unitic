@@ -14,5 +14,6 @@
         public bool IsDeleted { get; set; } = false;
 
         public List<UserAddressResponceDtos> Useraddress { get; set; }
+        public List<UserExperianceResponseDtos> UserExperiance { get; set; }
     }
 }

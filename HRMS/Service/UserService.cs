@@ -74,6 +74,17 @@ namespace HRMS.Service
                     PostalCode = s.PostalCode,
                     Country = s.Country
                 }).ToList(),
+                UserExperiance = a.userExperiances?.Select(e => new UserExperianceResponseDtos
+                {
+                    Id = e.Id,
+                    Type = e.Type,
+                    Stream = e.Stream,
+                    Year = e.Year,
+                    Duration = e.Duration,
+                    Description = e.Description,
+                    Institute = e.Institute,
+                    Grade =e.Grade
+                }).ToList(),
 
 
             }).ToList();
@@ -108,6 +119,17 @@ namespace HRMS.Service
                     State = s.State,
                     PostalCode = s.PostalCode,
                     Country = s.Country
+                }).ToList(),
+                UserExperiance = data.userExperiances?.Select(e => new UserExperianceResponseDtos
+                {
+                    Id = e.Id,
+                    Type = e.Type,
+                    Stream = e.Stream,
+                    Year = e.Year,
+                    Duration = e.Duration,
+                    Description = e.Description,
+                    Institute = e.Institute,
+                    Grade = e.Grade
                 }).ToList(),
 
             };
