@@ -44,6 +44,13 @@ namespace HRMS
             builder.Services.AddScoped<IExperianceRepo, ExperianceRepository>();
             builder.Services.AddScoped<IExperianceService, ExperianceService >();
 
+            builder.Services.AddScoped<IUserRepo, UserRepository>();
+            builder.Services.AddScoped<IUserServices, UserService >();
+
+
+            builder.Services.AddScoped<IUserAddressRepo, UserAddressRepo >();
+            builder.Services.AddScoped<IUserAddressService, UserAddressService >();
+
 
             var app = builder.Build();
 

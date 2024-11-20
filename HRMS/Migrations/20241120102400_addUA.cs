@@ -5,7 +5,7 @@
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class tic : Migration
+    public partial class addUA : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
