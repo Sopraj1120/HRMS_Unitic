@@ -59,8 +59,6 @@ namespace HRMS.DataBase
                 .WithOne(s => s.Student)
                 .HasForeignKey(s => s.StudentId);
 
-
-
             modelBuilder.Entity<Users>()
                 .HasMany(a => a.userAddresses)
                 .WithOne(u => u.User)

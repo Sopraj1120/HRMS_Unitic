@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "HRMS\\Repository\\UserOlevelRepository.cs",
               "ToolTip": "D:\\Projects\\M3_GroupProject\\MRM_System\\HRMS_Unitic\\HRMS\\Repository\\UserOlevelRepository.cs",
               "RelativeToolTip": "HRMS\\Repository\\UserOlevelRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwB4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T13:44:00.685Z",
               "EditorCaption": ""
@@ -59,7 +59,8 @@
               "RelativeToolTip": "HRMS\\Entities\\UserOLevel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:43:48.764Z"
+              "WhenOpened": "2024-11-20T13:43:48.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -71,7 +72,8 @@
               "RelativeToolTip": "HRMS\\Entities\\UserExperiance.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:43:41.874Z"
+              "WhenOpened": "2024-11-20T13:43:41.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,7 +85,8 @@
               "RelativeToolTip": "HRMS\\Entities\\UserHigherStudies.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:43:32.279Z"
+              "WhenOpened": "2024-11-20T13:43:32.279Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -95,7 +98,8 @@
               "RelativeToolTip": "HRMS\\Service\\UserOlevelService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T13:39:05.7Z"
+              "WhenOpened": "2024-11-20T13:39:05.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

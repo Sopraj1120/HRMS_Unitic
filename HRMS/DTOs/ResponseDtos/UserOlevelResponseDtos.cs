@@ -3,7 +3,6 @@
     public class UserOlevelResponseDtos
     {
         public Guid Id { get; set; }
-
         public string IndexNo { get; set; }
         public string Year { get; set; }
         public string School { get; set; }
