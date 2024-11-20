@@ -52,8 +52,8 @@ namespace HRMS
             builder.Services.AddScoped<IUserAddressRepo, UserAddressRepo >();
             builder.Services.AddScoped<IUserAddressService, UserAddressService >();
 
-            builder.Services.AddScoped<IUserExperiancerepo, UserExperianceRepository >();
-            builder.Services.AddScoped<IUserExperianceSevice, UserExperianceservice >();
+            builder.Services.AddScoped<IUserHigherStudiesrepo, UserHigherStudiesRepository >();
+            builder.Services.AddScoped<UserHigherStudiesSevice, UserHigherStudiesservice >();
 
 
             var app = builder.Build();

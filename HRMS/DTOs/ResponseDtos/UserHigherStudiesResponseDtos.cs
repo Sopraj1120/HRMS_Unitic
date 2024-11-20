@@ -1,6 +1,6 @@
 ﻿namespace HRMS.DTOs.ResponseDtos
 {
-    public class UserExperianceResponseDtos
+    public class UserHigherStudiesResponseDtos
     {
         public Guid Id { get; set; }
         public string Type { get; set; }

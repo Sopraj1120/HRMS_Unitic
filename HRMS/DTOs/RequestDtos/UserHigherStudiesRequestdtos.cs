@@ -1,6 +1,6 @@
 ﻿namespace HRMS.DTOs.RequestDtos
 {
-    public class UserExperianceRequestdtos
+    public class UserHigherStudiesRequestdtos
     {
         public string Type { get; set; }
         public string Stream { get; set; }

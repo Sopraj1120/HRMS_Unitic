@@ -74,7 +74,7 @@ namespace HRMS.Service
                     PostalCode = s.PostalCode,
                     Country = s.Country
                 }).ToList(),
-                UserExperiance = a.userExperiances?.Select(e => new UserExperianceResponseDtos
+                UserHStudy = a.userHigherStudies?.Select(e => new UserHigherStudiesResponseDtos
                 {
                     Id = e.Id,
                     Type = e.Type,
@@ -120,7 +120,7 @@ namespace HRMS.Service
                     PostalCode = s.PostalCode,
                     Country = s.Country
                 }).ToList(),
-                UserExperiance = data.userExperiances?.Select(e => new UserExperianceResponseDtos
+                UserHStudy = data.userHigherStudies?.Select(e => new UserHigherStudiesResponseDtos
                 {
                     Id = e.Id,
                     Type = e.Type,
