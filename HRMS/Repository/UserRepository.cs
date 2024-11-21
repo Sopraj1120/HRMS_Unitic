@@ -23,13 +23,13 @@ namespace HRMS.Repository
 
         public async Task<List<Users>> GetAllUsers()
         {
-            var data = await _context.users.Where(a => !a.IsDeleted).Include(a => a.userAddresses).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            var data = await _context.users.Where(a => !a.IsDeleted).Include(a => a.userAddresses).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
             return data;
         }
 
         public async Task<Users> GetUserById(Guid Id)
         {
-            var data = await _context.users.Include(A =>A.userAddresses).Include(e => e.userExperiances).Include(e => e.userHigherStudies).FirstOrDefaultAsync(x =>x.Id == Id && !x.IsDeleted);
+            var data = await _context.users.Include(A =>A.userAddresses).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).FirstOrDefaultAsync(x =>x.Id == Id && !x.IsDeleted);
             return data;
         }
 

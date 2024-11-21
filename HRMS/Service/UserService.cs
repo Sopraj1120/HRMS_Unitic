@@ -74,6 +74,20 @@ namespace HRMS.Service
                     PostalCode = s.PostalCode,
                     Country = s.Country
                 }).ToList(),
+                UserAlevel = a.userALevels?.Select(l => new UserAlevelResponseDtos
+                {
+                    Id = l.Id,
+                    IndexNo = l.IndexNo,
+                    Year =l.Year,
+                    School = l.School,
+                    Stream = l.Stream,
+                    Subject1 = l.Subject1,
+                    Subject2 = l.Subject2,
+                    Subject3 = l.Subject3,
+                    GeneralEnglish = l.GeneralEnglish,
+                    GeneralKnowledge = l.GeneralKnowledge,
+                    GIT = l.GIT
+                }).ToList(),
                 UserExperiances = a.userExperiances?.Select(e => new UserExperianceResponceDtos
                 {
                     Id = e.Id,
@@ -128,6 +142,20 @@ namespace HRMS.Service
                     State = s.State,
                     PostalCode = s.PostalCode,
                     Country = s.Country
+                }).ToList(),
+                UserAlevel = data.userALevels?.Select(l => new UserAlevelResponseDtos
+                {
+                    Id = l.Id,
+                    IndexNo = l.IndexNo,
+                    Year = l.Year,
+                    School = l.School,
+                    Stream = l.Stream,
+                    Subject1 = l.Subject1,
+                    Subject2 = l.Subject2,
+                    Subject3 = l.Subject3,
+                    GeneralEnglish = l.GeneralEnglish,
+                    GeneralKnowledge = l.GeneralKnowledge,
+                    GIT = l.GIT
                 }).ToList(),
                 UserExperiances = data.userExperiances?.Select(e => new UserExperianceResponceDtos
                 {
