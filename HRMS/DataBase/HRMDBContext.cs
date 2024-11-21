@@ -75,6 +75,11 @@ namespace HRMS.DataBase
                 .HasForeignKey(u => u.UserId);
 
             modelBuilder.Entity<Users>()
+                .HasMany(e => e.userExperiances)
+                .WithOne(u => u.User)
+                .HasForeignKey(u => u.UserId);
+
+            modelBuilder.Entity<Users>()
                .HasMany(h =>h.userHigherStudies)
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);

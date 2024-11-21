@@ -19,6 +19,7 @@ namespace HRMS.Entities
 
         public ICollection<UserAddress> userAddresses { get; set; }
         public ICollection<UserOLevel> userOLevels { get; set; }
+        public ICollection<UserExperiance> userExperiances { get; set; }
         public ICollection<UserHigherStudies> userHigherStudies { get;set; }
       
     }
