@@ -1,0 +1,1000 @@
+[
+  {
+    "ContainingType": "HRMS.Controllers.AddressController",
+    "Method": "AddAddress",
+    "RelativePath": "api/Address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StudentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.AddressRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.AddressController",
+    "Method": "GetAddresssByStudentId",
+    "RelativePath": "api/Address/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.AddressController",
+    "Method": "DeleteAddress",
+    "RelativePath": "api/Address/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.AlevelController",
+    "Method": "AddAlevel",
+    "RelativePath": "api/Alevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StudentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "aLevelRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.ALevelRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.AlevelController",
+    "Method": "GetAlevelByStudent",
+    "RelativePath": "api/Alevel/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.AlevelController",
+    "Method": "DeleteAlevel",
+    "RelativePath": "api/Alevel/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ExperianceController",
+    "Method": "AddExperiance",
+    "RelativePath": "api/Experiance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "experianceRequest",
+        "Type": "HRMS.DTOs.RequestDtos.ExperianceRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ExperianceController",
+    "Method": "GetExperianceByStudentId",
+    "RelativePath": "api/Experiance/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ExperianceController",
+    "Method": "DeleteExperiance",
+    "RelativePath": "api/Experiance/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HollyDayController",
+    "Method": "AddHollyDays",
+    "RelativePath": "api/HollyDay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hollydaysRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.HollydaysRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HollyDayController",
+    "Method": "UpadteHollyDay",
+    "RelativePath": "api/HollyDay",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "hollydaysRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.HollydaysRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HollyDayController",
+    "Method": "DeleteHollyDay",
+    "RelativePath": "api/HollyDay",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HollyDayController",
+    "Method": "GetHollydayById",
+    "RelativePath": "api/HollyDay/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HollyDayController",
+    "Method": "GetAllHollyDays",
+    "RelativePath": "api/HollyDay/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HStudyController",
+    "Method": "AddHStudy",
+    "RelativePath": "api/HStudy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "hStudiesRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.HStudiesRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HStudyController",
+    "Method": "GetHStudyByStudentId",
+    "RelativePath": "api/HStudy/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.HStudyController",
+    "Method": "DeleteHStudy",
+    "RelativePath": "api/HStudy/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "GetLeaveApplyById",
+    "RelativePath": "api/LeaveApply/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "DeleteLeaveApplyById",
+    "RelativePath": "api/LeaveApply/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "UpdateLeaveStatus",
+    "RelativePath": "api/LeaveApply/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "isApproved",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "approvedDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "AddLeaveApply",
+    "RelativePath": "api/LeaveApply/ApplyLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "HRMS.DTOs.RequestDtos.LeaveApplyRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "GetAllLeaveApplies",
+    "RelativePath": "api/LeaveApply/Get_All_ApplyLeave",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveApplyController",
+    "Method": "GetLeaveApplyById",
+    "RelativePath": "api/LeaveApply/Get_LeaveApply_ById",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveTypeController",
+    "Method": "AddLeaveType",
+    "RelativePath": "api/LeaveType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leaveTypeRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.LeaveTypeRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveTypeController",
+    "Method": "UpdateLeaveType",
+    "RelativePath": "api/LeaveType",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "leaveTypeRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.LeaveTypeRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveTypeController",
+    "Method": "DeleteleaveTypes",
+    "RelativePath": "api/LeaveType",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveTypeController",
+    "Method": "GetLeaveTypeById",
+    "RelativePath": "api/LeaveType/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.LeaveTypeController",
+    "Method": "GetAllLeaveTypes",
+    "RelativePath": "api/LeaveType/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.OlevelController",
+    "Method": "AddOlevel",
+    "RelativePath": "api/Olevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "oLevalRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.OLevalRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.OlevelController",
+    "Method": "GetOlByStudentId",
+    "RelativePath": "api/Olevel/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.OlevelController",
+    "Method": "DeleteOlevel",
+    "RelativePath": "api/Olevel/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ParentsController",
+    "Method": "AddParents",
+    "RelativePath": "api/Parents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "parentsRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.ParentsRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ParentsController",
+    "Method": "GetparentsByStudentId",
+    "RelativePath": "api/Parents/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.ParentsController",
+    "Method": "Deleteparents",
+    "RelativePath": "api/Parents/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.StudentController",
+    "Method": "GetAllStudents",
+    "RelativePath": "api/Student",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.StudentController",
+    "Method": "GetStudentById",
+    "RelativePath": "api/Student/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.StudentController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/Student/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "studentRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.StudentRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Student/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.StudentController",
+    "Method": "AddStudent",
+    "RelativePath": "api/Student/AddStudent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.StudentRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserController",
+    "Method": "deleteuser",
+    "RelativePath": "api/User/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/AddUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserController",
+    "Method": "GetAllUser",
+    "RelativePath": "api/User/GetAllUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/Update_User/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "userRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAddressController",
+    "Method": "GetAddressByUserId",
+    "RelativePath": "api/UserAddress/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAddressController",
+    "Method": "DeleteUserAddress",
+    "RelativePath": "api/UserAddress/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAddressController",
+    "Method": "AddUserAddress",
+    "RelativePath": "api/UserAddress/Add_User_Address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "userAddressRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserAddressRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAlevelController",
+    "Method": "AddAlevel",
+    "RelativePath": "api/UserAlevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "userAlevelRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserAlevelRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAlevelController",
+    "Method": "GetAlevelByUserId",
+    "RelativePath": "api/UserAlevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserAlevelController",
+    "Method": "DeleteAlevels",
+    "RelativePath": "api/UserAlevel",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserExperianceController",
+    "Method": "AddExperiance",
+    "RelativePath": "api/UserExperiance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "userExperianceRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserExperianceRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserExperianceController",
+    "Method": "GetExperianceBYUserId",
+    "RelativePath": "api/UserExperiance/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserExperianceController",
+    "Method": "DeleteExperiance",
+    "RelativePath": "api/UserExperiance/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserHigherStudiesController",
+    "Method": "AddHStudy",
+    "RelativePath": "api/UserHigherStudies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "userHigherStudies",
+        "Type": "HRMS.DTOs.RequestDtos.UserHigherStudiesRequestdtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserHigherStudiesController",
+    "Method": "GetHStudyByUserId",
+    "RelativePath": "api/UserHigherStudies/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserHigherStudiesController",
+    "Method": "DeleteHStudy",
+    "RelativePath": "api/UserHigherStudies/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserOlevelController",
+    "Method": "AddOlevel",
+    "RelativePath": "api/UserOlevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "userOlevelRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.UserOlevelRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserOlevelController",
+    "Method": "GetOlevelByUserId",
+    "RelativePath": "api/UserOlevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS.Controllers.UserOlevelController",
+    "Method": "DeleteOlevelS",
+    "RelativePath": "api/UserOlevel",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
