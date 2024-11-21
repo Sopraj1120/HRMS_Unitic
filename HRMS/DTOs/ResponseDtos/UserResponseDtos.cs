@@ -1,4 +1,6 @@
-﻿namespace HRMS.DTOs.ResponseDtos
+﻿using HRMS.Entities;
+
+namespace HRMS.DTOs.ResponseDtos
 {
     public class UserResponseDtos
     {
@@ -11,6 +13,8 @@
         public string MerritalStatus { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DateOfBirth { get; set; }
+
+        public Role Role { get; set; }
         public bool IsDeleted { get; set; } = false;
 
         public List<UserAddressResponceDtos> Useraddress { get; set; }

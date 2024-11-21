@@ -28,6 +28,7 @@ namespace HRMS.Service
                 MerritalStatus = userRequestDtos.MerritalStatus,
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
+                Role = userRequestDtos.Role,
             };
 
             var data = await _userRepo.AddUser(user);
@@ -43,6 +44,7 @@ namespace HRMS.Service
                 MerritalStatus = data.MerritalStatus,
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth,
+                Role = data.Role,
                 IsDeleted = data.IsDeleted
             };
             return resuser;
@@ -63,6 +65,7 @@ namespace HRMS.Service
                 MerritalStatus = a.MerritalStatus,
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth,
+                Role = a.Role,
                 IsDeleted = a.IsDeleted,
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -148,6 +151,7 @@ namespace HRMS.Service
                 MerritalStatus = data.MerritalStatus,
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth,
+                Role = data.Role,
                 IsDeleted = data.IsDeleted,
                 Useraddress = data.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -234,6 +238,7 @@ namespace HRMS.Service
             user.MerritalStatus = userRequestDtos.MerritalStatus;
             user.PhoneNumber = userRequestDtos.PhoneNumber;
             user.DateOfBirth = userRequestDtos.DateOfBirth;
+            user.Role = userRequestDtos.Role;
 
            
             var updatedUser = await _userRepo.UpdateUser(user);
