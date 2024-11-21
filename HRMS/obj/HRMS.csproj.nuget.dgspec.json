@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\HRMS.csproj": {}
+    "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\HRMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\HRMS.csproj": {
+    "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\HRMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+        "projectUniqueName": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\HRMS.csproj",
         "projectName": "HRMS",
-        "projectPath": "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+        "projectPath": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\HRMS.csproj",
         "packagesPath": "C:\\Users\\marif\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\obj\\",
         "projectStyle": "PackageReference",
