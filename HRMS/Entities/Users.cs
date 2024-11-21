@@ -15,6 +15,7 @@ namespace HRMS.Entities
         public string MerritalStatus { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public Role Role { get; set; } = Role.Admin;
         public bool IsDeleted { get; set; } = false;
 
         public ICollection<UserAddress> userAddresses { get; set; }
