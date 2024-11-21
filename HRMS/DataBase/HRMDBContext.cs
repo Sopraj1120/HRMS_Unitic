@@ -1,4 +1,5 @@
 ﻿using HRMS.Entities;
+using HRMS.Entities.HRMS.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -28,6 +29,7 @@ namespace HRMS.DataBase
         public DbSet<UserExperiance> userExperiances { get; set; }
         public DbSet<UserHigherStudies> userHigherStudies { get; set; }
         public DbSet<HollyDays> hollyDays { get; set; }
+        public DbSet<LeaveType> leaveType { get; set; }
 
        
 

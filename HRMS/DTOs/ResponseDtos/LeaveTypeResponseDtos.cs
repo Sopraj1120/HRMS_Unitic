@@ -5,5 +5,6 @@
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int CountPerYear { get; set; }
+        public bool IsActive { get; set; } = false;
     }
 }
