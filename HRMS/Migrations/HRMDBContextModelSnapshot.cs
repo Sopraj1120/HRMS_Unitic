@@ -234,6 +234,52 @@ namespace HRMS.Migrations
                     b.ToTable("hollyDays");
                 });
 
+            modelBuilder.Entity("HRMS.Entities.LeaveApply", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ApplyDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ApprovedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LeaveDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LeaveStatus")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("LeaveTypeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LeaveTypeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("leaveApply");
+                });
+
             modelBuilder.Entity("HRMS.Entities.OLevel", b =>
                 {
                     b.Property<Guid>("Id")
@@ -694,6 +740,25 @@ namespace HRMS.Migrations
                         .IsRequired();
 
                     b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("HRMS.Entities.LeaveApply", b =>
+                {
+                    b.HasOne("HRMS.Entities.HRMS.Entities.LeaveType", "LeaveType")
+                        .WithMany()
+                        .HasForeignKey("LeaveTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HRMS.Entities.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LeaveType");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HRMS.Entities.OLevel", b =>

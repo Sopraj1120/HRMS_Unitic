@@ -70,6 +70,9 @@ namespace HRMS
             builder.Services.AddScoped<ILeaveTypeRepo, LeaveTypeRepository >();
             builder.Services.AddScoped<ILeaveTypeService , LeaveTypeService >();
 
+            builder.Services.AddScoped<ILeaveApplyRepo, LeaveApplyRepo >();
+            builder.Services.AddScoped<ILeaveApplyService , LeaveApplyService >();
+
 
             var app = builder.Build();
 

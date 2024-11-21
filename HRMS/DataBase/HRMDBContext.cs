@@ -31,6 +31,8 @@ namespace HRMS.DataBase
         public DbSet<HollyDays> hollyDays { get; set; }
         public DbSet<LeaveType> leaveType { get; set; }
 
+        public DbSet<LeaveApply> leaveApply { get; set; }
+
        
 
 
@@ -92,6 +94,8 @@ namespace HRMS.DataBase
                .HasMany(h =>h.userHigherStudies)
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
+
+          
 
 
             base.OnModelCreating(modelBuilder);
