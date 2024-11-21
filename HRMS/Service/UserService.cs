@@ -74,6 +74,22 @@ namespace HRMS.Service
                     PostalCode = s.PostalCode,
                     Country = s.Country
                 }).ToList(),
+                Olevel = a.userOLevels?.Select(o => new UserOlevelResponseDtos
+                {
+                    Id = o.Id,
+                    IndexNo = o.IndexNo,
+                    Year = o.Year,
+                    School = o.School,
+                    Tamil = o.Tamil,
+                    Science = o.Science,
+                    Maths = o.Maths,
+                    Religion = o.Religion,
+                    English = o.English,
+                    History = o.History,
+                    Basket1 =o.Basket1,
+                    Basket2 =o.Basket2,
+                    Basket3 = o.Basket3
+                }).ToList(),
                 UserAlevel = a.userALevels?.Select(l => new UserAlevelResponseDtos
                 {
                     Id = l.Id,
@@ -142,6 +158,22 @@ namespace HRMS.Service
                     State = s.State,
                     PostalCode = s.PostalCode,
                     Country = s.Country
+                }).ToList(),
+                Olevel = data.userOLevels?.Select(o => new UserOlevelResponseDtos
+                {
+                    Id = o.Id,
+                    IndexNo = o.IndexNo,
+                    Year = o.Year,
+                    School = o.School,
+                    Tamil = o.Tamil,
+                    Science = o.Science,
+                    Maths = o.Maths,
+                    Religion = o.Religion,
+                    English = o.English,
+                    History = o.History,
+                    Basket1 = o.Basket1,
+                    Basket2 = o.Basket2,
+                    Basket3 = o.Basket3
                 }).ToList(),
                 UserAlevel = data.userALevels?.Select(l => new UserAlevelResponseDtos
                 {
