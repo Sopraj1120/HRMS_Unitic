@@ -1,8 +1,7 @@
-﻿namespace HRMS.Entities
+﻿namespace HRMS.DTOs.RequestDtos
 {
-    public class UserALevel
+    public class UserAlevelRequestDtos
     {
-        public Guid Id { get; set; }
         public string IndexNo { get; set; }
         public string Year { get; set; }
         public string School { get; set; }
@@ -13,8 +12,5 @@
         public string? GeneralEnglish { get; set; }
         public string? GeneralKnowledge { get; set; }
         public string? GIT { get; set; }
-        public Guid userId { get; set; }
-
-        public Users user { get; set; }
     }
 }
