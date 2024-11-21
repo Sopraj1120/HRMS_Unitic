@@ -52,6 +52,9 @@ namespace HRMS
             builder.Services.AddScoped<IUserAddressRepo, UserAddressRepo >();
             builder.Services.AddScoped<IUserAddressService, UserAddressService >();
 
+            builder .Services.AddScoped<IUserAlevelRepo, UserAlevelRepository >();
+            builder .Services.AddScoped<IUserAlevelService, UserAlevelservice>();
+
             builder.Services.AddScoped<IUserExperianceRepo, UserExperianceRepository >();
             builder.Services.AddScoped<IUserExperianceService , UserExperianceService >();
 

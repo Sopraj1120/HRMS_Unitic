@@ -3,6 +3,66 @@
   "WorkspaceRootPath": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Migrations\\20241121040728_add alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HRMS\\Migrations\\20241121040728_add alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\controllers\\useralevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\useralevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\service\\useralevelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\useralevelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\iservice\\iuseralevelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iuseralevelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\entities\\useralevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\useralevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\repository\\useralevelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\useralevelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\irepository\\iuseralevelrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iuseralevelrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\repository\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\dtos\\responsedtos\\useralevelresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\useralevelresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\dtos\\requestdtos\\useralevelrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\useralevelrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\entities\\alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\entities\\userolevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\userolevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +75,8 @@
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\userresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\migrations\\20241120170708_addexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241120170708_addexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\source\\repos\\hrms_unitic\\hrms\\controllers\\userexperiancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,15 +130,184 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20241121040728_add alevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Migrations\\20241121040728_add alevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241121040728_add alevel.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Migrations\\20241121040728_add alevel.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241121040728_add alevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T04:07:29.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserAlevelController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Controllers\\UserAlevelController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\UserAlevelController.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Controllers\\UserAlevelController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\UserAlevelController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwCEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T04:00:33.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeDocumentMoniker": "HRMS\\Program.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeToolTip": "HRMS\\Program.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwDcAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:04:54.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserAlevelService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Iservice\\IUserAlevelService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IUserAlevelService.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Iservice\\IUserAlevelService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IUserAlevelService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:59:42.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserAlevelservice.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Service\\UserAlevelservice.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserAlevelservice.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Service\\UserAlevelservice.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserAlevelservice.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwAkAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:51:47.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IUserAlevelRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\IRepository\\IUserAlevelRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IUserAlevelRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\IRepository\\IUserAlevelRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IUserAlevelRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:50:58.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserAlevelRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserAlevelRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\UserAlevelRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserAlevelRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\UserAlevelRepository.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwAcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:45:22.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddressRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\AddressRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\AddressRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\AddressRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\AddressRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:48:37.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserAlevelResponseDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAlevelResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserAlevelResponseDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAlevelResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserAlevelResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:44:49.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserALevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\UserALevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\UserALevel.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\UserALevel.cs",
+              "RelativeToolTip": "HRMS\\Entities\\UserALevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:39:18.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserAlevelRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAlevelRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\UserAlevelRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAlevelRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\UserAlevelRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:44:17.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ALevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\ALevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\ALevel.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\ALevel.cs",
+              "RelativeToolTip": "HRMS\\Entities\\ALevel.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwBAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:39:27.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserOLevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\UserOLevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\UserOLevel.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\UserOLevel.cs",
+              "RelativeToolTip": "HRMS\\Entities\\UserOLevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T03:39:22.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\UserService.cs",
@@ -103,46 +320,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "HRMS\\Repository\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "HRMS\\Repository\\UserRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwB8AAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T02:57:57.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserResponseDtos.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
-              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T02:57:20.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\Users.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Users.cs",
               "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\Users.cs",
               "RelativeToolTip": "HRMS\\Entities\\Users.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA5wBUAAABIAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wBUAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T02:55:35.598Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "20241120170708_addexp.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Migrations\\20241120170708_addexp.cs",
               "RelativeDocumentMoniker": "HRMS\\Migrations\\20241120170708_addexp.cs",
@@ -150,12 +341,48 @@
               "RelativeToolTip": "HRMS\\Migrations\\20241120170708_addexp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:07:08.806Z",
+              "WhenOpened": "2024-11-20T17:07:08.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HRMDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
+              "RelativeDocumentMoniker": "HRMS\\DataBase\\HRMDBContext.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
+              "RelativeToolTip": "HRMS\\DataBase\\HRMDBContext.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAQwFAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T16:43:16.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
+              "Title": "UserResponseDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:57:20.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB8AAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:57:57.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "IUserExperianceService.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Iservice\\IUserExperianceService.cs",
               "RelativeDocumentMoniker": "HRMS\\Iservice\\IUserExperianceService.cs",
@@ -167,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "UserExperianceService.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Service\\UserExperianceService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\UserExperianceService.cs",
@@ -179,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "IUserExperianceRepo.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\IRepository\\IUserExperianceRepo.cs",
               "RelativeDocumentMoniker": "HRMS\\IRepository\\IUserExperianceRepo.cs",
@@ -191,20 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HRMDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
-              "RelativeDocumentMoniker": "HRMS\\DataBase\\HRMDBContext.cs",
-              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
-              "RelativeToolTip": "HRMS\\DataBase\\HRMDBContext.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAE8AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T16:43:16.853Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "UserExperianceController.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Controllers\\UserExperianceController.cs",
               "RelativeDocumentMoniker": "HRMS\\Controllers\\UserExperianceController.cs",
@@ -216,19 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Program.cs",
-              "RelativeDocumentMoniker": "HRMS\\Program.cs",
-              "ToolTip": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Program.cs",
-              "RelativeToolTip": "HRMS\\Program.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwDcAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:04:54.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "UserHigherStudiesRepository.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserHigherStudiesRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\UserHigherStudiesRepository.cs",
@@ -240,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "UserExperianceRepository.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Repository\\UserExperianceRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\UserExperianceRepository.cs",
@@ -252,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "UserExperianceRequestDtos.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserExperianceRequestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\UserExperianceRequestDtos.cs",
@@ -264,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "UserHigherStudiesResponseDtos.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserHigherStudiesResponseDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserHigherStudiesResponseDtos.cs",
@@ -276,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "UserExperianceResponceDtos.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserExperianceResponceDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserExperianceResponceDtos.cs",
@@ -288,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "UserExperiance.cs",
               "DocumentMoniker": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\Entities\\UserExperiance.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\UserExperiance.cs",

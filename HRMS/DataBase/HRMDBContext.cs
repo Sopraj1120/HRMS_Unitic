@@ -24,6 +24,7 @@ namespace HRMS.DataBase
         public DbSet<Users> users { get; set; }
         public DbSet<UserAddress> userAddresses { get; set; }
         public DbSet<UserOLevel> userOLevels { get; set; }
+        public DbSet<UserALevel> userALevels { get; set; }
         public DbSet<UserExperiance> userExperiances { get; set; }
         public DbSet<UserHigherStudies> userHigherStudies { get; set; }
 
@@ -73,6 +74,11 @@ namespace HRMS.DataBase
                 .HasMany(o => o.userOLevels)
                 .WithOne(u => u.User)
                 .HasForeignKey(u => u.UserId);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(a => a.userALevels)
+                .WithOne(u => u.user)
+                .HasForeignKey(u => u.userId);
 
             modelBuilder.Entity<Users>()
                 .HasMany(e => e.userExperiances)

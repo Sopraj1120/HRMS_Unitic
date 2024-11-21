@@ -1,6 +1,6 @@
-﻿namespace HRMS.Entities
+﻿namespace HRMS.DTOs.ResponseDtos
 {
-    public class UserALevel
+    public class UserAlevelResponseDtos
     {
         public Guid Id { get; set; }
         public string IndexNo { get; set; }
@@ -13,8 +13,5 @@
         public string? GeneralEnglish { get; set; }
         public string? GeneralKnowledge { get; set; }
         public string? GIT { get; set; }
-        public Guid userId { get; set; }
-
-        public Users user { get; set; }
     }
 }
