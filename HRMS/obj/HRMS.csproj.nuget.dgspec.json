@@ -11,7 +11,7 @@
         "projectName": "HRMS",
         "projectPath": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\HRMS.csproj",
         "packagesPath": "C:\\Users\\marif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marif\\Source\\Repos\\HRMS_Unitic\\HRMS\\obj\\",
+        "outputPath": "C:\\Users\\marif\\source\\repos\\HRMS_Unitic\\HRMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marif\\AppData\\Roaming\\NuGet\\NuGet.Config",
