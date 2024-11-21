@@ -67,6 +67,9 @@ namespace HRMS
             builder .Services.AddScoped<IHollyDayRepo, HollyDayRepository >();
             builder.Services.AddScoped<IHollydayService , HollydayService >();
 
+            builder.Services.AddScoped<ILeaveTypeRepo, LeaveTypeRepository >();
+            builder.Services.AddScoped<ILeaveTypeService , LeaveTypeService >();
+
 
             var app = builder.Build();
 
