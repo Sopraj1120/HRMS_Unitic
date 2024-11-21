@@ -14,6 +14,7 @@
         public bool IsDeleted { get; set; } = false;
 
         public List<UserAddressResponceDtos> Useraddress { get; set; }
+        public List<UserOlevelResponseDtos> Olevel { get; set; }
         public List<UserAlevelResponseDtos> UserAlevel { get; set; }
         public List<UserExperianceResponceDtos> UserExperiances { get; set; }
         public List<UserHigherStudiesResponseDtos> UserHStudy { get; set; }
