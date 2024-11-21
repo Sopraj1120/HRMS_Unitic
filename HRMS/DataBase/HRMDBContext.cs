@@ -27,6 +27,7 @@ namespace HRMS.DataBase
         public DbSet<UserALevel> userALevels { get; set; }
         public DbSet<UserExperiance> userExperiances { get; set; }
         public DbSet<UserHigherStudies> userHigherStudies { get; set; }
+        public DbSet<HollyDays> hollyDays { get; set; }
 
        
 
