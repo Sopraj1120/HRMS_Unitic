@@ -17,14 +17,30 @@ namespace HRMS.Controllers
             _leaveApplyService = leaveApplyService;
         }
 
-        [HttpPost("ApplyLeave")]
-        public async Task<IActionResult> AddLeaveApply([FromBody] LeaveApplyRequestDtos request)
+        [HttpPost]
+        public async Task<IActionResult> AddLeaveApply(Guid userId, Guid leaveId, LeaveApplyRequestDtos request)
         {
-            var result = await _leaveApplyService.AddLeaveApply(request);
-            return Ok(result);
+            try
+            {
+                var result = await _leaveApplyService.AddLeaveApply(userId, leaveId, request);
+                return Ok(result);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
-        [HttpGet("Get_All_ApplyLeave")]
+
+        [HttpGet]
         public async Task<IActionResult> GetAllLeaveApplies()
         {
             var result = await _leaveApplyService.GetAllLeaveApplies();
@@ -33,7 +49,7 @@ namespace HRMS.Controllers
 
 
         [HttpGet("{id}")]
-        [Route("Get_LeaveApply_ById")]
+       
         public async Task<IActionResult> GetLeaveApplyById(Guid id)
         {
             var result = await _leaveApplyService.GetLeaveApplyById(id);
@@ -41,7 +57,7 @@ namespace HRMS.Controllers
         }
 
 
-        [HttpPut("{id}/status")]
+        [HttpPut]
         public async Task<IActionResult> UpdateLeaveStatus(Guid id, [FromBody] LeaveStatus status, [FromQuery] bool isApproved, [FromQuery] DateTime? approvedDate)
         {
             await _leaveApplyService.UpdateLeaveStatus(id, status, isApproved, approvedDate);

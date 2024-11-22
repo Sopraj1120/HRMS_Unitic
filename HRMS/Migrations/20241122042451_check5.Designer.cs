@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241122042451_check5")]
+    partial class check5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -745,13 +748,13 @@ namespace HRMS.Migrations
             modelBuilder.Entity("HRMS.Entities.LeaveApply", b =>
                 {
                     b.HasOne("HRMS.Entities.HRMS.Entities.LeaveType", "LeaveType")
-                        .WithMany("leaveApplies")
+                        .WithMany()
                         .HasForeignKey("LeaveTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HRMS.Entities.Users", "User")
-                        .WithMany("leaveApplies")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -836,11 +839,6 @@ namespace HRMS.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.HRMS.Entities.LeaveType", b =>
-                {
-                    b.Navigation("leaveApplies");
-                });
-
             modelBuilder.Entity("HRMS.Entities.Students", b =>
                 {
                     b.Navigation("ALs");
@@ -858,8 +856,6 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Users", b =>
                 {
-                    b.Navigation("leaveApplies");
-
                     b.Navigation("userALevels");
 
                     b.Navigation("userAddresses");
