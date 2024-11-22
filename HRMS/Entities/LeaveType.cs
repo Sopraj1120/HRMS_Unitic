@@ -9,7 +9,8 @@
             public int CountPerYear { get; set; }
 
             public bool IsActive { get; set; } = true;
-
+            public Guid LeaveResponceId { get; set; }
+            public LeaveResponse LeaveResponse { get; set; }
 
             //public Guid LeaveBalanceId { get; set; }
 

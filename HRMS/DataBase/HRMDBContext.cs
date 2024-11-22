@@ -35,6 +35,8 @@ namespace HRMS.DataBase
 
         public DbSet<LeaveBalance> leaveBalance { get; set; }
         public DbSet<Salary> salary { get; set; }
+        public DbSet<LeaveResponse> leaveResponse { get; set; }
+
 
        
 
@@ -98,21 +100,38 @@ namespace HRMS.DataBase
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
 
-            //modelBuilder.Entity<LeaveBalance>()
-            //     .HasMany(t => t.leaveTypes)
-            //     .WithOne(b => b.LeaveBalance)
-            //     .HasForeignKey(b => b.LeaveBalanceId);
 
             modelBuilder.Entity<Users>()
                 .HasMany(la => la.leaveApplies)
                 .WithOne(u => u.User)
                 .HasForeignKey(u => u.UserId);
 
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.leaveResponses)
+                .WithOne(u => u.User)
+                .HasForeignKey(u =>u.UserId);
+
+
+
             modelBuilder.Entity<LeaveType>()
                 .HasMany(la => la.leaveApplies)
                 .WithOne(lt => lt.LeaveType)
                 .HasForeignKey(lt => lt.LeaveTypeId);
-            
+
+
+            modelBuilder.Entity<LeaveResponse>()
+                .HasMany(l => l.LeaveApply)
+                .WithOne(lr => lr.LeaveResponse)
+                .HasForeignKey(lr => lr.LeaveResponseId);
+        
+               
+
+
+                //modelBuilder.Entity<LeaveBalance>()
+                //     .HasMany(t => t.leaveTypes)
+                //     .WithOne(b => b.LeaveBalance)
+                //     .HasForeignKey(b => b.LeaveBalanceId);
+
 
 
             base.OnModelCreating(modelBuilder);
