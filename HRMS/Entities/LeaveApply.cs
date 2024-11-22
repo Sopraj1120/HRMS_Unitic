@@ -24,6 +24,9 @@ namespace HRMS.Entities
         public bool IsApproved { get; set; } = false; 
         public DateTime? ApprovedDate { get; set; }
         public LeaveStatus LeaveStatus { get; set; } = LeaveStatus.Pending;
+
+        public Guid LeaveResponseId { get; set; }   
+        public LeaveResponse LeaveResponse { get; set; }
     }
 
 
