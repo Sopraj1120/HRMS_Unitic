@@ -118,11 +118,12 @@ namespace HRMS.DataBase
                 .WithOne(lt => lt.LeaveType)
                 .HasForeignKey(lt => lt.LeaveTypeId);
 
-
             modelBuilder.Entity<LeaveResponse>()
-                .HasMany(l => l.LeaveApply)
-                .WithOne(lr => lr.LeaveResponse)
-                .HasForeignKey(lr => lr.LeaveResponseId);
+                .HasMany(la => la.LeaveApply)
+                .WithOne(l => l.LeaveResponse)
+                .HasForeignKey(l => l.leaveresId);
+
+
         
                
 

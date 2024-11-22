@@ -13,6 +13,8 @@ namespace HRMS.DTOs.ResponseDtos
         public bool Status { get; set; }
         public string Comments { get; set; }
         public Role Role { get; set; }
+        public int LeaveDaysCount { get; set; }
+        public Guid ApproverId { get; set; }
         public UserLeaveResponseDtos User { get; set; } 
         public LeaveApplyResponseDtos LeaveApply { get; set; }
 

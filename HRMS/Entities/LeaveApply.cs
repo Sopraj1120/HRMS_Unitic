@@ -12,8 +12,8 @@ namespace HRMS.Entities
         public DateTime EndDate { get; set; }
 
         
-        public Guid LeaveTypeId { get; set; }
-        public LeaveType LeaveType { get; set; }
+        public Guid? LeaveTypeId { get; set; }
+        public LeaveType? LeaveType { get; set; }
 
         public Guid UserId { get; set; }
         public Users User { get; set; }
@@ -25,8 +25,10 @@ namespace HRMS.Entities
         public DateTime? ApprovedDate { get; set; }
         public LeaveStatus LeaveStatus { get; set; } = LeaveStatus.Pending;
 
-        public Guid LeaveResponseId { get; set; }   
-        public LeaveResponse LeaveResponse { get; set; }
+        public Guid? leaveresId { get; set; }
+        public LeaveResponse? LeaveResponse { get; set; }
+
+       
     }
 
 

@@ -5,7 +5,7 @@
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class check5 : Migration
+    public partial class gh : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

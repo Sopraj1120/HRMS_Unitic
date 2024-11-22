@@ -2,7 +2,7 @@
 using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
-using HRMS.Migrations;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace HRMS.Repository
@@ -21,36 +21,42 @@ namespace HRMS.Repository
             var data = await _context.leaveResponse.AddAsync(leaveResponse);
             await _context.SaveChangesAsync();
             return leaveResponse;
-           
+
         }
 
         public async Task<List<LeaveResponse>> GetAllLeaveResponce()
         {
-            var data = await _context.leaveResponse.Include(u =>u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).ToListAsync();
+            var data = await _context.leaveResponse.Include(u => u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).ToListAsync();
             return data;
         }
 
         public async Task<LeaveResponse> GetleaveResponseById(Guid Id)
         {
-            var data =await _context.leaveResponse.Include(u => u.User).Include(ly => ly.LeaveType).Include(la => la.LeaveApply).FirstOrDefaultAsync(a=> a.Id == Id);
+            var data = await _context.leaveResponse.Include(u => u.User).Include(ly => ly.LeaveType).Include(la => la.LeaveApply).FirstOrDefaultAsync(a => a.Id == Id);
             if (data == null)
             {
                 throw new Exception("Not responce data here!");
             }
             return data;
-        } 
+        }
 
-       
-        public async Task<LeaveResponse> GetLeaveResponseByUserId(Guid userId)
+
+        public async Task<List<LeaveResponse>> GetLeaveResponseByUserId(Guid userId)
         {
-            var data = await _context.leaveResponse.Include(u=> u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).FirstOrDefaultAsync(a => a.UserId == userId);
+            var data = await _context.leaveResponse.Include(u => u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).Where(x => x.UserId == userId).ToListAsync();
 
-            if(data == null)
+            if (data == null)
             {
                 throw new Exception("User Not apply Leave");
             }
             return data;
         }
-      
+        public async Task<int> GetTotalLeavesForUser(Guid userId)
+        {
+            return await _context.leaveResponse
+                .Where(lr => lr.UserId == userId)
+                .SumAsync(lr => lr.LeaveDaysCount);
+        }
+
     }
 }
