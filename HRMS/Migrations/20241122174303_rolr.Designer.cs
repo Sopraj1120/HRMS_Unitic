@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241122174303_rolr")]
+    partial class rolr
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -969,7 +972,7 @@ namespace HRMS.Migrations
             modelBuilder.Entity("LeaveResponse", b =>
                 {
                     b.HasOne("HRMS.Entities.Users", "Approver")
-                        .WithMany("LeaveResponsesAsApprover")
+                        .WithMany()
                         .HasForeignKey("ApproverId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -981,7 +984,7 @@ namespace HRMS.Migrations
                         .IsRequired();
 
                     b.HasOne("HRMS.Entities.Users", "User")
-                        .WithMany("LeaveResponsesAsUser")
+                        .WithMany("leaveResponses")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1010,11 +1013,9 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Users", b =>
                 {
-                    b.Navigation("LeaveResponsesAsApprover");
-
-                    b.Navigation("LeaveResponsesAsUser");
-
                     b.Navigation("leaveApplies");
+
+                    b.Navigation("leaveResponses");
 
                     b.Navigation("userALevels");
 

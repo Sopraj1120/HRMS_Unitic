@@ -1,7 +1,4 @@
-﻿using HRMS.Entities.HRMS.Entities;
-using System.Data;
-
-namespace HRMS.Entities
+﻿namespace HRMS.Entities
 {
     public class LeaveApply
     {

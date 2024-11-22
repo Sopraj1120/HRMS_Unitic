@@ -18,7 +18,7 @@ namespace HRMS.Repository
 
         public async Task<LeaveResponse> AddLeaveResponce(LeaveResponse leaveResponse)
         {
-            var data = await _context.leaveResponse.AddAsync(leaveResponse);
+                var data = await _context.leaveResponse.AddAsync(leaveResponse);
             await _context.SaveChangesAsync();
             return leaveResponse;
 

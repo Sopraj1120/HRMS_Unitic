@@ -28,7 +28,9 @@ namespace HRMS.Entities
 
       
         public ICollection<LeaveApply> leaveApplies { get; set; }
-        public ICollection<LeaveResponse> leaveResponses { get; set; }
-      
+        public ICollection<LeaveResponse> LeaveResponsesAsUser { get; set; } 
+        public ICollection<LeaveResponse> LeaveResponsesAsApprover { get; set; } 
     }
+
 }
+

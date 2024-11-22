@@ -1,6 +1,5 @@
 ﻿using HRMS.DTOs.RequestDtos;
 using HRMS.DTOs.ResponseDtos;
-using HRMS.Entities.HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
 

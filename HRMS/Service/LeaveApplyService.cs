@@ -48,7 +48,6 @@ namespace HRMS.Service
                 Reason = request.Reason,
                 LeaveDate = request.LeaveDate,
                 EndDate = request.EndDate,
-                Role = request.Role,
                 IsApproved = false,
                 LeaveStatus = LeaveStatus.Pending
             };
@@ -62,7 +61,6 @@ namespace HRMS.Service
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
                 EndDate = data.EndDate,
-                Role = data.Role,
                 IsApproved = data.IsApproved,
                 LeaveType = new LeaveTypeResponseDtos
                 {
@@ -73,6 +71,7 @@ namespace HRMS.Service
                 {
                     Id = data.User.Id, 
                     FirstName = data.User.FirstName,
+                    Role = data.User.Role,
                     PhoneNumber = data.User.PhoneNumber
                 },
             };
@@ -88,7 +87,6 @@ namespace HRMS.Service
                 Reason = l.Reason,
                 LeaveDate = l.LeaveDate,
                 EndDate = l.EndDate,
-                Role = l.Role,
                 IsApproved = l.IsApproved,
                 LeaveType = new LeaveTypeResponseDtos
                 {
@@ -99,6 +97,7 @@ namespace HRMS.Service
                 {
                     Id = l.User.Id,
                     FirstName = l.User.FirstName,
+                    Role = l.User.Role,
                     PhoneNumber = l.User.PhoneNumber
                 },
             }).ToList();
@@ -118,7 +117,6 @@ namespace HRMS.Service
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
                 EndDate = data.EndDate,
-                Role = data.Role,
                 IsApproved = data.IsApproved,
                 LeaveType = new LeaveTypeResponseDtos
                 { 
@@ -129,6 +127,7 @@ namespace HRMS.Service
                 { 
                     Id = data.User.Id, 
                     FirstName = data.User.FirstName,
+                    Role = data.User.Role,
                     PhoneNumber = data.User.PhoneNumber
                 },
             };

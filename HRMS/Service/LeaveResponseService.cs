@@ -4,6 +4,10 @@ using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace HRMS.Service
 {
@@ -19,13 +23,27 @@ namespace HRMS.Service
             _leaveApplyRepo = leaveApplyRepo;
             _userRepo = userRepo;
         }
+
+        
         private int CalculateLeaveDays(DateTime leaveDate, DateTime endDate)
         {
             return (endDate - leaveDate).Days;
         }
 
+
         private LeaveApplyResponseDtos MapLeaveApplyToResponseDtos(LeaveApply leave)
         {
+            if (leave.User == null)
+            {
+                
+                throw new InvalidOperationException("User information is missing for LeaveApply with ID: " + leave.Id);
+            }
+
+            if (leave.LeaveType == null)
+            {
+                throw new InvalidOperationException("LeaveType information is missing for LeaveApply with ID: " + leave.Id);
+            }
+
             return new LeaveApplyResponseDtos
             {
                 Id = leave.Id,
@@ -33,59 +51,58 @@ namespace HRMS.Service
                 LeaveDate = leave.LeaveDate,
                 EndDate = leave.EndDate,
                 Reason = leave.Reason,
-                IsApproved = leave.IsApproved,
-                LeaveStatus = leave.LeaveStatus,
-                ApprovedDate = leave.ApprovedDate,
                 LeaveType = new LeaveTypeResponseDtos
                 {
-                    Id = leave.LeaveType?.Id ?? Guid.Empty, 
-                    Name = leave.LeaveType?.Name,
-                    CountPerYear = leave.LeaveType?.CountPerYear ?? 0,
-                    IsActive = leave.LeaveType?.IsActive ?? false
+                    Id = leave.LeaveType.Id,
+                    Name = leave.LeaveType.Name,
+                    CountPerYear = leave.LeaveType.CountPerYear,
+                    IsActive = leave.LeaveType.IsActive
                 },
                 User = new UserLeaveResponseDtos
                 {
-                    Id = leave.User?.Id ?? Guid.Empty,
-                    FirstName = leave.User?.FirstName,
-                    PhoneNumber = leave.User?.PhoneNumber
+                    Id = leave.User.Id,
+                    FirstName = leave.User.FirstName,
+                    Role = leave.User.Role, 
+                    PhoneNumber = leave.User.PhoneNumber
                 },
-                Role = leave.Role
+              
             };
         }
+
+
+
         public async Task<LeaveResponseResponseDtos> AddLeaveResponse(Guid approverId, Guid leaveapplyId, LeaveResponseRequestDtos leaveResponseRequestDtos)
         {
-
+          
             var leave = await _leaveApplyRepo.GetLeaveApplyById(leaveapplyId);
             if (leave == null)
             {
                 throw new KeyNotFoundException($"Leave application with ID {leaveapplyId} not found.");
             }
 
-         
-           
-
             int leaveDays = CalculateLeaveDays(leave.LeaveDate, leave.EndDate);
 
-         
-
-
+           
             var leaveResponse = new LeaveResponse
             {
                 Id = Guid.NewGuid(),
                 LeaveApplyId = leaveapplyId,
+                LeaveTypeId= leave.LeaveTypeId??default,
+                UserId= leave.User.Id,
                 ApproverId = approverId,
                 Status = leaveResponseRequestDtos.Status,
                 Comments = leaveResponseRequestDtos.Comments,
-                LeaveTypeId = leave.LeaveType.Id,
-                ResponceDate = DateTime.Now
+                ResponceDate = DateTime.Now,
+
+
+
+
             };
 
+       
             var addedResponse = await _leaveResponceRepo.AddLeaveResponce(leaveResponse);
 
-
-
-
-
+          
             var responseDto = new LeaveResponseResponseDtos
             {
                 Id = addedResponse.Id,
@@ -105,29 +122,23 @@ namespace HRMS.Service
 
             return responseDto;
         }
-    
 
+      
         public async Task<List<LeaveResponseResponseDtos>> GetAllLeaveresponse()
         {
-
             var leaveResponses = await _leaveResponceRepo.GetAllLeaveResponce();
-
 
             var responseDtos = new List<LeaveResponseResponseDtos>();
 
             foreach (var leaveResponse in leaveResponses)
             {
-
                 var leaveApplication = await _leaveApplyRepo.GetLeaveApplyById(leaveResponse.LeaveApplyId);
-
                 if (leaveApplication == null)
                 {
                     throw new KeyNotFoundException($"Leave application with ID {leaveResponse.LeaveApplyId} not found.");
                 }
 
-
                 int leaveDays = CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.EndDate);
-
 
                 var responseDto = new LeaveResponseResponseDtos
                 {
@@ -150,31 +161,24 @@ namespace HRMS.Service
             }
 
             return responseDtos;
-       
         }
 
-
+     
         public async Task<LeaveResponseResponseDtos> GetleaveResponseById(Guid id)
         {
-
             var data = await _leaveResponceRepo.GetleaveResponseById(id);
-
             if (data == null)
             {
                 throw new KeyNotFoundException($"Leave response with ID {id} not found.");
             }
 
-
             var leave = await _leaveApplyRepo.GetLeaveApplyById(data.LeaveApplyId);
-
             if (leave == null)
             {
                 throw new KeyNotFoundException($"Leave application with ID {data.LeaveApplyId} not found.");
             }
 
-
             int leaveDays = CalculateLeaveDays(leave.LeaveDate, leave.EndDate);
-
 
             var responseDto = new LeaveResponseResponseDtos
             {
@@ -196,9 +200,9 @@ namespace HRMS.Service
             return responseDto;
         }
 
+      
         public async Task<List<LeaveResponseResponseDtos>> GetLeaveResponseByUserId(Guid userId)
         {
-
             var data = await _leaveResponceRepo.GetLeaveResponseByUserId(userId);
 
             if (data == null || !data.Any())
@@ -206,22 +210,17 @@ namespace HRMS.Service
                 throw new KeyNotFoundException($"No leave responses found for user ID {userId}.");
             }
 
-
             var responseDtos = new List<LeaveResponseResponseDtos>();
 
             foreach (var leaveResponse in data)
             {
-
                 var leaveApplication = await _leaveApplyRepo.GetLeaveApplyById(leaveResponse.LeaveApplyId);
-
                 if (leaveApplication == null)
                 {
                     throw new KeyNotFoundException($"Leave application with ID {leaveResponse.LeaveApplyId} not found.");
                 }
 
-
-                  int leaveDays = CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.EndDate);
-
+                int leaveDays = CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.EndDate);
 
                 var responseDto = new LeaveResponseResponseDtos
                 {

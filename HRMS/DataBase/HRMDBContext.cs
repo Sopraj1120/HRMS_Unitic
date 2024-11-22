@@ -1,9 +1,5 @@
 ﻿using HRMS.Entities;
-using HRMS.Entities.HRMS.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace HRMS.DataBase
 {
@@ -107,14 +103,20 @@ namespace HRMS.DataBase
                 .HasForeignKey(u => u.UserId);
 
             modelBuilder.Entity<Users>()
-                .HasMany(e => e.leaveResponses)
+                .HasMany(e => e.LeaveResponsesAsUser)
                 .WithOne(u => u.User)
                 .HasForeignKey(u =>u.UserId);
+
+            modelBuilder.Entity<LeaveResponse>()
+             .HasOne(lr => lr.Approver)
+             .WithMany(e => e.LeaveResponsesAsApprover)
+             .HasForeignKey(lr => lr.ApproverId);
+    
 
 
 
             modelBuilder.Entity<LeaveType>()
-                .HasMany(la => la.leaveApplies)
+                .HasMany(la => la.LeaveApplies)
                 .WithOne(lt => lt.LeaveType)
                 .HasForeignKey(lt => lt.LeaveTypeId);
 
@@ -123,15 +125,16 @@ namespace HRMS.DataBase
                 .WithOne(l => l.LeaveResponse)
                 .HasForeignKey(l => l.leaveresId);
 
-
-        
-               
+         
 
 
-                //modelBuilder.Entity<LeaveBalance>()
-                //     .HasMany(t => t.leaveTypes)
-                //     .WithOne(b => b.LeaveBalance)
-                //     .HasForeignKey(b => b.LeaveBalanceId);
+
+
+
+            //modelBuilder.Entity<LeaveBalance>()
+            //     .HasMany(t => t.leaveTypes)
+            //     .WithOne(b => b.LeaveBalance)
+            //     .HasForeignKey(b => b.LeaveBalanceId);
 
 
 

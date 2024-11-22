@@ -1,5 +1,4 @@
 ﻿using HRMS.DataBase;
-using HRMS.Entities.HRMS.Entities;
 using HRMS.IRepository;
 using Microsoft.EntityFrameworkCore;
 
