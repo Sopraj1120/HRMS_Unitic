@@ -9,8 +9,7 @@ namespace HRMS.DTOs.ResponseDtos
         public string Reason { get; set; }
         public DateTime LeaveDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string LeaveTypeName { get; set; }
-        public string UserName {  get; set; }
+     
         public LeaveTypeResponseDtos LeaveType { get; set; }
         public UserLeaveResponseDtos User { get; set; }
         public Role Role { get; set; }
