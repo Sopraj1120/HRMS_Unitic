@@ -11,9 +11,9 @@
             public bool IsActive { get; set; } = true;
 
 
-            public Guid LeaveBalanceId { get; set; }
+            //public Guid LeaveBalanceId { get; set; }
 
-            public LeaveBalance LeaveBalance { get; set; }
+            //public LeaveBalance LeaveBalance { get; set; }
 
             public ICollection<LeaveApply> leaveApplies { get; set; }
 

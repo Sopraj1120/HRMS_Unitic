@@ -98,10 +98,10 @@ namespace HRMS.DataBase
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
 
-            modelBuilder.Entity<LeaveBalance>()
-                 .HasMany(t => t.leaveTypes)
-                 .WithOne(b => b.LeaveBalance)
-                 .HasForeignKey(b => b.LeaveBalanceId);
+            //modelBuilder.Entity<LeaveBalance>()
+            //     .HasMany(t => t.leaveTypes)
+            //     .WithOne(b => b.LeaveBalance)
+            //     .HasForeignKey(b => b.LeaveBalanceId);
 
             modelBuilder.Entity<Users>()
                 .HasMany(la => la.leaveApplies)

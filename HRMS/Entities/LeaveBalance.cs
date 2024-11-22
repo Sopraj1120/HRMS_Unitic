@@ -9,7 +9,7 @@ namespace HRMS.Entities
         public Guid LeaveTypeId { get; set; }
 
         public Users User { get; set; }
-        public ICollection<LeaveType> leaveTypes { get; set; }
+        //public ICollection<LeaveType> leaveTypes { get; set; }
 
     }
 }

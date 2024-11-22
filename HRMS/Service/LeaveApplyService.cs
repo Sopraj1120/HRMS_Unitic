@@ -72,7 +72,8 @@ namespace HRMS.Service
                 User = new UserLeaveResponseDtos
                 {
                     Id = data.User.Id, 
-                    FirstName = data.User.FirstName
+                    FirstName = data.User.FirstName,
+                    PhoneNumber = data.User.PhoneNumber
                 },
             };
         }
@@ -89,8 +90,17 @@ namespace HRMS.Service
                 EndDate = l.EndDate,
                 Role = l.Role,
                 IsApproved = l.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos { Id = l.LeaveType.Id, Name = l.LeaveType.Name },
-                User = new UserLeaveResponseDtos { Id = l.User.Id, FirstName = l.User.FirstName },
+                LeaveType = new LeaveTypeResponseDtos
+                {
+                    Id = l.LeaveType.Id,
+                    Name = l.LeaveType.Name
+                },
+                User = new UserLeaveResponseDtos
+                {
+                    Id = l.User.Id,
+                    FirstName = l.User.FirstName,
+                    PhoneNumber = l.User.PhoneNumber
+                },
             }).ToList();
         }
 
@@ -110,8 +120,17 @@ namespace HRMS.Service
                 EndDate = data.EndDate,
                 Role = data.Role,
                 IsApproved = data.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos { Id = data.LeaveType.Id, Name = data.LeaveType.Name },
-                User = new UserLeaveResponseDtos { Id = data.User.Id, FirstName = data.User.FirstName },
+                LeaveType = new LeaveTypeResponseDtos
+                { 
+                    Id = data.LeaveType.Id, 
+                    Name = data.LeaveType.Name 
+                },
+                User = new UserLeaveResponseDtos
+                { 
+                    Id = data.User.Id, 
+                    FirstName = data.User.FirstName,
+                    PhoneNumber = data.User.PhoneNumber
+                },
             };
         }
 
