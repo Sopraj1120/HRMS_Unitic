@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "X:\\M3_GroupProject\\HRMS_22-11-2024\\HRMS_Unitic\\",
   "Documents": [
     {
@@ -81,6 +82,37 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|x:\\m3_groupproject\\hrms_22-11-2024\\hrms_unitic\\hrms\\migrations\\20241122054546_inisaldatadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241122054546_inisaldatadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Migrations\\20241122064807_aas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HRMS\\Migrations\\20241122064807_aas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\controllers\\leaveapplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leaveapplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\service\\leaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\repository\\leaveapplyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\leaveapplyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\dtos\\requestdtos\\leaveapplyrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leaveapplyrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\irepository\\ileaveapplyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\ileaveapplyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrms_unitic\\hrms\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 40170f2af8a3055066ff1e7a4ee7e295845c470b
     }
   ],
   "DocumentGroupContainers": [
@@ -90,6 +122,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 381,
+<<<<<<< HEAD
           "SelectedChildIndex": 11,
           "Children": [
             {
@@ -334,6 +367,100 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T13:43:16.827Z"
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241122064807_aas.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Migrations\\20241122064807_aas.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241122064807_aas.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Migrations\\20241122064807_aas.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241122064807_aas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:48:07.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeaveApplyController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Controllers\\LeaveApplyController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveApplyController.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Controllers\\LeaveApplyController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\LeaveApplyController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:43:07.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LeaveApplyService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Service\\LeaveApplyService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveApplyService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Service\\LeaveApplyService.cs",
+              "RelativeToolTip": "HRMS\\Service\\LeaveApplyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:36:55.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ILeaveApplyRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveApplyRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveApplyRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveApplyRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ILeaveApplyRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:36:04.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LeaveApplyRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:32:33.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LeaveApplyRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Repository\\LeaveApplyRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveApplyRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Repository\\LeaveApplyRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\LeaveApplyRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:29:52.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T06:29:50.51Z",
+              "EditorCaption": ""
+>>>>>>> 40170f2af8a3055066ff1e7a4ee7e295845c470b
             }
           ]
         }
