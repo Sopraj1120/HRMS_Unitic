@@ -33,6 +33,9 @@ namespace HRMS.DataBase
 
         public DbSet<LeaveApply> leaveApply { get; set; }
 
+        public DbSet<LeaveBalance> leaveBalance { get; set; }
+        public DbSet<Salary> salary { get; set; }
+
        
 
 
@@ -95,6 +98,12 @@ namespace HRMS.DataBase
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
 
+<<<<<<< HEAD
+            modelBuilder.Entity<LeaveBalance>()
+                 .HasMany(t => t.leaveTypes)
+                 .WithOne(b => b.LeaveBalance)
+                 .HasForeignKey(b => b.LeaveBalanceId);
+=======
             modelBuilder.Entity<Users>()
                 .HasMany(la => la.leaveApplies)
                 .WithOne(u => u.User)
@@ -107,6 +116,7 @@ namespace HRMS.DataBase
             
 
 
+>>>>>>> 40170f2af8a3055066ff1e7a4ee7e295845c470b
 
 
             base.OnModelCreating(modelBuilder);
