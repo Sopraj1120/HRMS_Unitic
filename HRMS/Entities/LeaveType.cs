@@ -9,6 +9,8 @@
             public int CountPerYear { get; set; }
 
             public bool IsActive { get; set; } = true;
+
+            public ICollection<LeaveApply> leaveApplies { get; set; }
         }
     }
 

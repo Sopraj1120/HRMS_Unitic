@@ -24,6 +24,10 @@ namespace HRMS.Entities
         public ICollection<UserALevel>  userALevels { get; set; }
         public ICollection<UserExperiance> userExperiances { get; set; }
         public ICollection<UserHigherStudies> userHigherStudies { get;set; }
+
+
+      
+        public ICollection<LeaveApply> leaveApplies { get; set; }
       
     }
 }

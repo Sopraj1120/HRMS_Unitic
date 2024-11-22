@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241122054609_df")]
+    partial class df
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -273,9 +276,11 @@ namespace HRMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LeaveTypeId");
+                    b.HasIndex("LeaveTypeId")
+                        .IsUnique();
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("leaveApply");
                 });
@@ -745,14 +750,14 @@ namespace HRMS.Migrations
             modelBuilder.Entity("HRMS.Entities.LeaveApply", b =>
                 {
                     b.HasOne("HRMS.Entities.HRMS.Entities.LeaveType", "LeaveType")
-                        .WithMany("leaveApplies")
-                        .HasForeignKey("LeaveTypeId")
+                        .WithOne("LeaveApply")
+                        .HasForeignKey("HRMS.Entities.LeaveApply", "LeaveTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HRMS.Entities.Users", "User")
-                        .WithMany("leaveApplies")
-                        .HasForeignKey("UserId")
+                        .WithOne("LeaveApply")
+                        .HasForeignKey("HRMS.Entities.LeaveApply", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -838,7 +843,8 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.HRMS.Entities.LeaveType", b =>
                 {
-                    b.Navigation("leaveApplies");
+                    b.Navigation("LeaveApply")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("HRMS.Entities.Students", b =>
@@ -858,7 +864,8 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Users", b =>
                 {
-                    b.Navigation("leaveApplies");
+                    b.Navigation("LeaveApply")
+                        .IsRequired();
 
                     b.Navigation("userALevels");
 

@@ -3,29 +3,51 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
+using Microsoft.EntityFrameworkCore;
 
 namespace HRMS.Service
 {
     public class LeaveApplyService : ILeaveApplyService
     {
         private readonly ILeaveApplyRepo _leaveApplyRepo;
+        private readonly IUserRepo _userRepo;
+        private readonly ILeaveTypeRepo _leaveTypeRepo;
 
-        public LeaveApplyService(ILeaveApplyRepo leaveApplyRepo)
+     
+        public LeaveApplyService(ILeaveApplyRepo leaveApplyRepo, IUserRepo userRepo, ILeaveTypeRepo leaveTypeRepo) 
         {
             _leaveApplyRepo = leaveApplyRepo;
+            _userRepo = userRepo;
+            _leaveTypeRepo = leaveTypeRepo;
         }
 
-        public async Task<LeaveApplyResponseDtos> AddLeaveApply(LeaveApplyRequestDtos request)
+        public async Task<LeaveApplyResponseDtos> AddLeaveApply(Guid userId, Guid leavetypeId,LeaveApplyRequestDtos request)
         {
+            var user = await _userRepo.GetUserById(userId);
+            if (user == null)
+            {
+                throw new KeyNotFoundException($"User with ID {userId} not found.");
+            }
+
+            var leaveType = await _leaveTypeRepo.GetLeaveTypeById(leavetypeId);
+            if (leaveType == null)
+            {
+                throw new KeyNotFoundException($"LeaveType with ID {leavetypeId} not found.");
+            }
+            if (request.LeaveDate >= request.EndDate)
+            {
+                throw new ArgumentException("End date must be later than the start date.");
+            }
+
             var leaveApply = new LeaveApply
             {
                 Id = Guid.NewGuid(),
+                UserId = userId,
+                LeaveTypeId = leavetypeId,
                 ApplyDate = DateTime.Now,
                 Reason = request.Reason,
                 LeaveDate = request.LeaveDate,
                 EndDate = request.EndDate,
-                LeaveTypeId = request.LeaveTypeId,
-                UserId = request.UserId,
                 Role = request.Role,
                 IsApproved = false,
                 LeaveStatus = LeaveStatus.Pending
@@ -42,8 +64,16 @@ namespace HRMS.Service
                 EndDate = data.EndDate,
                 Role = data.Role,
                 IsApproved = data.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos { Id = data.LeaveType.Id, Name = data.LeaveType.Name },
-                User = new UserLeaveResponseDtos { Id = data.User.Id, FirstName = data.User.FirstName },
+                LeaveType = new LeaveTypeResponseDtos
+                {
+                    Id = data.LeaveType.Id, 
+                    Name = data.LeaveType.Name 
+                },
+                User = new UserLeaveResponseDtos
+                {
+                    Id = data.User.Id, 
+                    FirstName = data.User.FirstName
+                },
             };
         }
 
