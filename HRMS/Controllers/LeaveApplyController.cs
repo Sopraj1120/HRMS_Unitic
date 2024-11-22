@@ -17,7 +17,7 @@ namespace HRMS.Controllers
             _leaveApplyService = leaveApplyService;
         }
 
-        [HttpPost("ApplyLeave")]
+        [HttpPost]
         public async Task<IActionResult> AddLeaveApply([FromBody] LeaveApplyRequestDtos request)
         {
             var result = await _leaveApplyService.AddLeaveApply(request);
@@ -33,7 +33,7 @@ namespace HRMS.Controllers
 
 
         [HttpGet("{id}")]
-        [Route("Get_LeaveApply_ById")]
+        
         public async Task<IActionResult> GetLeaveApplyById(Guid id)
         {
             var result = await _leaveApplyService.GetLeaveApplyById(id);
@@ -41,7 +41,7 @@ namespace HRMS.Controllers
         }
 
 
-        [HttpPut("{id}/status")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateLeaveStatus(Guid id, [FromBody] LeaveStatus status, [FromQuery] bool isApproved, [FromQuery] DateTime? approvedDate)
         {
             await _leaveApplyService.UpdateLeaveStatus(id, status, isApproved, approvedDate);

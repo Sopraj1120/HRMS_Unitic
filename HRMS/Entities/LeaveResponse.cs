@@ -28,5 +28,8 @@ namespace HRMS.Entities
         public Guid ApproverId { get; set; } 
         public string Comments { get; set; }
 
+        public Guid LeaveBlanceId { get; set; }
+        public DateTime LeaveDays { get; set; }
+        public LeaveBalance LeaveBalance { get; set; }
     }
 }
