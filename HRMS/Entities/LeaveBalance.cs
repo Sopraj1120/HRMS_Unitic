@@ -1,6 +1,4 @@
-﻿using HRMS.Entities.HRMS.Entities;
-
-namespace HRMS.Entities
+﻿namespace HRMS.Entities
 {
     public class LeaveBalance
     {

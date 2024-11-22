@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241122150522_check")]
+    partial class check
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,6 +155,30 @@ namespace HRMS.Migrations
                     b.ToTable("experiances");
                 });
 
+            modelBuilder.Entity("HRMS.Entities.HRMS.Entities.LeaveType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CountPerYear")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("LeaveResponceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("leaveType");
+                });
+
             modelBuilder.Entity("HRMS.Entities.HigherStudies", b =>
                 {
                     b.Property<Guid>("Id")
@@ -281,6 +308,58 @@ namespace HRMS.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("leaveBalance");
+                });
+
+            modelBuilder.Entity("HRMS.Entities.LeaveResponse", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ApplyDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ApproverId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Comments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LeaveApplyId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("LeaveDaysCount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("LeaveTypeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ResponceDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LeaveTypeId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("leaveResponse");
                 });
 
             modelBuilder.Entity("HRMS.Entities.OLevel", b =>
@@ -742,77 +821,6 @@ namespace HRMS.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("LeaveResponse", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ApplyDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("ApproverId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Comments")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("LeaveApplyId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("LeaveDaysCount")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("LeaveTypeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ResponceDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApproverId");
-
-                    b.HasIndex("LeaveTypeId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("leaveResponse");
-                });
-
-            modelBuilder.Entity("LeaveType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("CountPerYear")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("leaveType");
-                });
-
             modelBuilder.Entity("HRMS.Entities.ALevel", b =>
                 {
                     b.HasOne("HRMS.Entities.Students", "Student")
@@ -859,8 +867,8 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.LeaveApply", b =>
                 {
-                    b.HasOne("LeaveType", "LeaveType")
-                        .WithMany("LeaveApplies")
+                    b.HasOne("HRMS.Entities.HRMS.Entities.LeaveType", "LeaveType")
+                        .WithMany("leaveApplies")
                         .HasForeignKey("LeaveTypeId");
 
                     b.HasOne("HRMS.Entities.Users", "User")
@@ -869,7 +877,7 @@ namespace HRMS.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LeaveResponse", "LeaveResponse")
+                    b.HasOne("HRMS.Entities.LeaveResponse", "LeaveResponse")
                         .WithMany("LeaveApply")
                         .HasForeignKey("leaveresId");
 
@@ -887,6 +895,25 @@ namespace HRMS.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("HRMS.Entities.LeaveResponse", b =>
+                {
+                    b.HasOne("HRMS.Entities.HRMS.Entities.LeaveType", "LeaveType")
+                        .WithOne("LeaveResponse")
+                        .HasForeignKey("HRMS.Entities.LeaveResponse", "LeaveTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HRMS.Entities.Users", "User")
+                        .WithMany("leaveResponses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LeaveType");
 
                     b.Navigation("User");
                 });
@@ -966,31 +993,17 @@ namespace HRMS.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("LeaveResponse", b =>
+            modelBuilder.Entity("HRMS.Entities.HRMS.Entities.LeaveType", b =>
                 {
-                    b.HasOne("HRMS.Entities.Users", "Approver")
-                        .WithMany("LeaveResponsesAsApprover")
-                        .HasForeignKey("ApproverId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.Navigation("LeaveResponse")
                         .IsRequired();
 
-                    b.HasOne("LeaveType", "LeaveType")
-                        .WithMany("LeaveResponses")
-                        .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("leaveApplies");
+                });
 
-                    b.HasOne("HRMS.Entities.Users", "User")
-                        .WithMany("LeaveResponsesAsUser")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Approver");
-
-                    b.Navigation("LeaveType");
-
-                    b.Navigation("User");
+            modelBuilder.Entity("HRMS.Entities.LeaveResponse", b =>
+                {
+                    b.Navigation("LeaveApply");
                 });
 
             modelBuilder.Entity("HRMS.Entities.Students", b =>
@@ -1010,11 +1023,9 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Users", b =>
                 {
-                    b.Navigation("LeaveResponsesAsApprover");
-
-                    b.Navigation("LeaveResponsesAsUser");
-
                     b.Navigation("leaveApplies");
+
+                    b.Navigation("leaveResponses");
 
                     b.Navigation("userALevels");
 
@@ -1025,18 +1036,6 @@ namespace HRMS.Migrations
                     b.Navigation("userHigherStudies");
 
                     b.Navigation("userOLevels");
-                });
-
-            modelBuilder.Entity("LeaveResponse", b =>
-                {
-                    b.Navigation("LeaveApply");
-                });
-
-            modelBuilder.Entity("LeaveType", b =>
-                {
-                    b.Navigation("LeaveApplies");
-
-                    b.Navigation("LeaveResponses");
                 });
 #pragma warning restore 612, 618
         }
