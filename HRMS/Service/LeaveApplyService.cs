@@ -65,7 +65,9 @@ namespace HRMS.Service
                 LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = data.LeaveType.Id, 
-                    Name = data.LeaveType.Name 
+                    Name = data.LeaveType.Name ,
+                    CountPerYear = data.LeaveType.CountPerYear
+                   
                 },
                 User = new UserLeaveResponseDtos
                 {

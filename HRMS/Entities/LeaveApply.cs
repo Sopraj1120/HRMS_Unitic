@@ -10,7 +10,7 @@
 
         
         public Guid? LeaveTypeId { get; set; }
-        public LeaveType? LeaveType { get; set; }
+        public LeaveType LeaveType { get; set; }
 
         public Guid UserId { get; set; }
         public Users User { get; set; }
