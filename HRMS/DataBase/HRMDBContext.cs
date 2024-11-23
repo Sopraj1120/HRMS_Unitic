@@ -32,9 +32,10 @@ namespace HRMS.DataBase
         public DbSet<LeaveBalance> leaveBalance { get; set; }
         public DbSet<Salary> salary { get; set; }
         public DbSet<LeaveResponse> leaveResponse { get; set; }
+        public DbSet<AccountDetail> accountDetail { get; set; }
 
 
-       
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

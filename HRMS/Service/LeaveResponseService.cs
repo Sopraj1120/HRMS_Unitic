@@ -16,21 +16,38 @@ namespace HRMS.Service
         private readonly ILeaveResponceRepo _leaveResponceRepo;
         private readonly ILeaveApplyRepo _leaveApplyRepo;
         private readonly IUserRepo _userRepo;
+        private readonly IHollyDayRepo _hollyDayRepo;
 
-        public LeaveResponseService(ILeaveResponceRepo leaveResponceRepo, ILeaveApplyRepo leaveApplyRepo, IUserRepo userRepo)
+        public LeaveResponseService(ILeaveResponceRepo leaveResponceRepo, ILeaveApplyRepo leaveApplyRepo, IUserRepo userRepo, IHollyDayRepo hollyDayRepo)
         {
             _leaveResponceRepo = leaveResponceRepo;
             _leaveApplyRepo = leaveApplyRepo;
             _userRepo = userRepo;
+            _hollyDayRepo = hollyDayRepo;
         }
 
-        
-        private int CalculateLeaveDays(DateTime leaveDate, DateTime endDate)
+
+
+        private async Task<int> CalculateLeaveDays(DateTime leaveDate, DateTime endDate)
         {
-            return (endDate - leaveDate).Days;
+           
+            var holidays = await _hollyDayRepo.GatAllHollyDays();
+
+            
+            var allDates = Enumerable
+                .Range(0, (endDate - leaveDate).Days )
+                .Select(d => leaveDate.AddDays(d))
+                .ToList();
+
+            
+            var validLeaveDays = allDates
+                .Where(date => !holidays.Any(holiday => holiday.Date.Date == date.Date) && 
+                              date.DayOfWeek != DayOfWeek.Saturday &&  
+                              date.DayOfWeek != DayOfWeek.Sunday)    
+                .ToList();
+
+            return validLeaveDays.Count;
         }
-
-
         private LeaveApplyResponseDtos MapLeaveApplyToResponseDtos(LeaveApply leave)
         {
             if (leave.User == null)
@@ -49,7 +66,7 @@ namespace HRMS.Service
                 Id = leave.Id,
                 ApplyDate = leave.ApplyDate,
                 LeaveDate = leave.LeaveDate,
-                EndDate = leave.EndDate,
+                LeaveReturnDate = leave.LeaveReturnDate,
                 Reason = leave.Reason,
                 LeaveType = new LeavetypeinleaveResponceDto
                 {
@@ -80,7 +97,7 @@ namespace HRMS.Service
                 throw new KeyNotFoundException($"Leave application with ID {leaveapplyId} not found.");
             }
 
-            int leaveDays = CalculateLeaveDays(leave.LeaveDate, leave.EndDate);
+            int leaveDays = await CalculateLeaveDays(leave.LeaveDate, leave.LeaveReturnDate);
 
            
             var leaveResponse = new LeaveResponse
@@ -131,7 +148,7 @@ namespace HRMS.Service
                     throw new KeyNotFoundException($"Leave application with ID {leaveResponse.LeaveApplyId} not found.");
                 }
 
-                int leaveDays = CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.EndDate);
+                int leaveDays =await CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.LeaveReturnDate);
 
                 var responseDto = new LeaveResponseResponseDtos
                 {
@@ -165,7 +182,7 @@ namespace HRMS.Service
                 throw new KeyNotFoundException($"Leave application with ID {data.LeaveApplyId} not found.");
             }
 
-            int leaveDays = CalculateLeaveDays(leave.LeaveDate, leave.EndDate);
+            int leaveDays = await CalculateLeaveDays(leave.LeaveDate, leave.LeaveReturnDate);
 
             var responseDto = new LeaveResponseResponseDtos
             {
@@ -201,7 +218,7 @@ namespace HRMS.Service
                     throw new KeyNotFoundException($"Leave application with ID {leaveResponse.LeaveApplyId} not found.");
                 }
 
-                int leaveDays = CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.EndDate);
+                int leaveDays = await CalculateLeaveDays(leaveApplication.LeaveDate, leaveApplication.LeaveReturnDate);
 
                 var responseDto = new LeaveResponseResponseDtos
                 {

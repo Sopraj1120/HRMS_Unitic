@@ -20,7 +20,7 @@ namespace HRMS.Service
             var holly = new HollyDays
             {
                 Id = Guid.NewGuid(),
-                Date = DateTime.Now,
+                Date = hollydaysRequestDtos.Date,
                 Name = hollydaysRequestDtos.Name,
             };
             var data = await _hollyDayRepo.AddHollyDays(holly);

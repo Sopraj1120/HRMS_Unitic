@@ -34,7 +34,7 @@ namespace HRMS.Service
             {
                 throw new KeyNotFoundException($"LeaveType with ID {leavetypeId} not found.");
             }
-            if (request.LeaveDate >= request.EndDate)
+            if (request.LeaveDate >= request.LeaveReturnDate)
             {
                 throw new ArgumentException("End date must be later than the start date.");
             }
@@ -47,7 +47,7 @@ namespace HRMS.Service
                 ApplyDate = DateTime.Now,
                 Reason = request.Reason,
                 LeaveDate = request.LeaveDate,
-                EndDate = request.EndDate,
+                LeaveReturnDate = request.LeaveReturnDate,
                 IsApproved = false,
                 LeaveStatus = LeaveStatus.Pending
             };
@@ -60,8 +60,8 @@ namespace HRMS.Service
                 ApplyDate = data.ApplyDate,
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
-                EndDate = data.EndDate,
-               
+                LeaveReturnDate = data.LeaveReturnDate,
+
                 LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = data.LeaveType.Id, 
@@ -86,8 +86,8 @@ namespace HRMS.Service
                 ApplyDate = l.ApplyDate,
                 Reason = l.Reason,
                 LeaveDate = l.LeaveDate,
-                EndDate = l.EndDate,
-               
+                LeaveReturnDate = l.LeaveReturnDate,
+
                 LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = l.LeaveType.Id,
@@ -116,8 +116,8 @@ namespace HRMS.Service
                 ApplyDate = data.ApplyDate,
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
-                EndDate = data.EndDate,
-           
+                LeaveReturnDate = data.LeaveReturnDate,
+
                 LeaveType = new LeavetypeinleaveResponceDto
                 { 
                     Id = data.LeaveType.Id, 
