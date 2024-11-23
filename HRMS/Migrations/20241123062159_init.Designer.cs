@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    [Migration("20241122184126_s")]
-    partial class s
+    [Migration("20241123062159_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -784,13 +784,21 @@ namespace HRMS.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("UsersId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("UsersId1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ApproverId");
 
                     b.HasIndex("LeaveTypeId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UsersId");
+
+                    b.HasIndex("UsersId1");
 
                     b.ToTable("leaveResponse");
                 });
@@ -972,28 +980,28 @@ namespace HRMS.Migrations
             modelBuilder.Entity("LeaveResponse", b =>
                 {
                     b.HasOne("HRMS.Entities.Users", "Approver")
-                        .WithMany("LeaveResponsesAsApprover")
+                        .WithMany()
                         .HasForeignKey("ApproverId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("LeaveType", "LeaveType")
                         .WithMany("LeaveResponses")
                         .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("HRMS.Entities.Users", "User")
+                    b.HasOne("HRMS.Entities.Users", null)
                         .WithMany("LeaveResponsesAsUser")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsersId");
+
+                    b.HasOne("HRMS.Entities.Users", null)
+                        .WithMany("LeaveResponsesAsApprover")
+                        .HasForeignKey("UsersId1");
 
                     b.Navigation("Approver");
 
                     b.Navigation("LeaveType");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HRMS.Entities.Students", b =>

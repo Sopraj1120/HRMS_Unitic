@@ -51,12 +51,12 @@ namespace HRMS.Service
                 LeaveDate = leave.LeaveDate,
                 EndDate = leave.EndDate,
                 Reason = leave.Reason,
-                LeaveType = new LeaveTypeResponseDtos
+                LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = leave.LeaveType.Id,
                     Name = leave.LeaveType.Name,
                     CountPerYear = leave.LeaveType.CountPerYear,
-                    IsActive = leave.LeaveType.IsActive
+                    
                 },
                 User = new UserLeaveResponseDtos
                 {
@@ -87,12 +87,11 @@ namespace HRMS.Service
             {
                 Id = Guid.NewGuid(),
                 LeaveApplyId = leaveapplyId,
-                LeaveTypeId= leave.LeaveTypeId??default,
-                UserId= leave.User.Id,
+               
                 ApproverId = approverId,
                 Status = leaveResponseRequestDtos.Status,
                 Comments = leaveResponseRequestDtos.Comments,
-                ResponceDate = DateTime.Now,
+              
 
 
 
@@ -110,13 +109,7 @@ namespace HRMS.Service
                 Comments = addedResponse.Comments,
                 ApproverId = addedResponse.ApproverId,
                 LeaveDaysCount = leaveDays,
-                LeaveType = new LeaveTypeResponseDtos
-                {
-                    Id = addedResponse.LeaveType?.Id ?? Guid.Empty,
-                    Name = addedResponse.LeaveType?.Name,
-                    CountPerYear = addedResponse.LeaveType?.CountPerYear ?? 0,
-                    IsActive = addedResponse.LeaveType?.IsActive ?? false
-                },
+               
                 LeaveApply = MapLeaveApplyToResponseDtos(leave)
             };
 
@@ -147,13 +140,7 @@ namespace HRMS.Service
                     Comments = leaveResponse.Comments,
                     ApproverId = leaveResponse.ApproverId,
                     LeaveDaysCount = leaveDays,
-                    LeaveType = new LeaveTypeResponseDtos
-                    {
-                        Id = leaveResponse.LeaveType?.Id ?? Guid.Empty,
-                        Name = leaveResponse.LeaveType?.Name,
-                        CountPerYear = leaveResponse.LeaveType?.CountPerYear ?? 0,
-                        IsActive = leaveResponse.LeaveType?.IsActive ?? false
-                    },
+                   
                     LeaveApply = MapLeaveApplyToResponseDtos(leaveApplication)
                 };
 
@@ -187,13 +174,7 @@ namespace HRMS.Service
                 Comments = data.Comments,
                 ApproverId = data.ApproverId,
                 LeaveDaysCount = leaveDays,
-                LeaveType = new LeaveTypeResponseDtos
-                {
-                    Id = data.LeaveType?.Id ?? Guid.Empty,
-                    Name = data.LeaveType?.Name,
-                    CountPerYear = data.LeaveType?.CountPerYear ?? 0,
-                    IsActive = data.LeaveType?.IsActive ?? false
-                },
+               
                 LeaveApply = MapLeaveApplyToResponseDtos(leave)
             };
 
@@ -229,13 +210,7 @@ namespace HRMS.Service
                     Comments = leaveResponse.Comments,
                     ApproverId = leaveResponse.ApproverId,
                     LeaveDaysCount = leaveDays,
-                    LeaveType = new LeaveTypeResponseDtos
-                    {
-                        Id = leaveResponse.LeaveType?.Id ?? Guid.Empty,
-                        Name = leaveResponse.LeaveType?.Name,
-                        CountPerYear = leaveResponse.LeaveType?.CountPerYear ?? 0,
-                        IsActive = leaveResponse.LeaveType?.IsActive ?? false
-                    },
+                  
                     LeaveApply = MapLeaveApplyToResponseDtos(leaveApplication)
                 };
 

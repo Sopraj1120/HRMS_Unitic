@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    [Migration("20241122174303_rolr")]
-    partial class rolr
+    [Migration("20241123065210_init2")]
+    partial class init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -751,17 +751,11 @@ namespace HRMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("ApplyDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<Guid>("ApproverId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Comments")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<Guid>("LeaveApplyId")
                         .HasColumnType("uniqueidentifier");
@@ -769,19 +763,16 @@ namespace HRMS.Migrations
                     b.Property<int>("LeaveDaysCount")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("LeaveTypeId")
+                    b.Property<Guid?>("LeaveTypeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("ResponceDate")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid?>("UsersId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid?>("UsersId1")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -790,7 +781,9 @@ namespace HRMS.Migrations
 
                     b.HasIndex("LeaveTypeId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UsersId");
+
+                    b.HasIndex("UsersId1");
 
                     b.ToTable("leaveResponse");
                 });
@@ -974,26 +967,22 @@ namespace HRMS.Migrations
                     b.HasOne("HRMS.Entities.Users", "Approver")
                         .WithMany()
                         .HasForeignKey("ApproverId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("LeaveType", "LeaveType")
+                    b.HasOne("LeaveType", null)
                         .WithMany("LeaveResponses")
-                        .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LeaveTypeId");
 
-                    b.HasOne("HRMS.Entities.Users", "User")
-                        .WithMany("leaveResponses")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("HRMS.Entities.Users", null)
+                        .WithMany("LeaveResponsesAsUser")
+                        .HasForeignKey("UsersId");
+
+                    b.HasOne("HRMS.Entities.Users", null)
+                        .WithMany("LeaveResponsesAsApprover")
+                        .HasForeignKey("UsersId1");
 
                     b.Navigation("Approver");
-
-                    b.Navigation("LeaveType");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HRMS.Entities.Students", b =>
@@ -1013,9 +1002,11 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Users", b =>
                 {
-                    b.Navigation("leaveApplies");
+                    b.Navigation("LeaveResponsesAsApprover");
 
-                    b.Navigation("leaveResponses");
+                    b.Navigation("LeaveResponsesAsUser");
+
+                    b.Navigation("leaveApplies");
 
                     b.Navigation("userALevels");
 

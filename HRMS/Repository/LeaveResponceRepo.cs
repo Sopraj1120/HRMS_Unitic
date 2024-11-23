@@ -26,13 +26,13 @@ namespace HRMS.Repository
 
         public async Task<List<LeaveResponse>> GetAllLeaveResponce()
         {
-            var data = await _context.leaveResponse.Include(u => u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).ToListAsync();
+            var data = await _context.leaveResponse.Include(la => la.LeaveApply).ToListAsync();
             return data;
         }
 
         public async Task<LeaveResponse> GetleaveResponseById(Guid Id)
         {
-            var data = await _context.leaveResponse.Include(u => u.User).Include(ly => ly.LeaveType).Include(la => la.LeaveApply).FirstOrDefaultAsync(a => a.Id == Id);
+            var data = await _context.leaveResponse.Include(la => la.LeaveApply).FirstOrDefaultAsync(a => a.Id == Id);
             if (data == null)
             {
                 throw new Exception("Not responce data here!");
@@ -43,7 +43,7 @@ namespace HRMS.Repository
 
         public async Task<List<LeaveResponse>> GetLeaveResponseByUserId(Guid userId)
         {
-            var data = await _context.leaveResponse.Include(u => u.User).Include(lt => lt.LeaveType).Include(la => la.LeaveApply).Where(x => x.UserId == userId).ToListAsync();
+            var data = await _context.leaveResponse.Include(la => la.LeaveApply).ToListAsync();
 
             if (data == null)
             {
@@ -54,7 +54,7 @@ namespace HRMS.Repository
         public async Task<int> GetTotalLeavesForUser(Guid userId)
         {
             return await _context.leaveResponse
-                .Where(lr => lr.UserId == userId)
+               
                 .SumAsync(lr => lr.LeaveDaysCount);
         }
 

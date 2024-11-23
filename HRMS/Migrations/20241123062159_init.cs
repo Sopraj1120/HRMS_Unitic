@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class gh3 : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,8 +31,7 @@ namespace HRMS.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CountPerYear = table.Column<int>(type: "int", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    LeaveResponceId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -285,11 +284,13 @@ namespace HRMS.Migrations
                     ApplyDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ResponceDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
-                    Role = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ApproverId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Comments = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LeaveDaysCount = table.Column<int>(type: "int", nullable: false)
+                    LeaveApplyId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LeaveDaysCount = table.Column<int>(type: "int", nullable: false),
+                    UsersId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    UsersId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -298,14 +299,22 @@ namespace HRMS.Migrations
                         name: "FK_leaveResponse_leaveType_LeaveTypeId",
                         column: x => x.LeaveTypeId,
                         principalTable: "leaveType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_leaveResponse_users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_leaveResponse_users_ApproverId",
+                        column: x => x.ApproverId,
                         principalTable: "users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_leaveResponse_users_UsersId",
+                        column: x => x.UsersId,
+                        principalTable: "users",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_leaveResponse_users_UsersId1",
+                        column: x => x.UsersId1,
+                        principalTable: "users",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -452,15 +461,14 @@ namespace HRMS.Migrations
                     IsApproved = table.Column<bool>(type: "bit", nullable: false),
                     ApprovedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LeaveStatus = table.Column<int>(type: "int", nullable: false),
-                    leaveresId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    LeaveResponseId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    leaveresId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_leaveApply", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_leaveApply_leaveResponse_LeaveResponseId",
-                        column: x => x.LeaveResponseId,
+                        name: "FK_leaveApply_leaveResponse_leaveresId",
+                        column: x => x.leaveresId,
                         principalTable: "leaveResponse",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -497,9 +505,9 @@ namespace HRMS.Migrations
                 column: "StudentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_leaveApply_LeaveResponseId",
+                name: "IX_leaveApply_leaveresId",
                 table: "leaveApply",
-                column: "LeaveResponseId");
+                column: "leaveresId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_leaveApply_LeaveTypeId",
@@ -517,15 +525,24 @@ namespace HRMS.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_leaveResponse_LeaveTypeId",
+                name: "IX_leaveResponse_ApproverId",
                 table: "leaveResponse",
-                column: "LeaveTypeId",
-                unique: true);
+                column: "ApproverId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_leaveResponse_UserId",
+                name: "IX_leaveResponse_LeaveTypeId",
                 table: "leaveResponse",
-                column: "UserId");
+                column: "LeaveTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_leaveResponse_UsersId",
+                table: "leaveResponse",
+                column: "UsersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_leaveResponse_UsersId1",
+                table: "leaveResponse",
+                column: "UsersId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_oLevels_StudentId",
