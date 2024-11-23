@@ -61,8 +61,8 @@ namespace HRMS.Service
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
                 EndDate = data.EndDate,
-                IsApproved = data.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos
+               
+                LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = data.LeaveType.Id, 
                     Name = data.LeaveType.Name 
@@ -87,8 +87,8 @@ namespace HRMS.Service
                 Reason = l.Reason,
                 LeaveDate = l.LeaveDate,
                 EndDate = l.EndDate,
-                IsApproved = l.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos
+               
+                LeaveType = new LeavetypeinleaveResponceDto
                 {
                     Id = l.LeaveType.Id,
                     Name = l.LeaveType.Name
@@ -117,8 +117,8 @@ namespace HRMS.Service
                 Reason = data.Reason,
                 LeaveDate = data.LeaveDate,
                 EndDate = data.EndDate,
-                IsApproved = data.IsApproved,
-                LeaveType = new LeaveTypeResponseDtos
+           
+                LeaveType = new LeavetypeinleaveResponceDto
                 { 
                     Id = data.LeaveType.Id, 
                     Name = data.LeaveType.Name 

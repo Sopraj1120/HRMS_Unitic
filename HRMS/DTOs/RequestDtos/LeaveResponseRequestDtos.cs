@@ -3,7 +3,7 @@
     public class LeaveResponseRequestDtos
     {
        
-        public bool Status { get; set; } 
+        public status Status { get; set; } 
         public string? Comments { get; set; } 
         
     }

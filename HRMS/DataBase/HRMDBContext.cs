@@ -102,10 +102,6 @@ namespace HRMS.DataBase
                 .WithOne(u => u.User)
                 .HasForeignKey(u => u.UserId);
 
-            modelBuilder.Entity<Users>()
-                .HasMany(e => e.LeaveResponsesAsUser)
-                .WithOne(u => u.User)
-                .HasForeignKey(u =>u.UserId);
 
             modelBuilder.Entity<LeaveResponse>()
              .HasOne(lr => lr.Approver)
@@ -125,7 +121,13 @@ namespace HRMS.DataBase
                 .WithOne(l => l.LeaveResponse)
                 .HasForeignKey(l => l.leaveresId);
 
-         
+            modelBuilder.Entity<LeaveResponse>()
+                .HasOne(lr => lr.Approver)
+                .WithMany()
+                .HasForeignKey(lr => lr.ApproverId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+          
 
 
 
