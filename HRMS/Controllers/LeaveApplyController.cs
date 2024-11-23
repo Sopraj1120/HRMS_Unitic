@@ -19,11 +19,11 @@ namespace HRMS.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> AddLeaveApply(Guid userId, Guid leaveId, LeaveApplyRequestDtos request)
+        public async Task<IActionResult> AddLeaveApply(Guid userId, Guid leaveTypeId, LeaveApplyRequestDtos request)
         {
             try
             {
-                var result = await _leaveApplyService.AddLeaveApply(userId, leaveId, request);
+                var result = await _leaveApplyService.AddLeaveApply(userId, leaveTypeId, request);
                 return Ok(result);
             }
             catch (KeyNotFoundException ex)
