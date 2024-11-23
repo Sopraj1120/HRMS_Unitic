@@ -2,6 +2,10 @@
 using HRMS.Entities;
 using HRMS.IRepository;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
+=======
+using System.Runtime.InteropServices;
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
 
 namespace HRMS.Repository
 {
@@ -16,7 +20,11 @@ namespace HRMS.Repository
 
         public async Task<AccountDetail> AddAccountDetails(AccountDetail accountDetail)
         {
+<<<<<<< HEAD
             var data = await _context.accountDetail.AddAsync(accountDetail);
+=======
+            var data =await _context.accountDetail.AddAsync(accountDetail);
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
             await _context.SaveChangesAsync();
             return accountDetail;
         }
@@ -25,7 +33,11 @@ namespace HRMS.Repository
         {
             var data = await _context.accountDetail.ToListAsync();
             return data;
+<<<<<<< HEAD
 
+=======
+         
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
         }
 
         public async Task<AccountDetail> GetAccountByUserId(Guid userId)
@@ -49,7 +61,11 @@ namespace HRMS.Repository
             {
                 throw new KeyNotFoundException("User not found.");
             }
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
             userAccountData.Id = accountDetail.Id;
             userAccountData.FullName = accountDetail.FullName;
             userAccountData.NIC_No = accountDetail.NIC_No;
@@ -61,7 +77,11 @@ namespace HRMS.Repository
 
             await _context.SaveChangesAsync();
             return userAccountData;
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
         }
     }
 }

@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241123110557_coountdbmig")]
+    partial class coountdbmig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -276,13 +279,13 @@ namespace HRMS.Migrations
                     b.Property<DateTime?>("ApprovedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsApproved")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LeaveDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LeaveReturnDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("LeaveStatus")
@@ -871,11 +874,7 @@ namespace HRMS.Migrations
             modelBuilder.Entity("HRMS.Entities.AccountDetail", b =>
                 {
                     b.HasOne("HRMS.Entities.Users", "Users")
-<<<<<<< HEAD
-                        .WithMany()
-=======
                         .WithMany("accountDetail")
->>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
