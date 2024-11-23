@@ -1,17 +1,14 @@
-﻿namespace HRMS.Entities
+﻿namespace HRMS.DTOs.ResponseDtos
 {
-    public class AccountDetail
+    public class AccountDetailsResponceDtos
     {
-        public Guid Id { get; set; }    
+        public Guid Id { get; set; }
         public string FullName { get; set; }
         public string NIC_No { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public int AccountNumber { get; set; }
+        public int AccountNumbe { get; set; }
         public string BankName { get; set; }
         public string BranchName { get; set; }
-
-        public Guid UserId { get; set; }
-        public Users Users { get; set; }
     }
 }
