@@ -6,7 +6,7 @@
         public DateTime ApplyDate { get; set; } = DateTime.Now;
         public string Reason { get; set; }
         public DateTime LeaveDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime LeaveReturnDate { get; set; }
 
         
         public Guid? LeaveTypeId { get; set; }

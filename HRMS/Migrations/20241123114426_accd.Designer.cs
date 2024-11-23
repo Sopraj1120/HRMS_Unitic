@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241123114426_accd")]
+    partial class accd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -871,11 +874,7 @@ namespace HRMS.Migrations
             modelBuilder.Entity("HRMS.Entities.AccountDetail", b =>
                 {
                     b.HasOne("HRMS.Entities.Users", "Users")
-<<<<<<< HEAD
                         .WithMany()
-=======
-                        .WithMany("accountDetail")
->>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1075,8 +1074,6 @@ namespace HRMS.Migrations
                     b.Navigation("LeaveResponsesAsApprover");
 
                     b.Navigation("LeaveResponsesAsUser");
-
-                    b.Navigation("accountDetail");
 
                     b.Navigation("leaveApplies");
 

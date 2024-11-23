@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241123104546_sfs")]
+    partial class sfs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,52 +76,6 @@ namespace HRMS.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("aLevels");
-                });
-
-            modelBuilder.Entity("HRMS.Entities.AccountDetail", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("AccountNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BankName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BranchName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NIC_No")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UsersId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("accountDetail");
                 });
 
             modelBuilder.Entity("HRMS.Entities.Address", b =>
@@ -276,13 +233,13 @@ namespace HRMS.Migrations
                     b.Property<DateTime?>("ApprovedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsApproved")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LeaveDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("LeaveReturnDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("LeaveStatus")
@@ -868,21 +825,6 @@ namespace HRMS.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.AccountDetail", b =>
-                {
-                    b.HasOne("HRMS.Entities.Users", "Users")
-<<<<<<< HEAD
-                        .WithMany()
-=======
-                        .WithMany("accountDetail")
->>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Users");
-                });
-
             modelBuilder.Entity("HRMS.Entities.Address", b =>
                 {
                     b.HasOne("HRMS.Entities.Students", "Student")
@@ -1075,8 +1017,6 @@ namespace HRMS.Migrations
                     b.Navigation("LeaveResponsesAsApprover");
 
                     b.Navigation("LeaveResponsesAsUser");
-
-                    b.Navigation("accountDetail");
 
                     b.Navigation("leaveApplies");
 

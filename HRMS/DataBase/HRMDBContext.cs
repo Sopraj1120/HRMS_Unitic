@@ -33,9 +33,12 @@ namespace HRMS.DataBase
         public DbSet<Salary> salary { get; set; }
         public DbSet<LeaveResponse> leaveResponse { get; set; }
         public DbSet<AccountDetail> accountDetail { get; set; }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3e1833762c7b9455cde497d4974a9f72a7a90811
 
 
-       
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
