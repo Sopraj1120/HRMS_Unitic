@@ -26,39 +26,34 @@ namespace HRMS.Service
             _hollyDayRepo = hollyDayRepo;
         }
 
-
-
         private async Task<int> CalculateLeaveDays(DateTime leaveDate, DateTime endDate)
         {
-           
             var holidays = await _hollyDayRepo.GatAllHollyDays();
 
-            
             var allDates = Enumerable
-                .Range(0, (endDate - leaveDate).Days )
+                .Range(0, (endDate - leaveDate).Days)
                 .Select(d => leaveDate.AddDays(d))
                 .ToList();
 
-            
             var validLeaveDays = allDates
-                .Where(date => !holidays.Any(holiday => holiday.Date.Date == date.Date) && 
-                              date.DayOfWeek != DayOfWeek.Saturday &&  
-                              date.DayOfWeek != DayOfWeek.Sunday)    
+                .Where(date => !holidays.Any(holiday => holiday.Date.Date == date.Date) &&
+                               date.DayOfWeek != DayOfWeek.Saturday &&
+                               date.DayOfWeek != DayOfWeek.Sunday)
                 .ToList();
 
             return validLeaveDays.Count;
         }
+
         private LeaveApplyResponseDtos MapLeaveApplyToResponseDtos(LeaveApply leave)
         {
             if (leave.User == null)
             {
-                
-                throw new InvalidOperationException("User information is missing for LeaveApply with ID: " + leave.Id);
+                throw new InvalidOperationException($"User information is missing for LeaveApply with ID: {leave.Id}");
             }
 
             if (leave.LeaveType == null)
             {
-                throw new InvalidOperationException("LeaveType information is missing for LeaveApply with ID: " + leave.Id);
+                throw new InvalidOperationException($"LeaveType information is missing for LeaveApply with ID: {leave.Id}");
             }
 
             return new LeaveApplyResponseDtos
@@ -73,67 +68,86 @@ namespace HRMS.Service
                     Id = leave.LeaveType.Id,
                     Name = leave.LeaveType.Name,
                     CountPerYear = leave.LeaveType.CountPerYear,
-                    
                 },
                 User = new UserLeaveResponseDtos
                 {
                     Id = leave.User.Id,
                     FirstName = leave.User.FirstName,
-                    Role = leave.User.Role, 
+                    Role = leave.User.Role,
                     PhoneNumber = leave.User.PhoneNumber
                 },
-              
             };
         }
 
-
-
         public async Task<LeaveResponseResponseDtos> AddLeaveResponse(Guid approverId, Guid leaveapplyId, LeaveResponseRequestDtos leaveResponseRequestDtos)
         {
-          
+            // Fetch leave application
             var leave = await _leaveApplyRepo.GetLeaveApplyById(leaveapplyId);
             if (leave == null)
             {
                 throw new KeyNotFoundException($"Leave application with ID {leaveapplyId} not found.");
             }
 
+            // Fetch user information
+            var user = await _userRepo.GetUserById(leave.UserId);
+            if (user == null)
+            {
+                throw new KeyNotFoundException($"User with ID {leave.UserId} not found.");
+            }
+
+            // Calculate the number of leave days (assuming this is correct)
             int leaveDays = await CalculateLeaveDays(leave.LeaveDate, leave.LeaveReturnDate);
 
-           
+            // Calculate the remaining balance after leave days are deducted
+            int remainingBalance = leave.LeaveType.CountPerYear - leaveDays;
+
+            // Check if the leave can be approved based on available leave balance
+            if (leaveResponseRequestDtos.Status == status.Accept)
+            {
+                if (remainingBalance < 0)
+                {
+                    throw new InvalidOperationException($"User does not have enough leave balance. Required: {leaveDays}, Available: {leave.LeaveType.CountPerYear}");
+                }
+
+                // Update the user's available leave balance if leave is approved
+                user.AvailableLeaveDays = remainingBalance;
+                await _userRepo.UpdateUser(user);
+            }
+
+            // Create the LeaveResponse entity
             var leaveResponse = new LeaveResponse
             {
                 Id = Guid.NewGuid(),
                 LeaveApplyId = leaveapplyId,
-               
                 ApproverId = approverId,
                 Status = leaveResponseRequestDtos.Status,
                 Comments = leaveResponseRequestDtos.Comments,
-              
-
-
-
-
+                LeaveDaysCount = leaveDays,
+                UserLeaveBalance = remainingBalance, // Use the calculated remaining balance
             };
 
-       
+            // Add the leave response
             var addedResponse = await _leaveResponceRepo.AddLeaveResponce(leaveResponse);
 
-          
+            // Map the leave application details to the response DTO
             var responseDto = new LeaveResponseResponseDtos
             {
                 Id = addedResponse.Id,
-                Status = addedResponse.Status,
+                Status = addedResponse.Status.ToString(),
                 Comments = addedResponse.Comments,
-                ApproverId = addedResponse.ApproverId,
                 LeaveDaysCount = leaveDays,
-               
-                LeaveApply = MapLeaveApplyToResponseDtos(leave)
+                ApproverId = approverId,
+                LeaveApply = MapLeaveApplyToResponseDtos(leave), // Ensure this method works properly
+                UserLeaveBalance = remainingBalance // Return the correct remaining balance
             };
 
             return responseDto;
         }
 
-      
+
+
+
+
         public async Task<List<LeaveResponseResponseDtos>> GetAllLeaveresponse()
         {
             var leaveResponses = await _leaveResponceRepo.GetAllLeaveResponce();
@@ -153,7 +167,7 @@ namespace HRMS.Service
                 var responseDto = new LeaveResponseResponseDtos
                 {
                     Id = leaveResponse.Id,
-                    Status = leaveResponse.Status,
+                    Status = leaveResponse.Status.ToString(),
                     Comments = leaveResponse.Comments,
                     ApproverId = leaveResponse.ApproverId,
                     LeaveDaysCount = leaveDays,
@@ -187,7 +201,7 @@ namespace HRMS.Service
             var responseDto = new LeaveResponseResponseDtos
             {
                 Id = data.Id,
-                Status = data.Status,
+                Status = data.Status.ToString(),
                 Comments = data.Comments,
                 ApproverId = data.ApproverId,
                 LeaveDaysCount = leaveDays,
@@ -223,7 +237,7 @@ namespace HRMS.Service
                 var responseDto = new LeaveResponseResponseDtos
                 {
                     Id = leaveResponse.Id,
-                    Status = leaveResponse.Status,
+                    Status = leaveResponse.Status.ToString(),
                     Comments = leaveResponse.Comments,
                     ApproverId = leaveResponse.ApproverId,
                     LeaveDaysCount = leaveDays,

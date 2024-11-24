@@ -11,6 +11,7 @@ public class LeaveResponse
     public Guid LeaveApplyId { get; set; }
     public ICollection<LeaveApply> LeaveApply { get; set; }
     public int LeaveDaysCount { get; set; }
+    public int UserLeaveBalance { get; set; }
     public ICollection<HollyDays> HollyDays { get; set; }
 }
 
