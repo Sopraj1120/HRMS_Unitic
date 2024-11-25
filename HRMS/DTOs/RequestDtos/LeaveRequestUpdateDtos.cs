@@ -2,7 +2,7 @@
 
 namespace HRMS.DTOs.RequestDtos
 {
-    public class LeaveReqestDtos
+    public class LeaveRequestUpdateDtos
     {
         public DateTime ApplyDate { get; set; }
         public string Reason { get; set; }
@@ -12,8 +12,6 @@ namespace HRMS.DTOs.RequestDtos
         public int leaveCount { get; set; }
         public int AvailableLeaves { get; set; }
         public string? Comments { get; set; }
-        
-       
-
+        public status status { get; set; }
     }
 }
