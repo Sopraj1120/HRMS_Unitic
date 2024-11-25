@@ -9,14 +9,17 @@ namespace HRMS.Service
     public class UserService : IUserServices
     {
         private readonly IUserRepo _userRepo;
+      
 
         public UserService(IUserRepo userRepo)
         {
             _userRepo = userRepo;
+          
         }
 
         public async Task<UserResponseDtos> AddUser(UserRequestDtos userRequestDtos)
         {
+          
             var user = new Users
             {
                 Id = Guid.NewGuid(),
@@ -29,6 +32,8 @@ namespace HRMS.Service
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
                 Role = userRequestDtos.Role,
+                Gender = userRequestDtos.Gender,
+                
             };
 
             var data = await _userRepo.AddUser(user);
@@ -43,9 +48,11 @@ namespace HRMS.Service
                 Email = data.Email,
                 MerritalStatus = data.MerritalStatus,
                 PhoneNumber = data.PhoneNumber,
-                DateOfBirth = data.DateOfBirth,
-                Role = data.Role,
-                IsDeleted = data.IsDeleted
+                DateOfBirth = data.DateOfBirth.ToString(),
+                Role = data.Role.ToString(),
+                IsDeleted = data.IsDeleted,
+                Gender = data.Gender.ToString(),
+                
             };
             return resuser;
         }
@@ -64,9 +71,10 @@ namespace HRMS.Service
                 Email = a.Email,
                 MerritalStatus = a.MerritalStatus,
                 PhoneNumber = a.PhoneNumber,
-                DateOfBirth = a.DateOfBirth,
-                Role = a.Role,
+                DateOfBirth = a.DateOfBirth.ToString("yyyy-mm-dd"),
+                Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
+               
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
                     Id = s.Id,
@@ -150,9 +158,11 @@ namespace HRMS.Service
                 Email = data.Email,
                 MerritalStatus = data.MerritalStatus,
                 PhoneNumber = data.PhoneNumber,
-                DateOfBirth = data.DateOfBirth,
-                Role = data.Role,
+                DateOfBirth = data.DateOfBirth.ToString(),
+                Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
+                Gender = data.Gender.ToString(),
+              
                 Useraddress = data.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
                     Id = s.Id,
@@ -239,6 +249,8 @@ namespace HRMS.Service
             user.PhoneNumber = userRequestDtos.PhoneNumber;
             user.DateOfBirth = userRequestDtos.DateOfBirth;
             user.Role = userRequestDtos.Role;
+            user.Gender = userRequestDtos.Gender;
+            
 
            
             var updatedUser = await _userRepo.UpdateUser(user);
@@ -254,8 +266,10 @@ namespace HRMS.Service
                 Email = updatedUser.Email,
                 MerritalStatus = updatedUser.MerritalStatus,
                 PhoneNumber = updatedUser.PhoneNumber,
-                DateOfBirth = updatedUser.DateOfBirth,
-                IsDeleted = updatedUser.IsDeleted
+                DateOfBirth = updatedUser.DateOfBirth.ToString(),
+                IsDeleted = updatedUser.IsDeleted,
+                Gender = updatedUser.Gender.ToString(),
+             
             };
 
             return resUsers;

@@ -8,5 +8,6 @@ namespace HRMS.DTOs.ResponseDtos
         public string FirstName { get; set; }
         public Role Role { get; set; }
         public string PhoneNumber { get; set; }
+        public int AvailableLeaveDays { get; set; }
     }
 }
