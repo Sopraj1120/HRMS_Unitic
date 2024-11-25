@@ -24,5 +24,40 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllLeaveRequest()
+        {
+            var data = await _leaveRequestService.GetAllLeaveRequest();
+            return Ok(data);
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetLeaveRequestById(Guid Id)
+        {
+            var data = await _leaveRequestService.GetLeaveRequestById(Id);
+            return Ok(data);
+        }
+
+        [HttpGet("UserId")]
+        public async Task<IActionResult> GetLeaveRequestByUserId(Guid userId)
+        {
+            var data = await _leaveRequestService.GetLeaveRequestByUserId(userId);
+            return Ok(data);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateLeaveRequest(Guid Id, LeaveRequestUpdateDtos leaveRequest)
+        {
+            var data = await _leaveRequestService.UpdateLeaveRequest(Id, leaveRequest);
+            return Ok(data);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteLeaveRequest(Guid Id)
+        {
+            await _leaveRequestService.DeleteLeaveRequest(Id);
+            return NoContent();
+        }
+
     }
 }

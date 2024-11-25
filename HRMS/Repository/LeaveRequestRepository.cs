@@ -33,11 +33,11 @@ namespace HRMS.Repository
             return data;
         }
 
-        //public async Task<List<LeaveRequest>> GetLeaveRequestByUserId(Guid userId)
-        //{
-        //    var data = await _context.leaveRequest.Where(x => x.UserId == userId).ToListAsync();
-        //    return data;
-        //}
+        public async Task<List<LeaveRequest>> GetLeaveRequestByUserId(Guid userId)
+        {
+            var data = await _context.leaveRequest.Where(x => x.usersId == userId).ToListAsync();
+            return data;
+        }
 
         public async Task<int> GetTotalUsedLeave(Guid userId, Guid leaveTypeId)
         {
