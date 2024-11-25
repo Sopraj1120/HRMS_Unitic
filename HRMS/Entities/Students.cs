@@ -11,6 +11,7 @@
         public string MaritalStatus { get; set; }
         public string Mobile {  get; set; }
         public bool IsDeleted { get; set; } = false;
+        public Gender Gender { get; set; }
 
         public ICollection<Parents> Parents { get; set; }
         public ICollection<Address> Address { get; set; }

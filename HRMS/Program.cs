@@ -21,7 +21,9 @@ namespace HRMS
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<HRMDBContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("HRM")));
+            builder.Services.AddDbContext<HRMDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HRM")));
+
 
             builder.Services.AddScoped<IStudentRepo, StudentRepository>();
             builder.Services.AddScoped<IStudentService, StudentService >();
@@ -70,14 +72,13 @@ namespace HRMS
             builder.Services.AddScoped<ILeaveTypeRepo, LeaveTypeRepository >();
             builder.Services.AddScoped<ILeaveTypeService , LeaveTypeService >();
 
-            builder.Services.AddScoped<ILeaveApplyRepo, LeaveApplyRepo >();
-            builder.Services.AddScoped<ILeaveApplyService , LeaveApplyService >();
-
-            builder.Services.AddScoped<ILeaveResponceRepo, LeaveResponceRepo >();
-            builder.Services.AddScoped<ILeaveResponseService , LeaveResponseService >();
+        
 
             builder.Services.AddScoped<ILeaveBalanceRepo, LeaveBalanceRepo >();
             builder.Services.AddScoped<ILeaveBalanceService, Leave_BalanceService >();
+
+            builder.Services.AddScoped<ILeaveRequestrepo, LeaveRequestRepository >();
+            builder.Services.AddScoped<ILeaveRequestService, LeaveRequestService >();
 
 
             var app = builder.Build();

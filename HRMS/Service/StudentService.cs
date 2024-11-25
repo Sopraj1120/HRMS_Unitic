@@ -27,6 +27,7 @@ namespace HRMS.Service
                 Email = studentRequestDtos.Email,
                 MaritalStatus = studentRequestDtos.MaritalStatus,
                 Mobile = studentRequestDtos.Mobile,
+                Gender = studentRequestDtos.Gender
             };
 
             var data = await _studentrepo.AddStudent(student);
@@ -35,12 +36,13 @@ namespace HRMS.Service
                 Id = data.Id,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
-                DateOfBirth = data.DateOfBirth,
+                DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Nic = data.Nic,
                 Email = data.Email,
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
+                Gender = data.Gender.ToString()
                 
             };
 
@@ -57,12 +59,13 @@ namespace HRMS.Service
                 Id = s.Id,
                 FirstName = s.FirstName,
                 LastName = s.LastName,
-                DateOfBirth = s.DateOfBirth,
+                DateOfBirth = s.DateOfBirth.ToString("yyyy-MM-dd"),
                 Nic = s.Nic,
                 Email = s.Email,
                 MaritalStatus = s.MaritalStatus,
                 Mobile = s.Mobile,
                 IsDeleted = s.IsDeleted,
+                Gender = s.Gender.ToString(),   
                 Parents = s.Parents?.Select(p => new ParentsResponseDtos
                 {
                     Id = p.Id,
@@ -103,7 +106,7 @@ namespace HRMS.Service
                 {
                     Id = a.Id,
                     IndexNo = a.IndexNo,
-                    Year =  a.Year,
+                    Year = a.Year,
                     School = a.School,
                     Stream = a.Stream,
                     Subject1 = a.Subject1,
@@ -115,10 +118,10 @@ namespace HRMS.Service
                 }).ToList(),
                 HStudeies = s.HigherStudies.Select(h => new HStudeiesResponseDtos
                 {
-                    Id= h.Id,
+                    Id = h.Id,
                     Type = h.Type,
                     Stream = h.Stream,
-                    Year= h.Year,
+                    Year = h.Year,
                     Duration = h.Duration,
                     Description = h.Description,
                     Institute = h.Institute,
@@ -128,7 +131,7 @@ namespace HRMS.Service
                 {
                     Id = e.Id,
                     CompanyName = e.CompanyName,
-                    Position = e.Position,  
+                    Position = e.Position,
                     StartDate = e.StartDate,
                     EndDate = e.EndDate,
                     Description = e.Description
@@ -150,12 +153,13 @@ namespace HRMS.Service
                 Id = data.Id,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
-                DateOfBirth = data.DateOfBirth,
+                DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Nic = data.Nic,
                 Email = data.Email,
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
+                Gender = data.Gender.ToString(),
                 Parents = data.Parents?.Select(p => new ParentsResponseDtos
                 {
                     Id = p.Id,
@@ -240,7 +244,8 @@ namespace HRMS.Service
                 Nic = studentRequestDtos.Nic,
                 Email = studentRequestDtos.Email,
                 MaritalStatus = studentRequestDtos.MaritalStatus,
-                Mobile = studentRequestDtos.Mobile
+                Mobile = studentRequestDtos.Mobile,
+                Gender = studentRequestDtos.Gender,
 
             };
 
@@ -251,12 +256,13 @@ namespace HRMS.Service
                 Id = data.Id,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
-                DateOfBirth = data.DateOfBirth,
+                DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Nic = data.Nic,
                 Email = data.Email,
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
+                Gender = data.Gender.ToString(),
  
             };
             return resstu;
