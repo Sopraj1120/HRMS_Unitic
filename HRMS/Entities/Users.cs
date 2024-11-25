@@ -18,7 +18,9 @@ namespace HRMS.Entities
         public Role Role { get; set; } = Role.Admin;
         public int AvailableLeaveDays { get; set; }
         public bool IsDeleted { get; set; } = false;
+        public Gender Gender { get; set; }
 
+      
         public ICollection<UserAddress> userAddresses { get; set; }
         public ICollection<UserOLevel> userOLevels { get; set; }
         public ICollection<UserALevel>  userALevels { get; set; }
@@ -32,6 +34,13 @@ namespace HRMS.Entities
         public ICollection<LeaveResponse> LeaveResponsesAsApprover { get; set; } 
 
         public ICollection<AccountDetail> accountDetail { get; set; }
+    }
+
+    public enum Gender
+    {
+        Male = 1,
+        Female = 2,
+        Other = 3,
     }
 
 }

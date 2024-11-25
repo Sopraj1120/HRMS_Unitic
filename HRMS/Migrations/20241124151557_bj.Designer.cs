@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241124151557_bj")]
+    partial class bj
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -769,9 +772,6 @@ namespace HRMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -825,9 +825,6 @@ namespace HRMS.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("UsersId")
                         .HasColumnType("uniqueidentifier");

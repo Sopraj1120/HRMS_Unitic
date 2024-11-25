@@ -9,6 +9,8 @@ namespace HRMS.IRepository
         Task<LeaveApply> GetLeaveApplyById(Guid id);
         Task<LeaveApply> UpdateLeaveApply(LeaveApply leaveApply);
         Task DeleteLeaveApply(Guid id);
-        
+        Task<List<LeaveResponse>> Getuserleaves(Guid UserId);
+
+
     }
 }

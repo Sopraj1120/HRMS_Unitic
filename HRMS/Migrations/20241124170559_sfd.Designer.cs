@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241124170559_sfd")]
+    partial class sfd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -755,6 +758,12 @@ namespace HRMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("ALevelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AddressId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("AvailableLeaveDays")
                         .HasColumnType("int");
 
@@ -765,12 +774,18 @@ namespace HRMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("ExpeianceId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
+
+                    b.Property<Guid>("HigherStudyId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -785,6 +800,9 @@ namespace HRMS.Migrations
                     b.Property<string>("Nic")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("OLResultId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()

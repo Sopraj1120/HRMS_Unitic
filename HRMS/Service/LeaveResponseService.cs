@@ -74,34 +74,33 @@ namespace HRMS.Service
                     Id = leave.User.Id,
                     FirstName = leave.User.FirstName,
                     Role = leave.User.Role,
-                    PhoneNumber = leave.User.PhoneNumber
+                    PhoneNumber = leave.User.PhoneNumber,
+                    AvailableLeaveDays = leave.User.AvailableLeaveDays,
                 },
             };
         }
 
         public async Task<LeaveResponseResponseDtos> AddLeaveResponse(Guid approverId, Guid leaveapplyId, LeaveResponseRequestDtos leaveResponseRequestDtos)
         {
-            // Fetch leave application
+          
             var leave = await _leaveApplyRepo.GetLeaveApplyById(leaveapplyId);
             if (leave == null)
             {
                 throw new KeyNotFoundException($"Leave application with ID {leaveapplyId} not found.");
             }
 
-            // Fetch user information
             var user = await _userRepo.GetUserById(leave.UserId);
             if (user == null)
             {
                 throw new KeyNotFoundException($"User with ID {leave.UserId} not found.");
             }
 
-            // Calculate the number of leave days (assuming this is correct)
             int leaveDays = await CalculateLeaveDays(leave.LeaveDate, leave.LeaveReturnDate);
 
-            // Calculate the remaining balance after leave days are deducted
+           
             int remainingBalance = leave.LeaveType.CountPerYear - leaveDays;
 
-            // Check if the leave can be approved based on available leave balance
+           
             if (leaveResponseRequestDtos.Status == status.Accept)
             {
                 if (remainingBalance < 0)
@@ -109,12 +108,11 @@ namespace HRMS.Service
                     throw new InvalidOperationException($"User does not have enough leave balance. Required: {leaveDays}, Available: {leave.LeaveType.CountPerYear}");
                 }
 
-                // Update the user's available leave balance if leave is approved
+              
                 user.AvailableLeaveDays = remainingBalance;
                 await _userRepo.UpdateUser(user);
             }
 
-            // Create the LeaveResponse entity
             var leaveResponse = new LeaveResponse
             {
                 Id = Guid.NewGuid(),
@@ -123,13 +121,13 @@ namespace HRMS.Service
                 Status = leaveResponseRequestDtos.Status,
                 Comments = leaveResponseRequestDtos.Comments,
                 LeaveDaysCount = leaveDays,
-                UserLeaveBalance = remainingBalance, // Use the calculated remaining balance
+                UserId= user.Id,
+
             };
 
-            // Add the leave response
             var addedResponse = await _leaveResponceRepo.AddLeaveResponce(leaveResponse);
 
-            // Map the leave application details to the response DTO
+        
             var responseDto = new LeaveResponseResponseDtos
             {
                 Id = addedResponse.Id,
@@ -137,8 +135,8 @@ namespace HRMS.Service
                 Comments = addedResponse.Comments,
                 LeaveDaysCount = leaveDays,
                 ApproverId = approverId,
-                LeaveApply = MapLeaveApplyToResponseDtos(leave), // Ensure this method works properly
-                UserLeaveBalance = remainingBalance // Return the correct remaining balance
+                LeaveApply = MapLeaveApplyToResponseDtos(leave),
+              
             };
 
             return responseDto;

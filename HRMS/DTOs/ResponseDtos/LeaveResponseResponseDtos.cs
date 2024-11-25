@@ -11,7 +11,7 @@ namespace HRMS.DTOs.ResponseDtos
         public Guid ApproverId { get; set; }
     
         public LeaveApplyResponseDtos LeaveApply { get; set; }
-        public int UserLeaveBalance { get; set; }
+      
 
 
     }

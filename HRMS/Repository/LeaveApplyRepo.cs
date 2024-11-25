@@ -28,6 +28,13 @@ namespace HRMS.Repository
 
             
         }
+        public async Task<List<LeaveResponse>> Getuserleaves(Guid UserId)
+        {
+            var data = await _context.leaveResponse.Where(x=> x.UserId== UserId).ToListAsync();
+            return data;
+
+
+        }
 
         public async Task<LeaveApply> GetLeaveApplyById(Guid id)
         {
