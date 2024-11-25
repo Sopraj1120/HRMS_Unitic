@@ -6,6 +6,6 @@ public class LeaveType
     public string Name { get; set; }
     public int CountPerYear { get; set; }
     public bool IsActive { get; set; } = true;
-    public ICollection<LeaveResponse> LeaveResponses { get; set; } 
-    public ICollection<LeaveApply> LeaveApplies { get; set; }
+  
+    public ICollection<LeaveRequest> LeaveRequest { get; set; }
 }

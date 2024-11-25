@@ -7,12 +7,14 @@ namespace HRMS.DTOs.ResponseDtos
         public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public string DateOfBirth { get; set; }
         public string Nic { get; set; }
         public string Email { get; set; }
         public string MaritalStatus { get; set; }
         public string Mobile { get; set; }
         public bool IsDeleted { get; set; } = false;
+
+        public string Gender { get; set; }
 
         public List<ParentsResponseDtos> Parents { get; set; }
         public List<AddresResponseDto> Address { get; set; }

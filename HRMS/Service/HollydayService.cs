@@ -27,7 +27,7 @@ namespace HRMS.Service
             var resholly = new HollyDaysResponseDtos
             {
                 Id = data.Id,
-                Date = data.Date,
+                Date = data.Date.ToString("yyyy-MM-dd"),
                 Name = data.Name,
             };
             return resholly;
@@ -40,7 +40,7 @@ namespace HRMS.Service
             var resholly = data.Select(h => new HollyDaysResponseDtos
             {
                 Id = h.Id,
-                Date = h.Date,
+                Date = h.Date.ToString("yyyy-MM-dd"),
                 Name = h.Name,
             }).ToList();
             return resholly;
@@ -53,7 +53,7 @@ namespace HRMS.Service
             var resHolly = new HollyDaysResponseDtos
             {
                 Id = data.Id,
-                Date = data.Date,
+                Date = data.Date.ToString("yyyy-MM-dd"),
                 Name = data.Name,
             };
             return resHolly;
@@ -76,7 +76,7 @@ namespace HRMS.Service
             var resholly = new HollyDaysResponseDtos
             {
                 Id = data.Id,
-                Date = data.Date,
+                Date = data.Date.ToString("yyyy-MM-dd"),
                 Name = data.Name
 
             };

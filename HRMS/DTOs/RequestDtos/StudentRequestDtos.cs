@@ -1,4 +1,6 @@
-﻿namespace HRMS.DTOs.RequestDtos
+﻿using HRMS.Entities;
+
+namespace HRMS.DTOs.RequestDtos
 {
     public class StudentRequestDtos
     {
@@ -9,6 +11,7 @@
         public string Email { get; set; }
         public string MaritalStatus { get; set; }
         public string Mobile { get; set; }
+        public Gender Gender { get; set; }
 
       
     }

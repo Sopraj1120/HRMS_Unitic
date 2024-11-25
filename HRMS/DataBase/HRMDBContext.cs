@@ -27,11 +27,13 @@ namespace HRMS.DataBase
         public DbSet<HollyDays> hollyDays { get; set; }
         public DbSet<LeaveType> leaveType { get; set; }
 
-        public DbSet<LeaveApply> leaveApply { get; set; }
+        public DbSet<LeaveRequest> leaveRequest { get; set; }
+
+     
 
         public DbSet<LeaveBalance> leaveBalance { get; set; }
         public DbSet<Salary> salary { get; set; }
-        public DbSet<LeaveResponse> leaveResponse { get; set; }
+   
         public DbSet<AccountDetail> accountDetail { get; set; }
 
 
@@ -97,48 +99,10 @@ namespace HRMS.DataBase
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
 
-
-            modelBuilder.Entity<Users>()
-                .HasMany(la => la.leaveApplies)
-                .WithOne(u => u.User)
-                .HasForeignKey(u => u.UserId);
-
-
-            modelBuilder.Entity<LeaveResponse>()
-             .HasOne(lr => lr.Approver)
-             .WithMany(e => e.LeaveResponsesAsApprover)
-             .HasForeignKey(lr => lr.ApproverId);
-    
-
-
-
-            modelBuilder.Entity<LeaveType>()
-                .HasMany(la => la.LeaveApplies)
-                .WithOne(lt => lt.LeaveType)
-                .HasForeignKey(lt => lt.LeaveTypeId);
-
-            modelBuilder.Entity<LeaveResponse>()
-                .HasMany(la => la.LeaveApply)
-                .WithOne(l => l.LeaveResponse)
-                .HasForeignKey(l => l.leaveresId);
-
-            modelBuilder.Entity<LeaveResponse>()
-                .HasOne(lr => lr.Approver)
-                .WithMany()
-                .HasForeignKey(lr => lr.ApproverId)
-                .OnDelete(DeleteBehavior.NoAction);
-
-          
-
-
-
-
-
-            //modelBuilder.Entity<LeaveBalance>()
-            //     .HasMany(t => t.leaveTypes)
-            //     .WithOne(b => b.LeaveBalance)
-            //     .HasForeignKey(b => b.LeaveBalanceId);
-
+            //modelBuilder.Entity<LeaveType>()
+            //    .HasMany(lr => lr.LeaveRequest)
+            //    .WithOne(lt => lt.leaveType)
+            //    .HasForeignKey(lt => lt.LeaveTypeId);
 
 
             base.OnModelCreating(modelBuilder);
