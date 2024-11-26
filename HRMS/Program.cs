@@ -80,6 +80,9 @@ namespace HRMS
             builder.Services.AddScoped<ILeaveRequestrepo, LeaveRequestRepository >();
             builder.Services.AddScoped<ILeaveRequestService, LeaveRequestService >();
 
+            builder.Services.AddScoped<IAccountDetailRepo, AccountDetailsRepo >();
+            builder.Services.AddScoped<IAccountDetailService, AccountDetailService >();
+
 
             var app = builder.Build();
 

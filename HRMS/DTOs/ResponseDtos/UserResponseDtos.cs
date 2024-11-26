@@ -14,7 +14,6 @@ namespace HRMS.DTOs.ResponseDtos
         public string PhoneNumber { get; set; }
         public string DateOfBirth { get; set; }
         public string Role { get; set; } = "Admin";
-        public int AvailableLeaveDays { get; set; }
         public bool IsDeleted { get; set; } = false;
         public string Gender { get; set; }
 
