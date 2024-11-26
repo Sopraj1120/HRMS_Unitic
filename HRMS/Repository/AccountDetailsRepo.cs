@@ -19,6 +19,7 @@ namespace HRMS.Repository
         {
 
             var data = await _context.accountDetail.AddAsync(accountDetail);
+            await _context.SaveChangesAsync();
 
             return accountDetail;
         }
@@ -32,7 +33,7 @@ namespace HRMS.Repository
 
         public async Task<AccountDetail> GetAccountByUserId(Guid userId)
         {
-            var data = await _context.accountDetail.FirstOrDefaultAsync(a => a.UserId == userId);
+            var data = await _context.accountDetail.FirstOrDefaultAsync(a => a.UsersId == userId);
             return data;
 
         }
@@ -44,26 +45,28 @@ namespace HRMS.Repository
 
         }
 
-        public async Task<AccountDetail> UpdateAccountDetailsByUserId(Guid UserId, AccountDetail accountDetail)
+        public async Task<AccountDetail> UpdateAccountDetailsByUserId(AccountDetail accountDetail)
         {
-            var userAccountData = await GetAccountByUserId(UserId);
-            if (userAccountData != null)
+            var userAccountData = await GetAccountByUserId(accountDetail.UsersId);
+
+    
+            if (userAccountData == null)
             {
                 throw new KeyNotFoundException("User not found.");
             }
 
             userAccountData.Id = accountDetail.Id;
-            userAccountData.FullName = accountDetail.FullName;
-            userAccountData.NIC_No = accountDetail.NIC_No;
-            userAccountData.Email = accountDetail.Email;
-            userAccountData.PhoneNumber = accountDetail.PhoneNumber;
+            userAccountData.UsersName = accountDetail.UsersName;
+            userAccountData.UsersNIC_No = accountDetail.UsersNIC_No;
+            userAccountData.UsersEmail = accountDetail.UsersEmail;
+            userAccountData.UsersPhoneNumber = accountDetail.UsersPhoneNumber;
             userAccountData.AccountNumber = accountDetail.AccountNumber;
             userAccountData.BankName = accountDetail.BankName;
             userAccountData.BranchName = accountDetail.BranchName;
 
             await _context.SaveChangesAsync();
             return userAccountData;
-
         }
+
     }
 }
