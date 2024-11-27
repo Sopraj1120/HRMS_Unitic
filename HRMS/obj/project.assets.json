@@ -4433,19 +4433,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UT01286\\.nuget\\packages\\": {}
+    "C:\\Users\\thana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "projectUniqueName": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\HRMS.csproj",
       "projectName": "HRMS",
-      "projectPath": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\HRMS.csproj",
-      "packagesPath": "C:\\Users\\UT01286\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UT01286\\Desktop\\HRMS_Unitic\\HRMS\\obj\\",
+      "projectPath": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "packagesPath": "C:\\Users\\thana\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UT01286\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4515,7 +4515,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
