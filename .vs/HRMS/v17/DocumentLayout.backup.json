@@ -1,42 +1,166 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\",
+  "WorkspaceRootPath": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\controllers\\accountdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\accountdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\requestdtos\\accountdetailsrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\accountdetailsrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\iservice\\isalaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\isalaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\service\\salaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\salaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\irepository\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\repository\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\salaryresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\salaryresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\requestdtos\\leaverequestupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leaverequestupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\requestdtos\\salaryrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\salaryrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Migrations\\20241121144138_datainitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HRMS\\Migrations\\20241121144138_datainitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\controllers\\leaveapplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leaveapplycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\iservice\\ileaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\ileaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\irepository\\iaccountdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iaccountdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\service\\leaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leaveapplyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241126095258_init6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241126095258_init6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\iservice\\iaccountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iaccountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241126094800_init5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241126094800_init5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241126081911_init4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241126081911_init4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\service\\leavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\userresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\userresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\dtos\\responsedtos\\leaveapplyresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\leaveapplyresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\last(4)\\hrms_unitic\\hrms\\dtos\\requestdtos\\leaveapplyrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leaveapplyrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\iservice\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\irepository\\ileaverequestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\ileaverequestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\requestdtos\\leavereqestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leavereqestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\repository\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\leavereqresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\leavereqresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\userleaveresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\userleaveresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241125152200_init2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241125152200_init2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241126100105_init7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241126100105_init7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\hrms_27-11_backend\\hrms_unitic\\hrms\\migrations\\20241126073241_init3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241126073241_init3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,124 +170,502 @@
       "DocumentGroups": [
         {
           "DockedHeight": 381,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20241121144138_datainitial.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Migrations\\20241121144138_datainitial.cs",
-              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241121144138_datainitial.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Migrations\\20241121144138_datainitial.cs",
-              "RelativeToolTip": "HRMS\\Migrations\\20241121144138_datainitial.cs",
+              "DocumentIndex": 4,
+              "Title": "SalaryController.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\SalaryController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\SalaryController.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\SalaryController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\SalaryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:41:38.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LeaveApplyService.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Service\\LeaveApplyService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveApplyService.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Service\\LeaveApplyService.cs",
-              "RelativeToolTip": "HRMS\\Service\\LeaveApplyService.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAowGsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:31:54.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\appsettings.json",
-              "RelativeDocumentMoniker": "HRMS\\appsettings.json",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\appsettings.json",
-              "RelativeToolTip": "HRMS\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-21T14:21:54.423Z",
+              "WhenOpened": "2024-11-27T06:58:17.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Program.cs",
-              "RelativeDocumentMoniker": "HRMS\\Program.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Program.cs",
-              "RelativeToolTip": "HRMS\\Program.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwEkAAABSAAAAAAAAAA==",
+              "Title": "ISalaryService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\ISalaryService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ISalaryService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\ISalaryService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ISalaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:20:41.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LeaveApplyController.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Controllers\\LeaveApplyController.cs",
-              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveApplyController.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Controllers\\LeaveApplyController.cs",
-              "RelativeToolTip": "HRMS\\Controllers\\LeaveApplyController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAkwDcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:19:22.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ILeaveApplyService.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveApplyService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Iservice\\ILeaveApplyService.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveApplyService.cs",
-              "RelativeToolTip": "HRMS\\Iservice\\ILeaveApplyService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:14:32.097Z",
+              "WhenOpened": "2024-11-27T06:57:39.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LeaveTypeService.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Service\\LeaveTypeService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveTypeService.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\Service\\LeaveTypeService.cs",
-              "RelativeToolTip": "HRMS\\Service\\LeaveTypeService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAuwGIAAAA1AAAAAAAAAA==",
+              "Title": "SalaryService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\SalaryService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\SalaryService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\SalaryService.cs",
+              "RelativeToolTip": "HRMS\\Service\\SalaryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:52:56.407Z",
+              "WhenOpened": "2024-11-27T06:57:11.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "LeaveApplyResponseDtos.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveApplyResponseDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\LeaveApplyResponseDtos.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveApplyResponseDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\LeaveApplyResponseDtos.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAowA4AAAAsAAAAAAAAAA==",
+              "Title": "ISalaryRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\ISalaryRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ISalaryRepository.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\ISalaryRepository.cs*",
+              "RelativeToolTip": "HRMS\\IRepository\\ISalaryRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:44:06.714Z",
+              "WhenOpened": "2024-11-27T06:55:01.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LeaveApplyRequestDtos.cs",
-              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
-              "ToolTip": "D:\\Projects\\M3_GroupProject\\Last(4)\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveApplyRequestDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Title": "SalaryRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\SalaryRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\SalaryRepository.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\SalaryRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\SalaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:43:16.827Z",
+              "WhenOpened": "2024-11-27T06:54:21.238Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SalaryResponceDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs*",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T06:50:30.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SalaryRequestDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs*",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T06:49:57.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Salary.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Salary.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Salary.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T06:36:12.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAccountDetailRepo.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:07:00.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20241126100105_init7.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126100105_init7.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241126100105_init7.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126100105_init7.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241126100105_init7.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T10:01:05.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20241126081911_init4.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126081911_init4.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241126081911_init4.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126081911_init4.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241126081911_init4.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:19:12.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeDocumentMoniker": "HRMS\\Program.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeToolTip": "HRMS\\Program.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwFIAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:17:55.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountDetailsController.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\AccountDetailsController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\AccountDetailsController.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\AccountDetailsController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\AccountDetailsController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwCAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:15:33.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IAccountDetailService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\IAccountDetailService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IAccountDetailService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\IAccountDetailService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IAccountDetailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:14:46.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountDetailService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\AccountDetailService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeToolTip": "HRMS\\Service\\AccountDetailService.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAADgv5YAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:07:06.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountDetailsRepo.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:04:20.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Users.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Users.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:51:24.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountDetailsRequestDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:02:34.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountDetail.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\AccountDetail.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
+              "RelativeToolTip": "HRMS\\Entities\\AccountDetail.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:53:55.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241126094800_INIT5.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126094800_INIT5.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241126094800_INIT5.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126094800_INIT5.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241126094800_INIT5.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:48:00.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20241126095258_init6.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126095258_init6.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241126095258_init6.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126095258_init6.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241126095258_init6.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:52:59.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountDetailsResponceDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T08:03:22.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:52:06.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Role.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Role.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:51:31.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserResponseDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:50:17.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Students.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Students.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Students.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\Students.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Students.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:49:14.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20241126073241_init3.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126073241_init3.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241126073241_init3.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241126073241_init3.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241126073241_init3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:32:41.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LeaveRequestUpdateDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:10:03.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LeaveRequestService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveRequestService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeToolTip": "HRMS\\Service\\LeaveRequestService.cs",
+              "ViewState": "AQIAAOoAAAAAAAAAAAAUwA8BAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:45:09.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\appsettings.json",
+              "RelativeDocumentMoniker": "HRMS\\appsettings.json",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\appsettings.json",
+              "RelativeToolTip": "HRMS\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-25T15:21:24.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ILeaveRequestrepo.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:49:54.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LeaveRequestController.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\LeaveRequestController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveRequestController.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\LeaveRequestController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\LeaveRequestController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:46:31.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ILeaveRequestService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveRequestService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ILeaveRequestService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveRequestService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ILeaveRequestService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:46:20.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20241125152200_init2.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241125152200_init2.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241125152200_init2.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Migrations\\20241125152200_init2.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241125152200_init2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:22:00.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LeaveRequestRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\LeaveRequestRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveRequestRepository.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Repository\\LeaveRequestRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\LeaveRequestRepository.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:44:22.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LeaveReqestDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:40:57.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAApwCUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:18:34.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LeaveReqResponseDto.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:03:11.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveRequest.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\Entities\\LeaveRequest.cs",
+              "RelativeToolTip": "HRMS\\Entities\\LeaveRequest.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwBMAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:36:01.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserLeaveResponseDtos.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\hrms_27-11_backend\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T11:05:20.197Z"
             }
           ]
         }
