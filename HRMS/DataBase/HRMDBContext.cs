@@ -99,6 +99,20 @@ namespace HRMS.DataBase
                .WithOne(u => u.Users)
                .HasForeignKey(u => u.UserId);
 
+            modelBuilder.Entity<LeaveType>().HasData(new LeaveType
+            {
+                Id = Guid.NewGuid(),
+                Name = "No Pay Leave",
+                CountPerYear = 0,
+                IsActive = true
+            });
+
+            modelBuilder.Entity<LeaveRequest>()
+           .HasOne(lr => lr.leaveType)
+           .WithMany(lt => lt.LeaveRequest)
+           .HasForeignKey(lr => lr.leaveTypeId)
+           .OnDelete(DeleteBehavior.Cascade);
+
             //modelBuilder.Entity<LeaveType>()
             //    .HasMany(lr => lr.LeaveRequest)
             //    .WithOne(lt => lt.leaveType)

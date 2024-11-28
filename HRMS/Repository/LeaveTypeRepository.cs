@@ -43,15 +43,30 @@ namespace HRMS.Repository
             return leaveType;
         }
 
-        public async Task DeleteLeaveType(Guid Id)
+        public async Task DeleteLeaveType(Guid leaveTypeId)
         {
-            var data = await GetLeaveTypeById (Id);
+            var dependentRequests = await _dbcontext.leaveRequest
+                .Where(lr => lr.leaveTypeId == leaveTypeId)
+                .ToListAsync();
 
-            if (data == null) return;
-            data.IsActive = false;
-            _dbcontext.leaveType.Update (data);
-            await _dbcontext.SaveChangesAsync();
+            if (dependentRequests.Any())
+            {
+            
+                throw new InvalidOperationException("Cannot delete leave type with existing requests.");
+            }
+
+            var leaveType = await _dbcontext.leaveType.FindAsync(leaveTypeId);
+            if (leaveType != null)
+            {
+                _dbcontext.leaveType.Remove(leaveType);
+                await _dbcontext.SaveChangesAsync();
+            }
         }
-           
+
+        public async Task<LeaveType> GetLeaveTypeByName(string leaveName)
+        {
+            return await _dbcontext.leaveType.FirstOrDefaultAsync(lt => lt.Name == leaveName);
+        }
+
     }
 }

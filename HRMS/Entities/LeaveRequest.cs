@@ -20,6 +20,8 @@ namespace HRMS.Entities
         public Guid leaveTypeId {  get; set; }  
         public LeaveType? leaveType { get; set; }
         public ICollection<HollyDays>? HollyDays { get; set; }
+
+        
     }
 
 

@@ -17,6 +17,14 @@ namespace HRMS.Service
 
         public async Task<LeaveTypeResponseDtos> AddLeaveType(LeaveTypeRequestDtos leaveTypeRequestDtos)
         {
+
+            var existingLeaveType = (await _leaveTypeRepo.GetAllLeaveTypes())
+        .FirstOrDefault(l => l.Name.Equals(leaveTypeRequestDtos.Name, StringComparison.OrdinalIgnoreCase));
+
+            if (existingLeaveType != null)
+            {
+                throw new InvalidOperationException("A leave type with this name already exists.");
+            }
             var leave = new LeaveType
             {
                 Id = Guid.NewGuid(),
