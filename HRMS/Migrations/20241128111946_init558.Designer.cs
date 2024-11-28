@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    [Migration("20241126095258_init6")]
-    partial class init6
+    [Migration("20241128111946_init558")]
+    partial class init558
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -102,15 +102,12 @@ namespace HRMS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UsersNIC_No")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsersName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsersPhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -436,7 +433,7 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.Salary", b =>
                 {
-                    b.Property<Guid>("id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -446,10 +443,10 @@ namespace HRMS.Migrations
                     b.Property<decimal>("BasicSalary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Bonas")
+                    b.Property<decimal>("Bonus")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Detection")
+                    b.Property<decimal>("Dedection")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("EPF")
@@ -458,19 +455,33 @@ namespace HRMS.Migrations
                     b.Property<decimal>("Etf")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid?>("LeaveTypeId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<decimal>("NetSalary")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int>("SalaryStatus")
+                        .HasColumnType("int");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("WorkingDasy")
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WorkingDays")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
+
+                    b.HasIndex("LeaveTypeId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("salary");
                 });
@@ -823,6 +834,15 @@ namespace HRMS.Migrations
                     b.HasIndex("LeaveBalanceId");
 
                     b.ToTable("leaveType");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("7213a7a3-29ef-451a-80fc-9ea04769dad0"),
+                            CountPerYear = 0,
+                            IsActive = true,
+                            Name = "No Pay Leave"
+                        });
                 });
 
             modelBuilder.Entity("HRMS.Entities.ALevel", b =>
@@ -937,6 +957,23 @@ namespace HRMS.Migrations
                         .IsRequired();
 
                     b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("HRMS.Entities.Salary", b =>
+                {
+                    b.HasOne("LeaveType", "LeaveType")
+                        .WithMany()
+                        .HasForeignKey("LeaveTypeId");
+
+                    b.HasOne("HRMS.Entities.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LeaveType");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HRMS.Entities.UserALevel", b =>

@@ -69,11 +69,18 @@ namespace HRMS.Service
 
         
             var availableleaves = leavetype.CountPerYear - totalUsedLeave;
-            if (availableleaves < 0)
-                availableleaves = 0;
+            //if (availableleaves < 0)
+            //    availableleaves = 0;
 
             var remainingLeave = availableleaves - leaves;
-       
+            if (leavetype.Name == "No Pay Leave")
+            {
+
+                leavetype.CountPerYear++;
+
+                await  _leaveTypeRepo.UpdateLeaveType(leavetype);
+            }
+
             var leave = new LeaveRequest
             {
                 Id = Guid.NewGuid(),
@@ -288,9 +295,11 @@ namespace HRMS.Service
 
 
 
+
         public async Task DeleteLeaveRequest(Guid Id)
         {
             await _leaveRequestrepo.DeleteLeaveRequest(Id);
+
         }
     }
 }

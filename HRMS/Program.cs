@@ -84,6 +84,10 @@ namespace HRMS
             builder.Services.AddScoped<IAccountDetailService, AccountDetailService >();
 
 
+            builder.Services.AddScoped<ISalaryRepository, SalaryRepository >();
+            builder.Services.AddScoped<ISalaryService , SalaryService >();
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

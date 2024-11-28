@@ -6,32 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class init554 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "salary",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BasicSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Detection = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Bonas = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    EPF = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Etf = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Allowenss = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    WorkingDasy = table.Column<int>(type: "int", nullable: false),
-                    Role = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_salary", x => x.id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Students",
                 columns: table => new
@@ -66,7 +45,6 @@ namespace HRMS.Migrations
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
-                    AvailableLeaveDays = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     Gender = table.Column<int>(type: "int", nullable: false)
                 },
@@ -234,14 +212,13 @@ namespace HRMS.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NIC_No = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UsersName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UsersNIC_No = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UsersEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UsersPhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AccountNumber = table.Column<int>(type: "int", nullable: false),
                     BankName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BranchName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UsersId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -439,8 +416,8 @@ namespace HRMS.Migrations
                     AvailableLeaves = table.Column<int>(type: "int", nullable: false),
                     Comments = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     status = table.Column<int>(type: "int", nullable: false),
-                    usersId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    leaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    usersId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    leaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -449,12 +426,50 @@ namespace HRMS.Migrations
                         name: "FK_leaveRequest_leaveType_leaveTypeId",
                         column: x => x.leaveTypeId,
                         principalTable: "leaveType",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_leaveRequest_users_usersId",
                         column: x => x.usersId,
                         principalTable: "users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "salary",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LeaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false),
+                    BasicSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Dedection = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Bonus = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    EPF = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Etf = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Allowenss = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    WorkingDays = table.Column<int>(type: "int", nullable: false),
+                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SalaryStatus = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_salary", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_salary_leaveType_LeaveTypeId",
+                        column: x => x.LeaveTypeId,
+                        principalTable: "leaveType",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_salary_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -475,6 +490,11 @@ namespace HRMS.Migrations
                         principalTable: "leaveRequest",
                         principalColumn: "Id");
                 });
+
+            migrationBuilder.InsertData(
+                table: "leaveType",
+                columns: new[] { "Id", "CountPerYear", "IsActive", "LeaveBalanceId", "Name" },
+                values: new object[] { new Guid("f3f84548-3232-422b-be0b-1904af8ce518"), 0, true, null, "No Pay Leave" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_accountDetail_UsersId",
@@ -535,6 +555,16 @@ namespace HRMS.Migrations
                 name: "IX_Parents_StudentId",
                 table: "Parents",
                 column: "StudentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_salary_LeaveTypeId",
+                table: "salary",
+                column: "LeaveTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_salary_UserId",
+                table: "salary",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_userAddresses_UserId",

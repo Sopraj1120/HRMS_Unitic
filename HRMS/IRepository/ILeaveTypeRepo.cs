@@ -7,4 +7,5 @@ public interface ILeaveTypeRepo
     Task<LeaveType> GetLeaveTypeById(Guid Id);
     Task<LeaveType> UpdateLeaveType(LeaveType leaveType);
     Task DeleteLeaveType(Guid Id);
+    Task<LeaveType> GetLeaveTypeByName(string leaveName);
 }
