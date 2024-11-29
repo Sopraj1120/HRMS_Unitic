@@ -12,6 +12,7 @@ namespace HRMS.DTOs.RequestDtos
         public string MaritalStatus { get; set; }
         public string Mobile { get; set; }
         public Gender Gender { get; set; }
+        public string Image {  get; set; }  
 
       
     }

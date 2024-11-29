@@ -16,6 +16,8 @@ namespace HRMS.DTOs.ResponseDtos
 
         public string Gender { get; set; }
 
+        public string Image {  get; set; }
+
         public List<ParentsResponseDtos> Parents { get; set; }
         public List<AddresResponseDto> Address { get; set; }
 

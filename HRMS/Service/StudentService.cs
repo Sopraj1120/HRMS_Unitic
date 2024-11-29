@@ -27,7 +27,8 @@ namespace HRMS.Service
                 Email = studentRequestDtos.Email,
                 MaritalStatus = studentRequestDtos.MaritalStatus,
                 Mobile = studentRequestDtos.Mobile,
-                Gender = studentRequestDtos.Gender
+                Gender = studentRequestDtos.Gender,
+                Image = studentRequestDtos.Image,
             };
 
             var data = await _studentrepo.AddStudent(student);
@@ -42,7 +43,8 @@ namespace HRMS.Service
                 MaritalStatus = data.MaritalStatus,
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
-                Gender = data.Gender.ToString()
+                Gender = data.Gender.ToString(),
+                Image = data.Image,
                 
             };
 
@@ -66,6 +68,7 @@ namespace HRMS.Service
                 Mobile = s.Mobile,
                 IsDeleted = s.IsDeleted,
                 Gender = s.Gender.ToString(),   
+                Image = s.Image,
                 Parents = s.Parents?.Select(p => new ParentsResponseDtos
                 {
                     Id = p.Id,
@@ -160,6 +163,7 @@ namespace HRMS.Service
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image,
                 Parents = data.Parents?.Select(p => new ParentsResponseDtos
                 {
                     Id = p.Id,
@@ -246,6 +250,7 @@ namespace HRMS.Service
                 MaritalStatus = studentRequestDtos.MaritalStatus,
                 Mobile = studentRequestDtos.Mobile,
                 Gender = studentRequestDtos.Gender,
+                Image = studentRequestDtos.Image
 
             };
 
@@ -263,6 +268,7 @@ namespace HRMS.Service
                 Mobile = data.Mobile,
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image
  
             };
             return resstu;
