@@ -81,10 +81,13 @@ namespace HRMS.Repository
 
         public async Task<int> GetNoPayLeaveCount(Guid userId, Guid leaveTypeId)
         {
-            // Replace "LeaveRecords" with the name of your table/entity for leave records
+            // Count the total "No Pay Leave" days where availableLeaves is less than or equal to zero
             return await _hRMDBContext.leaveRequest
-                .Where(lr => lr.usersId == userId && lr.leaveTypeId == leaveTypeId)
-                .CountAsync();
+                .Where(lr => lr.usersId == userId
+                             && lr.leaveTypeId == leaveTypeId
+                             && lr.AvailableLeaves <= 0) // Only include negative or zero leaves
+                .SumAsync(lr => Math.Abs(lr.AvailableLeaves)); // Sum the absolute values of the negative leave days
         }
+
     }
 }
