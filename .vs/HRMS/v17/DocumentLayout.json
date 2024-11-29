@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|d:\\projects\\m3_groupproject\\29_11-2024-backend\\hrms_unitic\\hrms\\dtos\\responsedtos\\workingdaysresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\workingdaysresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -203,19 +223,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WorkingDaysController.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T07:16:17.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWorkingDaysService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T07:15:21.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkingDaysService.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\WorkingDaysService.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Service\\WorkingDaysService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T07:14:26.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IWorkingDaysRepo.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T07:12:24.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WorkingDaysRepo.cs",
+              "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T07:11:16.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "WorkingDaysResponseDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
               "ToolTip": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
               "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T06:47:22.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "WorkingDaysRequestDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
@@ -223,12 +308,11 @@
               "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAzwAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:46:13.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T06:46:13.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "WorkingDays.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\WorkingDays.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\WorkingDays.cs",
@@ -236,12 +320,11 @@
               "RelativeToolTip": "HRMS\\Entities\\WorkingDays.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:34:06.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T06:34:06.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "20241128171022_init.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Migrations\\20241128171022_init.cs",
               "RelativeDocumentMoniker": "HRMS\\Migrations\\20241128171022_init.cs",
@@ -253,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ILeaveTypeRepo.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveTypeRepo.cs",
               "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveTypeRepo.cs",
@@ -265,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "LeaveRequestService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\LeaveRequestService.cs",
@@ -277,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "SalaryService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\SalaryService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\SalaryService.cs",
@@ -285,12 +368,11 @@
               "RelativeToolTip": "HRMS\\Service\\SalaryService.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T06:57:11.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T06:57:11.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ISalaryRepository.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\ISalaryRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\IRepository\\ISalaryRepository.cs",
@@ -302,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "SalaryRepository.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\SalaryRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\SalaryRepository.cs",
@@ -314,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "LeaveRequestController.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\LeaveRequestController.cs",
               "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveRequestController.cs",
@@ -326,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "LeaveTypeRepository.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\LeaveTypeRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveTypeRepository.cs",
@@ -338,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "LeaveReqResponseDto.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
@@ -350,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "LeaveRequestRepository.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\LeaveRequestRepository.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveRequestRepository.cs",
@@ -362,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "SalaryRequestDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
@@ -374,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "SalaryController.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\SalaryController.cs",
               "RelativeDocumentMoniker": "HRMS\\Controllers\\SalaryController.cs",
@@ -386,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Program.cs",
               "RelativeDocumentMoniker": "HRMS\\Program.cs",
@@ -398,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "20241128111946_init558.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Migrations\\20241128111946_init558.cs",
               "RelativeDocumentMoniker": "HRMS\\Migrations\\20241128111946_init558.cs",
@@ -410,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "LeaveTypeService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\LeaveTypeService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\LeaveTypeService.cs",
@@ -422,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "SalaryResponceDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
@@ -434,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "20241128111800_init555.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Migrations\\20241128111800_init555.cs",
               "RelativeDocumentMoniker": "HRMS\\Migrations\\20241128111800_init555.cs",
@@ -446,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Salary.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Salary.cs",
@@ -458,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "HRMDBContext.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
               "RelativeDocumentMoniker": "HRMS\\DataBase\\HRMDBContext.cs",
@@ -470,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\appsettings.json",
               "RelativeDocumentMoniker": "HRMS\\appsettings.json",
@@ -482,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "ILeaveRequestService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveRequestService.cs",
               "RelativeDocumentMoniker": "HRMS\\Iservice\\ILeaveRequestService.cs",
@@ -494,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "ISalaryService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Iservice\\ISalaryService.cs",
               "RelativeDocumentMoniker": "HRMS\\Iservice\\ISalaryService.cs",
@@ -506,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "LeaveTypeRequestDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
@@ -518,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "20241128105637_init554.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Migrations\\20241128105637_init554.cs",
               "RelativeDocumentMoniker": "HRMS\\Migrations\\20241128105637_init554.cs",
@@ -530,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "LeaveRequest.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\LeaveRequest.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveRequest.cs",
@@ -542,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "LeaveType.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\LeaveType.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveType.cs",
@@ -554,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "IAccountDetailRepo.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\IAccountDetailRepo.cs",
               "RelativeDocumentMoniker": "HRMS\\IRepository\\IAccountDetailRepo.cs",
@@ -566,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "AccountDetailsController.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\AccountDetailsController.cs",
               "RelativeDocumentMoniker": "HRMS\\Controllers\\AccountDetailsController.cs",
@@ -578,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "IAccountDetailService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Iservice\\IAccountDetailService.cs",
               "RelativeDocumentMoniker": "HRMS\\Iservice\\IAccountDetailService.cs",
@@ -590,7 +672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "AccountDetailService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\AccountDetailService.cs",
@@ -602,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "AccountDetailsRepo.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
               "RelativeDocumentMoniker": "HRMS\\Repository\\AccountDetailsRepo.cs",
@@ -614,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Users.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\Users.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Users.cs",
@@ -622,12 +704,11 @@
               "RelativeToolTip": "HRMS\\Entities\\Users.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAmwBoAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:51:24.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T07:51:24.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AccountDetailsRequestDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
@@ -635,12 +716,11 @@
               "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:02:34.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:02:34.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "AccountDetail.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\AccountDetail.cs",
@@ -652,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "AccountDetailsResponceDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
@@ -664,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "HRMS\\Service\\UserService.cs",
@@ -676,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Role.cs",
@@ -688,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "UserResponseDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserResponseDtos.cs",
@@ -700,7 +780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "Students.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Entities\\Students.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Students.cs",
@@ -712,7 +792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "LeaveRequestUpdateDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
@@ -724,7 +804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "ILeaveRequestrepo.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveRequestrepo.cs",
               "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveRequestrepo.cs",
@@ -736,7 +816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "LeaveReqestDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
@@ -748,7 +828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "HRMS\\Controllers\\StudentController.cs",
@@ -760,7 +840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "UserLeaveResponseDtos.cs",
               "DocumentMoniker": "D:\\Projects\\M3_GroupProject\\29_11-2024-BackEnd\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
               "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserLeaveResponseDtos.cs",
