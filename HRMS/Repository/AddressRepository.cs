@@ -27,6 +27,7 @@ namespace HRMS.Repository
             return data;
         }
 
+
         public async Task DeleteAddress (Guid Id)
         {
             var data = await _dbContext.Address.FindAsync(Id);
