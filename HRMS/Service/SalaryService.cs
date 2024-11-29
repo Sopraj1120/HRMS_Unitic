@@ -22,120 +22,83 @@ namespace HRMS.Service
             _leaveRequestrepo = leaveRequestrepo;
         }
 
-
-        public async Task<SalaryResponceDtos> AddSalary(Guid UserId, SalaryRequestDtos salaryRequestDtos)
+        public async Task<SalaryResponceDtos> AddSalary(Guid userId, SalaryRequestDtos salaryRequestDtos)
         {
-            var user = await _userRepo.GetUserById(UserId);
-
-            //var leave = await _leaveTypeRepo.GetLeaveTypeById(salaryRequestDtos.LeaveTypeId);
-            var workdays = salaryRequestDtos.WorkingDays;
-
-
-            //if (leave.Name == ("No Pay Leave") )
-            //{
-            //    workdays -= leave.CountPerYear;
-            //}   // Fetch user details
-          
+     
+            var user = await _userRepo.GetUserById(userId);
             if (user == null)
-                throw new KeyNotFoundException($"User with ID {UserId} not found.");
+                throw new KeyNotFoundException($"User with ID {userId} not found.");
 
-            var leaveRequests = await _leaveRequestrepo.GetLeaveRequestByUserId(UserId);
+        
+            var noPayLeaveType = await _leaveTypeRepo.GetLeaveTypeByName("No Pay Leave");
+            if (noPayLeaveType == null)
+                throw new Exception("'No Pay Leave' type not found.");
 
-            // Calculate working days default to 20
-            int effectiveWorkingDays = 20;
+          
+            int noPayLeaveCount = await _repository.GetNoPayLeaveCount(userId, noPayLeaveType.Id);
 
-            foreach (var leave in leaveRequests)
-            {
-                if (leave.AvailableLeaves < 0)
-                {
-                    effectiveWorkingDays -= Math.Abs(leave.AvailableLeaves);
-                }
-            }
-            effectiveWorkingDays = Math.Max(effectiveWorkingDays, 0);
-            if (effectiveWorkingDays < 0)
-                effectiveWorkingDays = 0;
+        
+            int workingDays = salaryRequestDtos.WorkingDays > 0
+                              ? salaryRequestDtos.WorkingDays
+                              : 20;
 
+           
+            workingDays -= noPayLeaveCount;
+            workingDays = Math.Max(workingDays, 0); 
 
-            // Fetch the count of "No Pay Leave" taken by the user
-            var noPayLeaveTypes = await _leaveTypeRepo.GetLeaveTypeByName("No Pay Leave");
-            int noPayLeaveCount = 0;
-            if (noPayLeaveTypes != null)
-            {
-                noPayLeaveCount = await _repository.GetNoPayLeaveCount(UserId, noPayLeaveTypes.Id);
-                effectiveWorkingDays -= noPayLeaveCount;
-                effectiveWorkingDays = Math.Max(effectiveWorkingDays, 0); // Adjust again if necessary
-            }
-            var noPayLeaveTypeId = new Guid("7213a7a3-29ef-451a-80fc-9ea04769dad0");
-            var leaveTypes = await _leaveTypeRepo.GetAllLeaveTypes();
-            var noPayLeaveTypes = leaveTypes.FirstOrDefault(lt => lt.Name == "No Pay Leave");
+    
+            var dailyRate = salaryRequestDtos.BasicSalary / 20m; 
+            var deductions = dailyRate * noPayLeaveCount;
+            var epf = salaryRequestDtos.BasicSalary * 0.08m; 
+            var employerEpf = salaryRequestDtos.BasicSalary * 0.12m; 
+            var etf = salaryRequestDtos.BasicSalary * 0.003m; 
+            var totalDeductions = deductions + epf + employerEpf + etf;
 
-            if (noPayLeaveTypes == null)
-                throw new Exception("Leave type 'No Pay Leave' not found.");
-
-            // Fetch the count of "No Pay Leave" taken by the user
-            var noPayLeaveCount = await _repository.GetNoPayLeaveCount(UserId, noPayLeaveTypes.Id);
-            // Calculate working days after deducting "No Pay Leave" days
-            //var effectiveWorkingDays = salaryRequestDtos.WorkingDays - noPayLeaveCount;
-
-            if (effectiveWorkingDays < 0)
-                effectiveWorkingDays = 0; // Ensure working days don't become negative
-
-            // Calculate deductions and salary components
-            var dailyRate = salaryRequestDtos.BasicSalary / 20; // Assuming 20 working days in a month
-            var deduction = dailyRate * noPayLeaveCount;
-            var epf = salaryRequestDtos.BasicSalary * 0.08m; // Employee contribution (8%)
-            var employerEpf = salaryRequestDtos.BasicSalary * 0.12m; // Employer contribution (12%)
-            var etf = salaryRequestDtos.BasicSalary * 0.003m; // ETF (0.3%)
-
+     
             var netSalary = salaryRequestDtos.BasicSalary
                             + salaryRequestDtos.Bonus
                             + salaryRequestDtos.Allowenss
-                            - (deduction + epf + employerEpf + etf);
+                            - totalDeductions;
 
             var salary = new Salary
             {
                 Id = Guid.NewGuid(),
-                UserId = UserId,
-                UserName = user.FirstName + " " + user.LastName,
+                UserId = userId,
+                UserName = $"{user.FirstName} {user.LastName}",
                 Role = user.Role,
                 BasicSalary = salaryRequestDtos.BasicSalary,
-                WorkingDays = salaryRequestDtos.WorkingDays ?? 20,
-                Dedection = salaryRequestDtos.BasicSalary - ((salaryRequestDtos.BasicSalary / 20) * workdays),
-                Etf = salaryRequestDtos.BasicSalary * 0.003m,
-                EPF = salaryRequestDtos.BasicSalary * (0.08m + 0.12m),
+                WorkingDays = workingDays,
+                Dedection = deductions,
+                Etf = etf,
+                EPF = epf + employerEpf,
                 Bonus = salaryRequestDtos.Bonus,
                 Allowenss = salaryRequestDtos.Allowenss,
-                NetSalary = (salaryRequestDtos.BasicSalary
-                 + salaryRequestDtos.Bonus
-                 + salaryRequestDtos.Allowenss)
-                - (salaryRequestDtos.BasicSalary - ((salaryRequestDtos.BasicSalary / 20) * workdays)
-                   + (salaryRequestDtos.BasicSalary * 0.003m)
-                   + (salaryRequestDtos.BasicSalary * (0.08m + 0.12m))),
+                NetSalary = netSalary,
                 SalaryStatus = salaryRequestDtos.SalaryStatus
-
-,
-                
             };
-            var data = await _repository.AddSalary(salary);
-            var responce = new SalaryResponceDtos
+
+          
+            var savedSalary = await _repository.AddSalary(salary);
+
+         
+            return new SalaryResponceDtos
             {
-                Id = data.Id,
-                UserId = data.UserId,
-                UserName = data.UserName,
-                Role = data.Role.ToString(),
-                BasicSalary = data.BasicSalary,
-                WorkingDays = data.WorkingDays,
-                Dedection = data.Dedection,
-                EPF = data.EPF,
-                Etf = data.Etf,
-                Allowenss = data.Allowenss,
-                Bonus = data.Bonus,
-                NetSalary = data.NetSalary,
-                SalaryStatus = data.SalaryStatus.ToString(),
-
+                Id = savedSalary.Id,
+                UserId = savedSalary.UserId,
+                UserName = savedSalary.UserName,
+                Role = savedSalary.Role.ToString(),
+                BasicSalary = savedSalary.BasicSalary,
+                WorkingDays = savedSalary.WorkingDays,
+                Dedection = savedSalary.Dedection,
+                EPF = savedSalary.EPF,
+                Etf = savedSalary.Etf,
+                Allowenss = savedSalary.Allowenss,
+                Bonus = savedSalary.Bonus,
+                NetSalary = savedSalary.NetSalary,
+                SalaryStatus = savedSalary.SalaryStatus.ToString()
             };
-            return responce;
-
         }
+
+
     }
 }
