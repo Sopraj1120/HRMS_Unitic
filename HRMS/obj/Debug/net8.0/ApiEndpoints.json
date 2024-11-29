@@ -686,6 +686,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HRMS.Controllers.SalaryController",
+    "Method": "AddSalary",
+    "RelativePath": "api/Salary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "salaryRequestDtos",
+        "Type": "HRMS.DTOs.RequestDtos.SalaryRequestDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRMS.Controllers.StudentController",
     "Method": "GetAllStudents",
     "RelativePath": "api/Student",
