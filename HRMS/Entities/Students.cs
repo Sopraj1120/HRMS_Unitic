@@ -23,6 +23,7 @@
         public ICollection<ALevel> ALs { get; set; }
         public ICollection<HigherStudies> HigherStudies { get; set; }
         public ICollection<Experiance> Experiances { get; set; }
+        public ICollection<StudentAttendance> StudentAttendances { get;set; }
 
     }
 }
