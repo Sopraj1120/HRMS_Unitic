@@ -10,6 +10,7 @@ namespace HRMS.Iservice
         Task<LeaveReqResponseDto> GetLeaveRequestById(Guid Id);
         Task<List<LeaveReqResponseDto>> GetLeaveRequestByUserId(Guid userId);
         Task<LeaveReqResponseDto> UpdateLeaveRequest(Guid Id, LeaveRequestUpdateDtos leaveRequest);
+        Task<int> GetTotalUsedLeave(Guid userId, Guid leaveTypeId);
         Task DeleteLeaveRequest(Guid Id);
     }
 }

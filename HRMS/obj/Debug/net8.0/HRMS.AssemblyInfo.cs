@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HRMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c5603188a215625583a0f5ef1ed6add8036417e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f363ac0aa7a3ff099c780cb999726b4ee61baca")]
 [assembly: System.Reflection.AssemblyProductAttribute("HRMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HRMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

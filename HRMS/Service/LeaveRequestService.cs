@@ -290,6 +290,41 @@ namespace HRMS.Service
         }
 
 
+        public async Task<int> GetTotalUsedLeave(Guid userId, Guid leaveTypeId)
+        {
+            
+            var leaveRequests = await _leaveRequestrepo.GetLeaveRequestByUserId(userId);
+
+            
+            var filteredLeaveRequests = leaveRequests
+                .Where(lr => lr.leaveTypeId == leaveTypeId)
+                .ToList();
+
+         
+            int totalLeave = 0;
+
+            
+            foreach (var leaveRequest in filteredLeaveRequests)
+            {
+              
+                if (leaveRequest.status != status.Reject)
+                {
+                    if (leaveRequest.status == status.Accept || leaveRequest.status == status.pending)
+                    {
+                      
+                        totalLeave += leaveRequest.leaveCount;
+                    }
+                }
+                else
+                {
+                   
+                    totalLeave += leaveRequest.AvailableLeaves;
+                }
+            }
+
+       
+            return totalLeave;
+        }
 
 
         public async Task DeleteLeaveRequest(Guid Id)

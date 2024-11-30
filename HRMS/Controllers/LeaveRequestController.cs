@@ -52,6 +52,13 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
+        [HttpGet("Leave_count")]
+        public async  Task<IActionResult> GetTotalUsedLeave(Guid userId, Guid leaveTypeId)
+        {
+            var data = await _leaveRequestService.GetTotalUsedLeave(userId, leaveTypeId);
+            return Ok(data);
+        }
+
         [HttpDelete]
         public async Task<IActionResult> DeleteLeaveRequest(Guid Id)
         {
