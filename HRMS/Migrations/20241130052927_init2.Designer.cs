@@ -4,6 +4,7 @@ using HRMS.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    partial class HRMDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241130052927_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -812,25 +815,6 @@ namespace HRMS.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.WeekWorkingDays", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Weekday")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("WorkingDaysId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("WorkingDaysId");
-
-                    b.ToTable("WeekWorkingDays");
-                });
-
             modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
                 {
                     b.Property<Guid>("Id")
@@ -844,6 +828,10 @@ namespace HRMS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Weekdays")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -883,7 +871,7 @@ namespace HRMS.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c7accea6-65f7-4260-9241-ec18cb4ca01c"),
+                            Id = new Guid("df381250-5038-46ff-b035-f94b683cac69"),
                             CountPerYear = 0,
                             IsActive = true,
                             Name = "No Pay Leave"
@@ -1074,17 +1062,6 @@ namespace HRMS.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.WeekWorkingDays", b =>
-                {
-                    b.HasOne("HRMS.Entities.WorkingDays", "WorkingDays")
-                        .WithMany("WeekWorkingDays")
-                        .HasForeignKey("WorkingDaysId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("WorkingDays");
-                });
-
             modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
                 {
                     b.HasOne("HRMS.Entities.Users", "User")
@@ -1147,11 +1124,6 @@ namespace HRMS.Migrations
 
                     b.Navigation("workingDays")
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
-                {
-                    b.Navigation("WeekWorkingDays");
                 });
 
             modelBuilder.Entity("LeaveType", b =>

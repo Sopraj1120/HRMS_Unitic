@@ -1,4 +1,6 @@
-﻿using HRMS.Iservice;
+﻿using HRMS.DTOs.RequestDtos;
+using HRMS.Entities;
+using HRMS.Iservice;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,5 +16,36 @@ namespace HRMS.Controllers
         {
             _workingDaysService = workingDaysService;
         }
+
+        [HttpPost("Add_workingDays")]
+
+        public async Task<IActionResult> AddWorkingDays(Guid UserId, WorkingDaysRequestDtos requestDtos)
+        {
+            var data = await _workingDaysService.AddWorkingDays(UserId, requestDtos);
+            return Ok(data);
+        }
+
+        [HttpGet("Get_WorkingDays_By_ UserId")]
+        public async Task<IActionResult>  GetWorkingDaysByUserId(Guid UserId)
+        {
+            var data = await _workingDaysService.GetWorkingDaysByUserId(UserId);
+            return Ok(data);
+        }
+
+        [HttpPut("Update_wokingDays")]
+        public async Task<IActionResult> UpdateWorkingdays(Guid userId, WorkingDaysRequestDtos workingDaysRequest)
+        {
+            var data = await _workingDaysService.UpdateWorkingdays(userId, workingDaysRequest);
+            return Ok(data);
+        }
+
+
+        [HttpDelete("Delete_WorkingDays")]
+        public async Task<IActionResult>  deleteWorkingDays(Guid Id)
+        {
+            await _workingDaysService.deleteWorkingDays(Id);
+            return NoContent();
+        }
+
     }
 }

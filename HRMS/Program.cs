@@ -87,6 +87,9 @@ namespace HRMS
             builder.Services.AddScoped<ISalaryRepository, SalaryRepository >();
             builder.Services.AddScoped<ISalaryService , SalaryService >();
 
+            builder .Services.AddScoped<IWorkingDaysRepo, WorkingDaysRepo >();
+            builder.Services.AddScoped<IWorkingDaysService , WorkingDaysService >();
+
 
             var app = builder.Build();
 
