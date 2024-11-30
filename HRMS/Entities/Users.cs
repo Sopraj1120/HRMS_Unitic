@@ -30,8 +30,8 @@ namespace HRMS.Entities
 
 
         public ICollection<LeaveRequest> LeaveRequests { get; set; }
-        public ICollection<AccountDetail> accountDetail { get; set; }
-        public ICollection<WorkingDays> workingDays { get; set; }
+        public AccountDetail accountDetail { get; set; }
+        public WorkingDays workingDays { get; set; }
     }
 
     public enum Gender

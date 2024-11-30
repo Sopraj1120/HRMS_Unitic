@@ -14,20 +14,23 @@ namespace HRMS.Service
         private readonly IHollyDayRepo _hollyDayRepo;
         private readonly IUserRepo _userRepo;
         private readonly ILeaveTypeRepo _leaveTypeRepo;
+        private readonly IWorkingDaysRepo _workingDaysRepo;
        
 
-        public LeaveRequestService(ILeaveRequestrepo leaveRequestrepo, IHollyDayRepo hollyDayRepo, IUserRepo userRepo, ILeaveTypeRepo leaveTypeRepo)
+        public LeaveRequestService(ILeaveRequestrepo leaveRequestrepo, IHollyDayRepo hollyDayRepo, IUserRepo userRepo, ILeaveTypeRepo leaveTypeRepo, IWorkingDaysRepo workingDaysRepo)
         {
             _leaveRequestrepo = leaveRequestrepo;
             _hollyDayRepo = hollyDayRepo;
             _userRepo = userRepo;
             _leaveTypeRepo = leaveTypeRepo;
+            _workingDaysRepo = workingDaysRepo;
         }
 
 
-        private async Task<int> CalculateLeaveDays(DateTime leaveDate, DateTime returnDate)
+        private async Task<int> CalculateLeaveDays(Guid UserId, DateTime leaveDate, DateTime returnDate)
         {
             var holidays = await _hollyDayRepo.GatAllHollyDays();
+            var workingdays = await _workingDaysRepo.GetWorkingDaysByUserId(UserId);
           
             
             var allDates = Enumerable
@@ -38,8 +41,7 @@ namespace HRMS.Service
             
             var validLeaveDays = allDates
                 .Where(date => !holidays.Any(holidays=> holidays.Date.Date == date.Date) &&
-                               date.DayOfWeek != DayOfWeek.Saturday &&
-                               date.DayOfWeek != DayOfWeek.Sunday)
+                                workingdays.WeekWorkingDays.Any(w => w.Weekday == (weekdays)date.DayOfWeek))
                 .ToList();
 
             return validLeaveDays.Count;
@@ -55,7 +57,7 @@ namespace HRMS.Service
             if (leaveReqestDtos.ReJoinDate == default || leaveReqestDtos.LeaveDate == default)
                 throw new ArgumentException("LeaveDate and ReJoinDate must be valid dates.");
 
-            var leaves = await CalculateLeaveDays(leaveReqestDtos.LeaveDate, leaveReqestDtos.ReJoinDate);
+            var leaves = await CalculateLeaveDays(UserId,leaveReqestDtos.LeaveDate, leaveReqestDtos.ReJoinDate);
 
             var totalUsedLeave = await _leaveRequestrepo.GetTotalUsedLeave(UserId, LeaveTypeId);
           
@@ -69,17 +71,11 @@ namespace HRMS.Service
 
         
             var availableleaves = leavetype.CountPerYear - totalUsedLeave;
-            //if (availableleaves < 0)
-            //    availableleaves = 0;
+            if (availableleaves < 0)
+                availableleaves = 0;
 
             var remainingLeave = availableleaves - leaves;
-            if (leavetype.Name == "No Pay Leave")
-            {
-
-                leavetype.CountPerYear++;
-
-                await  _leaveTypeRepo.UpdateLeaveType(leavetype);
-            }
+           
 
             var leave = new LeaveRequest
             {
