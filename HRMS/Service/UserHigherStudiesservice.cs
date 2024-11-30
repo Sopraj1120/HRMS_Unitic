@@ -7,7 +7,7 @@ using System.Diagnostics.Contracts;
 
 namespace HRMS.Service
 {
-    public class UserHigherStudiesservice : UserHigherStudiesSevice
+    public class UserHigherStudiesservice : IUserHigherStudiesSevice
     {
         private readonly IUserHigherStudiesrepo _userexp;
 

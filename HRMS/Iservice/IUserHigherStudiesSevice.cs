@@ -3,7 +3,7 @@ using HRMS.DTOs.ResponseDtos;
 
 namespace HRMS.Iservice
 {
-    public interface UserHigherStudiesSevice
+    public interface IUserHigherStudiesSevice
     {
         Task<UserHigherStudiesResponseDtos> AddHStudy(Guid userId, UserHigherStudiesRequestdtos userHigherStudies);
         Task<List<UserHigherStudiesResponseDtos>> GetHStudyByUserId(Guid UderId);

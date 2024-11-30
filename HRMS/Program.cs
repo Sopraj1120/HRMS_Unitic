@@ -64,7 +64,7 @@ namespace HRMS
             builder.Services.AddScoped<IUserExperianceService , UserExperianceService >();
 
             builder.Services.AddScoped<IUserHigherStudiesrepo, UserHigherStudiesRepository >();
-            builder.Services.AddScoped<UserHigherStudiesSevice, UserHigherStudiesservice >();
+            builder.Services.AddScoped<IUserHigherStudiesSevice, UserHigherStudiesservice >();
 
             builder .Services.AddScoped<IHollyDayRepo, HollyDayRepository >();
             builder.Services.AddScoped<IHollydayService , HollydayService >();
