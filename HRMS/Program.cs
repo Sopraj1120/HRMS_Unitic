@@ -90,6 +90,9 @@ namespace HRMS
             builder .Services.AddScoped<IWorkingDaysRepo, WorkingDaysRepo >();
             builder.Services.AddScoped<IWorkingDaysService , WorkingDaysService >();
 
+            builder.Services.AddScoped<IStudentAttendanceRepo, StudentAttendanceRepository >();
+            builder .Services.AddScoped<IStudentAttendanceService , StudentAttendanceService >();
+
 
             var app = builder.Build();
 

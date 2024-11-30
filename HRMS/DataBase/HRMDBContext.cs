@@ -37,6 +37,7 @@ namespace HRMS.DataBase
         public DbSet<AccountDetail> accountDetail { get; set; }
 
         public DbSet<WorkingDays> workingDays { get; set; }
+        public DbSet<StudentAttendance> studentAttendances { get; set; }
 
 
 
