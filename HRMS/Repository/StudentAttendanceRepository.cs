@@ -1,4 +1,5 @@
 ﻿using HRMS.DataBase;
+using HRMS.DTOs.RequestDtos;
 using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
@@ -24,21 +25,29 @@ namespace HRMS.Repository
 
         }
 
-        public async Task<List<StudentAttendance>> GetStudentAttendanceByStuId(Guid stuID)
+        public async Task<StudentAttendance> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
         {
-            var data = await _context.studentAttendances.Where(x => x.StudentId == stuID).ToListAsync();
+            var data = await _context.studentAttendances.FirstOrDefaultAsync(x => x.StudentId == stuID && x.Date.Date == date.Date);
             return data;
         }
 
-        public async Task<List<StudentAttendance>> GenerateAttendanceReport(DateTime startDate, DateTime endDate)
+        public async Task<List<StudentAttendance>> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate)
         {
             var attendanceData = await _context.studentAttendances
-                .Where(x => x.Date >= startDate && x.Date <= endDate)
-                .ToListAsync();
-
+                .Where(x => x.StudentId == StuId && x.Date >= startDate && x.Date <= endDate)
+                 .ToListAsync();
             return attendanceData;
         }
 
+
+        public async Task<List<StudentAttendance>> GetAllAttendanceByDate(DateTime date)
+        {
+            var attendanceData = await _context.studentAttendances
+               .Where(x => x.Date.Date == date.Date)
+               .ToListAsync();
+
+            return attendanceData;
+        }
         public async Task<StudentAttendance> UpdateStuAttendance(StudentAttendance studentAttendance)
         {
             var student = await _context.studentAttendances.FirstOrDefaultAsync(x => x.StudentId == studentAttendance.StudentId);

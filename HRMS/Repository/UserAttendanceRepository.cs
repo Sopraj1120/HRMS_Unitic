@@ -24,24 +24,19 @@ namespace HRMS.Repository
 
         public async Task<UserAttendance> GetUserAttendanceByUserIdAndDate(Guid userId, DateTime date)
         {
-            var data = await _context.userAttendances.FirstOrDefaultAsync(x => x.UserId == userId && x.Date == date.Date);
+            var data = await _context.userAttendances.FirstOrDefaultAsync(x => x.UserId == userId && x.Date.Date == date.Date);
             return data;
         }
 
-        public async Task<List<AttendanceReportDto>> GenerateUserAttendanceReportByUser(Guid userId, DateTime startDate, DateTime endDate)
+        public async Task<List<UserAttendance>> GenerateUserAttendanceReportByUser(Guid userId, DateTime startDate, DateTime endDate)
         {
             var report = await _context.userAttendances
                 .Where(x => x.UserId == userId && x.Date >= startDate && x.Date <= endDate)
-                .GroupBy(x => x.Status)
-                .Select(group => new AttendanceReportDto
-                {
-                    Status = group.Key.ToString(), 
-                    Count = group.Count()           
-                })
                 .ToListAsync();
 
             return report;
         }
+     
 
         public async Task<List<UserAttendance>> GetAllAttendanceByDate(DateTime date)
         {
@@ -55,8 +50,9 @@ namespace HRMS.Repository
         public async Task<UserAttendance> UpdateUserAttendance(UserAttendance userAttendance)
         {
             var user = await _context.userAttendances.FirstOrDefaultAsync(x => x.UserId == userAttendance.UserId);
-            if (user != null) return null;
+            if (user == null) return null;
            
+            user.OutTime = userAttendance.OutTime;
             user.Status = userAttendance.Status;
 
             _context.userAttendances.Update(user);

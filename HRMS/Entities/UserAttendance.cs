@@ -7,8 +7,8 @@
         public string Name { get; set; }
         public Role Role { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-        public TimeSpan InTime { get; set; }
-        public TimeSpan OutTime { get; set; }
+        public DateTime InTime { get; set; }
+        public DateTime? OutTime { get; set; }
         public AttendanceStatus Status { get; set; }
   
 

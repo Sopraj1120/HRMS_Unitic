@@ -20,6 +20,7 @@ namespace HRMS.Service
 
         public async Task<UserAttendanceResponseDtos> AddAttendanceForUser(Guid UserId, UserAttendanceRequestDtos userAttendanceRequestDtos)
         {
+           
             var user = await _userRepo.GetUserById(UserId).ConfigureAwait(false);
 
             var userAttendance = new UserAttendance
@@ -43,8 +44,8 @@ namespace HRMS.Service
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH:mm"),
-                OutTime = data.OutTime.ToString(@"HH:mm"),
+                InTime = data.InTime.ToString(@"HH\:mm"),
+                OutTime = data.OutTime?.ToString(@"HH\:mm"),
                 Status = data.Status.ToString(),
             };
 
@@ -64,29 +65,50 @@ namespace HRMS.Service
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH:mm"),
-                OutTime = data.OutTime.ToString(@"HH:mm"),
+                InTime = data.InTime.ToString(@"HH\:mm"),
+                OutTime = data.OutTime?.ToString(@"HH\:mm"),
                 Status = data.Status.ToString(),
             };
             return Responce;
         }
 
-        public async Task<List<AttendanceReportDto>> GenerateUserAttendanceReportByUser(Guid userId, DateTime startDate, DateTime endDate)
+        public async Task<UserAttendanceReportWithStatusCount> GenerateUserAttendanceReportByUser(Guid userId, DateTime startDate, DateTime endDate)
         {
           
             var report = await _userAttendanceRepository.GenerateUserAttendanceReportByUser(userId, startDate, endDate).ConfigureAwait(false);
 
-            var response = report
-                .GroupBy(x => x.Status)
-                .Select(group => new AttendanceReportDto
-                {
-                    Status = group.Key.ToString(), 
-                    Count = group.Count()          
-                })
-                .ToList();
-            return response;
+            var statusCount = report.GroupBy(x => x.Status).Select( u => new AttendanceReportDto
+            {
+                Status = u.Key.ToString(),
+                Count = u.Count()
+            }).ToList();
+
+
+            var response = report.Select(x => new UserAttendanceResponseDtos
+            {
+                Id = x.Id,
+                UserId = x.UserId,
+                Name = x.Name,
+                Role = x.Role.ToString(),
+                Date = x.Date.ToString("yyyy-MM-dd"),
+                InTime = x.InTime.ToString(@"HH\:mm"),
+                OutTime = x.OutTime? .ToString(@"HH\:mm"),
+                Status = x.Status.ToString(),
+
+            }).ToList();
+
+            var attendanceReport = new UserAttendanceReportWithStatusCount
+            {
+                AttendanceDetails = response,
+                StatusCount = statusCount
+            };
+
+            return attendanceReport;
 
         }
+     
+
+
 
         public async Task<List<UserAttendanceResponseDtos>> GetAllAttendanceByDate(DateTime date)
         {
@@ -99,8 +121,8 @@ namespace HRMS.Service
                 Name = x.Name,
                 Role = x.Role.ToString(),
                 Date = x.Date.ToString("yyyy-MM-dd"),
-                InTime = x.InTime.ToString(@"HH:mm"),
-                OutTime = x.OutTime.ToString(@"HH:mm"),
+                InTime = x.InTime.ToString(@"HH\:mm"),
+                OutTime = x.OutTime?.ToString(@"HH\:mm"),
                 Status = x.Status.ToString(),
             }).ToList();
 
@@ -111,6 +133,7 @@ namespace HRMS.Service
         {
             var user = await _userAttendanceRepository.GetUserAttendanceByUserIdAndDate(UserId, date).ConfigureAwait(false);
 
+            user.OutTime = userAttendanceRequestDtos.OutTime;
             user.Status = userAttendanceRequestDtos.Status;
 
             var data = await _userAttendanceRepository.UpdateUserAttendance(user).ConfigureAwait(false);
@@ -122,8 +145,8 @@ namespace HRMS.Service
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH:mm"),
-                OutTime = data.OutTime.ToString(@"HH:mm"),
+                InTime = data.InTime.ToString(@"HH\:mm"),
+                OutTime = data.OutTime?.ToString(@"HH\:mm"),
                 Status = data.Status.ToString(),
             };
             return responce;

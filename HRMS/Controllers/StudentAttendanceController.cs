@@ -27,16 +27,23 @@ namespace HRMS.Controllers
         }
 
         [HttpGet("Get_Student_Attendance")]
-        public async Task<IActionResult> GetStudentAttendanceByStuId(Guid stuID)
+        public async Task<IActionResult> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
         {
-            var data = await _studentAttendanceService.GetStudentAttendanceByStuId(stuID);
+            var data = await _studentAttendanceService.GetStudentAttendanceByStuIdAndDate(stuID, date);
             return Ok(data);
         }
 
-        [HttpGet("Get_Att_Report")]
-        public async Task<IActionResult> GenerateAttendanceReport(DateTime startDate, DateTime endDate)
+        [HttpGet("Get_AttEndance_Report")]
+        public async Task<IActionResult> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate)
         {
-            var data = await _studentAttendanceService.GenerateAttendanceReport(startDate, endDate);
+            var data = await _studentAttendanceService.GenerateAttendanceReport(StuId,startDate, endDate);
+            return Ok(data);
+        }
+
+        [HttpGet("Get_All_Attendance")]
+        public async Task<IActionResult> GetAllAttendanceByDate(DateTime date)
+        {
+            var data = await _studentAttendanceService.GetAllAttendanceByDate(date);
             return Ok(data);
         }
 

@@ -1,8 +1,13 @@
-﻿using HRMS.DTOs.RequestDtos;
+﻿using Azure;
+using HRMS.DTOs.RequestDtos;
 using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
+using HRMS.Repository;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.VisualBasic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HRMS.Service
 {
@@ -42,71 +47,87 @@ namespace HRMS.Service
             };
             return responce;
         }
-
-        public async Task<List<StudentAttendanceResponseDtos>> GetStudentAttendanceByStuId(Guid stuID)
+       public async  Task<StudentAttendanceResponseDtos> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
         {
-            var data = await _studentAttendanceRepo.GetStudentAttendanceByStuId(stuID);
-
-            var responce = data.Select(x => new StudentAttendanceResponseDtos
+            var data = await _studentAttendanceRepo.GetStudentAttendanceByStuIdAndDate(stuID, date).ConfigureAwait(false);
+            var responce = new StudentAttendanceResponseDtos
             {
-                Id = x.Id,
-                StudentId = x.StudentId,
-                Name = x.Name,
-                Date = x.Date.ToString("yyyy-MM-dd"),
-                Status = x.Status.ToString()
+                Id = data.Id,
+                StudentId = data.StudentId,
+                Name = data.Name,
+                Date = data.Date.ToString("yyyy-MM-dd"),
+                Status = data.Status.ToString()
 
-            }).ToList();
+            };
             return responce;
         }
 
-        public async Task<List<StudentAttendanceResponseDtos>> GenerateAttendanceReport(DateTime startDate, DateTime endDate)
-        {
-           
-                
-                var attendanceData = await _studentAttendanceRepo.GenerateAttendanceReport(startDate, endDate);
+       
 
-               
-                var attendanceReport = attendanceData.Select(data => new StudentAttendanceResponseDtos
+        public async Task<AttendanceReportWithStatusCount> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate)
+        {
+
+
+            var report = await _studentAttendanceRepo.GenerateAttendanceReport(StuId, startDate, endDate).ConfigureAwait(false);
+
+            var statusCount = report.GroupBy(x => x.Status).Select(a => new AttendanceReportDto
+            {
+                Status = a.Key.ToString(),
+                Count = a.Count()
+            }).ToList();
+            
+
+                var responce = report.Select(x => new StudentAttendanceResponseDtos
+ {
+                  Id = x.Id,
+                  StudentId = x.StudentId,
+                  Name = x.Name,
+                  Date = x.Date.ToString("yyyy-MM-dd"),
+                  Status = x.Status.ToString()
+                 }).ToList();
+
+            var attendanceReport = new AttendanceReportWithStatusCount
+            {
+                AttendanceDetails = responce,
+                StatusCount = statusCount
+            };
+
+            return attendanceReport;
+
+        }
+       public async Task<List<StudentAttendanceResponseDtos>> GetAllAttendanceByDate(DateTime date)
+        {
+            var data = await _studentAttendanceRepo.GetAllAttendanceByDate(date).ConfigureAwait(false);
+            
+                
+
+                var responce = data.Select(x => new StudentAttendanceResponseDtos
                 {
-                    Id = data.Id,
-                    StudentId = data.StudentId,
-                    Name = data.Name,
-                    Date = data.Date.ToString("yyyy-MM-dd"),
-                    Status = data.Status.ToString()
+                    Id = x.Id,
+                    StudentId = x.StudentId,
+                    Name = x.Name,
+                    Date = x.Date.ToString("yyyy-MM-dd"),
+                    Status = x.Status.ToString()
                 }).ToList();
 
-                return attendanceReport;
-           
-        }
-
+                return responce;
+       }
+        
         public async Task<StudentAttendanceResponseDtos> UpdateStuAttendance(Guid studentId, DateTime date, StudentAttendanceRequestDtos studentAttendanceRequestDtos)
         {
            
-            var existingAttendance = await _studentAttendanceRepo.GetStudentAttendanceByStuId(studentId);
+            var student = await _studentAttendanceRepo.GetStudentAttendanceByStuIdAndDate(studentId, date).ConfigureAwait(false);
 
-     
-            var attendanceToUpdate = existingAttendance.FirstOrDefault(x => x.Date.Date == date.Date);
+            student.Status = studentAttendanceRequestDtos.Status;
 
-            if (attendanceToUpdate == null)
-            {
-               
-                return null;
-            }
-
-           
-            attendanceToUpdate.Status = studentAttendanceRequestDtos.Status;
-
-          
-            var updatedAttendance = await _studentAttendanceRepo.UpdateStuAttendance(attendanceToUpdate);
-
-          
+            var data = await _studentAttendanceRepo.UpdateStuAttendance(student).ConfigureAwait(false);
             var response = new StudentAttendanceResponseDtos
             {
-                Id = updatedAttendance.Id,
-                StudentId = updatedAttendance.StudentId,
-                Name = updatedAttendance.Name,
-                Date = updatedAttendance.Date.ToString("yyyy-MM-dd"),
-                Status = updatedAttendance.Status.ToString()
+                Id = data.Id,
+                StudentId = data.StudentId,
+                Name = data.Name,
+                Date = data.Date.ToString("yyyy-MM-dd"),
+                Status = data.Status.ToString()
             };
 
             return response;
