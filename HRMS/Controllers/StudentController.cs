@@ -43,9 +43,9 @@ namespace HRMS.Controllers
         [HttpGet]
         [Route("Get_All_Students")]
 
-        public async Task<IActionResult> GetAllStudents ()
+        public async Task<IActionResult> GetAllStudents (int pageNumber, int pageSize)
         {
-            var data = await _studentService.GetAllStudents();
+            var data = await _studentService.GetAllStudents(pageNumber, pageSize);
             return Ok(data);
         }
 

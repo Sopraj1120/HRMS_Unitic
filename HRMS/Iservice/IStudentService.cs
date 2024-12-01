@@ -6,7 +6,7 @@ namespace HRMS.Iservice
     public interface IStudentService
     {
         Task<StudentResponseDtos> AddSudent(StudentRequestDtos studentRequestDtos);
-        Task<List<StudentResponseDtos>> GetAllStudents();
+        Task<List<StudentResponseDtos>> GetAllStudents(int pageNumber, int pageSize);
         Task<StudentResponseDtos> GetStudentById(Guid Id);
         Task<StudentResponseDtos> UpdateStudent(Guid Id, StudentRequestDtos studentRequestDtos);
         Task DeleteStudent(Guid Id);

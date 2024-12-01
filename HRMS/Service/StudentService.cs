@@ -52,9 +52,9 @@ namespace HRMS.Service
 
         }
 
-       public async Task<List<StudentResponseDtos>> GetAllStudents()
+       public async Task<List<StudentResponseDtos>> GetAllStudents(int pageNumber, int pageSize)
         {
-            var data = await _studentrepo.GetAllStudents();
+            var data = await _studentrepo.GetAllStudents(pageNumber, pageSize);
 
             var resstu = data.Select(s => new StudentResponseDtos
             {

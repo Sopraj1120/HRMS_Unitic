@@ -15,6 +15,7 @@
     {
         absent = 1,
         Present =2,
+        LateCome =3,
         
     }
 }

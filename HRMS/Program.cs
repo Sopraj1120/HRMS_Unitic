@@ -93,6 +93,9 @@ namespace HRMS
             builder.Services.AddScoped<IStudentAttendanceRepo, StudentAttendanceRepository >();
             builder .Services.AddScoped<IStudentAttendanceService , StudentAttendanceService >();
 
+            builder.Services.AddScoped<IUserAttendanceRepository, UserAttendanceRepository >();
+            builder.Services.AddScoped<IUserAttendanceService , UserAttendanceService >();
+
 
             var app = builder.Build();
 
