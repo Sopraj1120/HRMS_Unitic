@@ -21,11 +21,14 @@ namespace HRMS.Repository
             return student;
         }
 
-        public async Task<List<Students>> GetAllStudents ()
+        public async Task<List<Students>> GetAllStudents(int pageNumber, int pageSize)
         {
-            var data = await _context.Students.Where(x => !x.IsDeleted).Include(p => p.Parents).Include(a => a.Address).Include(o => o.OLs).Include(a => a.ALs).Include(h => h.HigherStudies).Include(e => e.Experiances).ToListAsync();
+            var data = await _context.Students.Where(x => !x.IsDeleted).Include(p => p.Parents).Include(a => a.Address).Include(o => o.OLs)
+                .Include(a => a.ALs).Include(h => h.HigherStudies).Include(e => e.Experiances).Skip((pageNumber - 1) * pageSize) .Take(pageSize) .ToListAsync();
+
             return data;
         }
+
 
         public async Task<Students> GetStudentById(Guid Id)
         {
