@@ -5,6 +5,6 @@
         Admin = 1,
         Staff = 2,
         Employee = 3,
-        Lecturer = 4
+        Lecturers = 4
     }
 }

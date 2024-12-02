@@ -3,56 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\migrations\\20241201111715_init12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241201111715_init12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\iservice\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\repository\\userattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\userattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\repository\\userexperiancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\userexperiancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\irepository\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\dtos\\responsedtos\\userattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\userattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\dtos\\requestdtos\\userattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\userattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\iservice\\iuserattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iuserattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\entities\\userattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\userattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\irepository\\iuserattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iuserattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\entities\\userattendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\userattendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\entities\\attendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\attendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\service\\studentattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\studentattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\entities\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder\\hrms_unitic\\hrms\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,175 +38,98 @@
       "DocumentGroups": [
         {
           "DockedHeight": 381,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241201111715_init12.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Migrations\\20241201111715_init12.cs",
-              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241201111715_init12.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Migrations\\20241201111715_init12.cs",
-              "RelativeToolTip": "HRMS\\Migrations\\20241201111715_init12.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "LeaveRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveRequestService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeToolTip": "HRMS\\Service\\LeaveRequestService.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAArwH4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T11:17:16.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserAttendance.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\UserAttendance.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\UserAttendance.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\UserAttendance.cs",
-              "RelativeToolTip": "HRMS\\Entities\\UserAttendance.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:59:47.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserAttendanceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserAttendanceRepository.cs",
-              "RelativeDocumentMoniker": "HRMS\\Repository\\UserAttendanceRepository.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserAttendanceRepository.cs",
-              "RelativeToolTip": "HRMS\\Repository\\UserAttendanceRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADUAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:50:44.486Z",
+              "WhenOpened": "2024-12-02T10:19:18.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IUserAttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Iservice\\IUserAttendanceService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Iservice\\IUserAttendanceService.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Iservice\\IUserAttendanceService.cs",
-              "RelativeToolTip": "HRMS\\Iservice\\IUserAttendanceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Role.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\Role.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:42:26.9Z",
+              "WhenOpened": "2024-12-02T09:47:43.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserAttendanceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\IRepository\\IUserAttendanceRepository.cs",
-              "RelativeDocumentMoniker": "HRMS\\IRepository\\IUserAttendanceRepository.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\IRepository\\IUserAttendanceRepository.cs",
-              "RelativeToolTip": "HRMS\\IRepository\\IUserAttendanceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\UserController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAwwDwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:31:29.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserAttendanceReportWithStatusCount.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
-              "RelativeToolTip": "HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:29:16.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AttendanceReportWithStatusCount.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
-              "RelativeToolTip": "HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:24:09.223Z",
+              "WhenOpened": "2024-12-02T09:43:49.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserAttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\UserAttendanceService.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
-              "RelativeToolTip": "HRMS\\Service\\UserAttendanceService.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAIA7wIcAAAAMAAAA",
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Iservice\\IUserServices.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IUserServices.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Iservice\\IUserServices.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IUserServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:21:53.158Z",
+              "WhenOpened": "2024-12-02T09:41:53.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserService.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAYwKkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:39:36.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserExperianceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserExperianceRepository.cs",
-              "RelativeDocumentMoniker": "HRMS\\Repository\\UserExperianceRepository.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserExperianceRepository.cs",
-              "RelativeToolTip": "HRMS\\Repository\\UserExperianceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\IRepository\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IUserRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\IRepository\\IUserRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IUserRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T11:11:48.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserAttendanceRequestDtos.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T10:59:56.719Z",
+              "WhenOpened": "2024-12-02T09:39:05.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UserAttendanceResponseDtos.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T11:00:08.973Z",
+              "WhenOpened": "2024-12-02T09:34:34.67Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StudentAttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\StudentAttendanceService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\StudentAttendanceService.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Service\\StudentAttendanceService.cs",
-              "RelativeToolTip": "HRMS\\Service\\StudentAttendanceService.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAiwFQAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:25:40.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "StudentAttendance.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\StudentAttendance.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\StudentAttendance.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder\\HRMS_Unitic\\HRMS\\Entities\\StudentAttendance.cs",
-              "RelativeToolTip": "HRMS\\Entities\\StudentAttendance.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T09:10:46.695Z"
             }
           ]
         }
