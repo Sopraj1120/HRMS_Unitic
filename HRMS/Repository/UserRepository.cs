@@ -14,19 +14,62 @@ namespace HRMS.Repository
             _context = context;
         }
 
-        public async Task<Users> AddUser(Users users)
+      
+
+        public async Task<Users> AddAdmin(Users users)
         {
+            users.Role = Role.Admin;
+            var data = await _context.users.AddAsync(users);
+            await _context.SaveChangesAsync();
+            return users;
+        }
+        public async Task<Users> AddStaff(Users users)
+        {
+            users.Role = Role.Staff;
+            var data = await _context.users.AddAsync(users);
+            await _context.SaveChangesAsync();
+            return users;
+        } 
+        public async Task<Users> AddEmployee(Users users)
+        {
+            users.Role = Role.Employee;
             var data = await _context.users.AddAsync(users);
             await _context.SaveChangesAsync();
             return users;
         }
 
+        public async Task<Users> AddLecturer(Users users)
+        {
+            users.Role = Role.Lecturers;
+            var data = await _context.users.AddAsync(users);
+            await _context.SaveChangesAsync();
+            return users;
+        }
         public async Task<List<Users>> GetAllUsers()
         {
-            var data = await _context.users.Where(a => !a.IsDeleted).Include(a => a.userAddresses).Include(o =>o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            var data = await _context.users.Where(a => !a.IsDeleted).Include(a => a.userAddresses).Include(o => o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
             return data;
         }
-
+        public async Task<List<Users>> GetAdminUsers()
+        {
+            var data = await _context.users.Where(a =>a.Role == Role.Admin && !a.IsDeleted).Include(a => a.userAddresses).Include(o =>o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            return data;
+        }
+        public async Task<List<Users>> GetStaffUsers()
+        {
+            var data = await _context.users.Where(a => a.Role == Role.Staff && !a.IsDeleted).Include(a => a.userAddresses).Include(o => o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            return data;
+        }
+        public async Task<List<Users>> GetEmployeeUsers()
+        {
+            var data = await _context.users.Where(a => a.Role == Role.Employee && !a.IsDeleted).Include(a => a.userAddresses).Include(o => o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            return data;
+        }
+        public async Task<List<Users>> GetLecturersUsers()
+        {
+            var data = await _context.users.Where(a => a.Role == Role.Lecturers && !a.IsDeleted).Include(a => a.userAddresses).Include(o => o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).ToListAsync();
+            return data;
+        }
         public async Task<Users> GetUserById(Guid Id)
         {
             var data = await _context.users.Include(A =>A.userAddresses).Include(o => o.userOLevels).Include(a => a.userALevels).Include(e => e.userExperiances).Include(e => e.userHigherStudies).FirstOrDefaultAsync(x =>x.Id == Id && !x.IsDeleted);

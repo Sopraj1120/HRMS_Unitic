@@ -8,7 +8,14 @@ namespace HRMS.Iservice
         Task DeleteUser(Guid Id);
         Task<UserResponseDtos> UpadteUser(Guid Id, UserRequestDtos userRequestDtos);
         Task<UserResponseDtos> GetUserById(Guid Id);
-        Task<List<UserResponseDtos>> GetAllUsers();
-        Task<UserResponseDtos> AddUser(UserRequestDtos userRequestDtos);
+        Task<List<UserResponseDtos>> GetAllUser();
+        Task<List<UserResponseDtos>> GetAdminUser();
+        Task<List<UserResponseDtos>> GetStaffUser();
+        Task<List<UserResponseDtos>> GeteEmployeeUser();
+        Task<List<UserResponseDtos>> GetLecturesUsers();
+        Task<UserResponseDtos> AddAdmin(UserRequestDtos userRequestDtos);
+        Task<UserResponseDtos> AddStaff(UserRequestDtos userRequestDtos);
+        Task<UserResponseDtos> AddEmployee(UserRequestDtos userRequestDtos);
+        Task<UserResponseDtos> AddLecturer(UserRequestDtos userRequestDtos);
     }
 }

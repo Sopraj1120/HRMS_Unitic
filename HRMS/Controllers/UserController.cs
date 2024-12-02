@@ -1,4 +1,5 @@
 ﻿using HRMS.DTOs.RequestDtos;
+using HRMS.DTOs.ResponseDtos;
 using HRMS.Iservice;
 using HRMS.Service;
 using Microsoft.AspNetCore.Http;
@@ -27,20 +28,65 @@ namespace HRMS.Controllers
             _userHigherStudiesSevice = userHigherStudiesSevice;
             _userExperianceService = userExperianceService;
         }
-        [HttpPost]
-        [Route("AddUser")]
+      
 
-        public async Task<IActionResult> AddUser(UserRequestDtos userRequestDtos)
+        [HttpPost("Add-Admin")]
+        public async Task<IActionResult> AddAdmin(UserRequestDtos userRequestDtos)
         {
-            var data = await _userServices.AddUser(userRequestDtos);
+            var data = await _userServices.AddAdmin(userRequestDtos);
             return Ok(data);
         }
-
+        [HttpPost("Add-Staff")]
+        public async Task<IActionResult> AddStaff(UserRequestDtos userRequestDtos)
+        {
+            var data = await _userServices.AddStaff(userRequestDtos);
+            return Ok(data);
+        }
+        [HttpPost("Add-Employee")]
+        public async Task<IActionResult> AddEmployee(UserRequestDtos userRequestDtos)
+        {
+            var data = await _userServices.AddEmployee(userRequestDtos);
+            return Ok(data);
+        }
+        [HttpPost("Add- Lecturers")]
+        public async Task<IActionResult> AddLecturers(UserRequestDtos userRequestDtos)
+        {
+            var data = await _userServices.AddLecturer(userRequestDtos);
+            return Ok(data);
+        }
         [HttpGet]
-        [Route("GetAllUser")]
+        [Route("Get_All_User")]
         public async Task<IActionResult> GetAllUser()
         {
-            var data = await _userServices.GetAllUsers();
+            var data = await _userServices.GetAllUser();
+            return Ok(data);
+        }
+        [HttpGet]
+        [Route("Get_Admin_User")]
+        public async Task<IActionResult> GetAdminUser()
+        {
+            var data = await _userServices.GetAdminUser();
+            return Ok(data);
+        }
+        [HttpGet]
+        [Route("Get_Staff_User")]
+        public async Task<IActionResult> GetStaffUser()
+        {
+            var data = await _userServices.GetStaffUser();
+            return Ok(data);
+        }
+        [HttpGet]
+        [Route("Get_Employee_User")]
+        public async Task<IActionResult> GetEmployeeUser()
+        {
+            var data = await _userServices.GeteEmployeeUser();
+            return Ok(data);
+        }
+        [HttpGet]
+        [Route("Get_Lecturer_User")]
+        public async Task<IActionResult> GetLecturesUser()
+        {
+            var data = await _userServices.GetLecturesUsers();
             return Ok(data);
         }
 
