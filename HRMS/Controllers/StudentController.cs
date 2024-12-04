@@ -53,7 +53,7 @@ namespace HRMS.Controllers
 
         public async Task<IActionResult> GetStudentById(Guid Id)
         {
-            var data = _studentService.GetStudentById(Id);
+            var data = await _studentService.GetStudentById(Id);
             if (data == null) return NotFound();
             return Ok(data);
         }
