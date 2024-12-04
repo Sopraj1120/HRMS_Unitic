@@ -10,7 +10,7 @@ namespace HRMS.DTOs.RequestDtos
         public string? LastName { get; set; }
         public string Nic { get; set; }
         public string Email { get; set; }
-        public string MerritalStatus { get; set; }
+        public MerritalStatus MerritalStatus { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DateOfBirth { get; set; }
         public Role Role { get; set; } = Role.Admin;
