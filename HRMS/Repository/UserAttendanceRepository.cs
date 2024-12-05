@@ -15,6 +15,12 @@ namespace HRMS.Repository
             _context = context;
         }
 
+        public async Task<UserAttendance> GetAttendanceForUser(Guid Id)
+        {
+            var nowdate = DateTime.UtcNow.Date;
+            var data = await _context.userAttendances.Where(x=> x.UserId== Id && x.Date.Date== nowdate).FirstOrDefaultAsync();
+            return data;
+        }
         public async Task<UserAttendance> AddAttendanceForUser(UserAttendance userAttendance)
         {
             var data = await _context.userAttendances.AddAsync(userAttendance);

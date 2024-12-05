@@ -10,5 +10,6 @@ namespace HRMS.IRepository
         Task<List<UserAttendance>> GenerateUserAttendanceReportByUser(Guid userId, DateTime startDate, DateTime endDate);
         Task<List<UserAttendance>> GetAllAttendanceByDate(DateTime date);
         Task<UserAttendance> UpdateUserAttendance(UserAttendance userAttendance);
+        Task<UserAttendance> GetAttendanceForUser(Guid Id);
     }
 }

@@ -4,6 +4,7 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HRMS.Service
 {
@@ -20,33 +21,50 @@ namespace HRMS.Service
 
         public async Task<UserAttendanceResponseDtos> AddAttendanceForUser(Guid UserId, UserAttendanceRequestDtos userAttendanceRequestDtos)
         {
-           
+            UserAttendance userAttendance = new UserAttendance();
             var user = await _userRepo.GetUserById(UserId).ConfigureAwait(false);
-
-            var userAttendance = new UserAttendance
+            userAttendance = await _userAttendanceRepository.GetAttendanceForUser(UserId).ConfigureAwait(false);
+            if (userAttendance == null)
             {
-                Id = Guid.NewGuid(),
-                UserId = user.Id,
-                Name = user.FirstName,
-                Role = user.Role,
-                Date = userAttendanceRequestDtos.Date,
-                InTime = userAttendanceRequestDtos.InTime,  
-                OutTime = userAttendanceRequestDtos.OutTime, 
-                Status = userAttendanceRequestDtos.Status,
-            };
 
-            var data = await _userAttendanceRepository.AddAttendanceForUser(userAttendance).ConfigureAwait(false);
+                userAttendance = new UserAttendance
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = user.Id,
+                    Name = user.FirstName,
+                    Role = user.Role,
+                    Date = userAttendanceRequestDtos.Date,
+                    InTime = userAttendanceRequestDtos.InTime,
+                    OutTime = userAttendanceRequestDtos.OutTime ?? null,
+                    Status = userAttendanceRequestDtos.Status,
+                };
+
+                await _userAttendanceRepository.AddAttendanceForUser(userAttendance).ConfigureAwait(false);
+            }
+            else {
+                userAttendance.OutTime = userAttendanceRequestDtos?.OutTime ?? DateTime.Now;
+               await _userAttendanceRepository.UpdateUserAttendance(userAttendance).ConfigureAwait(false);
+
+            }
+
+
+
+
+
+
+
+
 
             var response = new UserAttendanceResponseDtos
             {
-                Id = data.Id,
-                UserId = data.UserId, 
-                Name = data.Name,
-                Role = data.Role.ToString(),
-                Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH\:mm"),
-                OutTime = data.OutTime?.ToString(@"HH\:mm"),
-                Status = data.Status.ToString(),
+                Id = userAttendance.Id,
+                UserId = userAttendance.UserId, 
+                Name = userAttendance.Name,
+                Role = userAttendance.Role.ToString(),
+                Date = userAttendance.Date.ToString("yyyy-MM-dd")?? default,
+                InTime = userAttendance.InTime.ToString()??"",
+                OutTime = userAttendance.OutTime.ToString() ?? "",
+                Status = userAttendance.Status.ToString(),
             };
 
             return response;
@@ -65,8 +83,8 @@ namespace HRMS.Service
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH\:mm"),
-                OutTime = data.OutTime?.ToString(@"HH\:mm"),
+                InTime = data.InTime.ToString() ?? "",
+                OutTime = data.OutTime.ToString() ?? "",
                 Status = data.Status.ToString(),
             };
             return Responce;
@@ -91,8 +109,8 @@ namespace HRMS.Service
                 Name = x.Name,
                 Role = x.Role.ToString(),
                 Date = x.Date.ToString("yyyy-MM-dd"),
-                InTime = x.InTime.ToString(@"HH\:mm"),
-                OutTime = x.OutTime? .ToString(@"HH\:mm"),
+                InTime = x.InTime.ToString() ?? "",
+                OutTime = x.OutTime.ToString() ?? "",
                 Status = x.Status.ToString(),
 
             }).ToList();
@@ -121,8 +139,8 @@ namespace HRMS.Service
                 Name = x.Name,
                 Role = x.Role.ToString(),
                 Date = x.Date.ToString("yyyy-MM-dd"),
-                InTime = x.InTime.ToString(@"HH\:mm"),
-                OutTime = x.OutTime?.ToString(@"HH\:mm"),
+                InTime = x.InTime.ToString() ?? "",
+                OutTime = x.OutTime.ToString() ?? "",
                 Status = x.Status.ToString(),
             }).ToList();
 
@@ -145,8 +163,8 @@ namespace HRMS.Service
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                InTime = data.InTime.ToString(@"HH\:mm"),
-                OutTime = data.OutTime?.ToString(@"HH\:mm"),
+                InTime = data.InTime.ToString() ?? "",
+                OutTime = data.OutTime.ToString() ?? "",
                 Status = data.Status.ToString(),
             };
             return responce;

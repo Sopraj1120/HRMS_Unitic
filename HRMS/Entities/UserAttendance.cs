@@ -7,7 +7,7 @@
         public string Name { get; set; }
         public Role Role { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-        public DateTime InTime { get; set; }
+        public DateTime? InTime { get; set; }
         public DateTime? OutTime { get; set; }
         public AttendanceStatus Status { get; set; }
   
