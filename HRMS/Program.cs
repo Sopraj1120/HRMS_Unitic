@@ -16,7 +16,10 @@ namespace HRMS
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(option => {
+                option.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                option.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+            }); ;
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -95,6 +98,12 @@ namespace HRMS
 
             builder.Services.AddScoped<IUserAttendanceRepository, UserAttendanceRepository >();
             builder.Services.AddScoped<IUserAttendanceService , UserAttendanceService >();
+
+            builder.Services.AddScoped <ISuperAdminRepo, SuperAdminRepository >();
+            builder.Services.AddScoped<ISuperAdminService, SuperAdminService >();
+
+            builder.Services.AddScoped<IUserLoginRepository, UserloginRepo >();
+            builder.Services.AddScoped<IUserLoginService, UserLoginService >();
 
 
 

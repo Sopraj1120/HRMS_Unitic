@@ -9,7 +9,7 @@ namespace HRMS.DTOs.ResponseDtos
         public string Name { get; set; }
         public string Role {  get; set; }   
         public string Date { get; set; } 
-        public string InTime { get; set; }
+        public string? InTime { get; set; }
         public string? OutTime { get; set; }
         public string Status { get; set; }
 

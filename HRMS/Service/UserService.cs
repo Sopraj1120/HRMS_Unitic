@@ -3,19 +3,24 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace HRMS.Service
 {
     public class UserService : IUserServices
     {
         private readonly IUserRepo _userRepo;
-      
+        private readonly IConfiguration _configuration;
 
-        public UserService(IUserRepo userRepo)
+
+        public UserService(IUserRepo userRepo, IConfiguration configuration)
         {
             _userRepo = userRepo;
-          
+            _configuration = configuration;
         }
 
 
@@ -30,10 +35,12 @@ namespace HRMS.Service
                 LastName = userRequestDtos.LastName,
                 Nic = userRequestDtos.Nic,
                 Email = userRequestDtos.Email,
+                PassWord = BCrypt.Net.BCrypt.HashPassword(userRequestDtos.Password),
                 MerritalStatus = userRequestDtos.MerritalStatus,
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
                 Gender = userRequestDtos.Gender,
+                Image = userRequestDtos.Image
 
             };
             var data = await _userRepo.AddAdmin(user);
@@ -46,12 +53,14 @@ namespace HRMS.Service
                 LastName = data.LastName,
                 Nic = data.Nic,
                 Email = data.Email,
+                Password = data.PassWord,
                 MerritalStatus = data.MerritalStatus.ToString(),
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image
 
             };
             return resuser;
@@ -66,10 +75,12 @@ namespace HRMS.Service
                 LastName = userRequestDtos.LastName,
                 Nic = userRequestDtos.Nic,
                 Email = userRequestDtos.Email,
+                PassWord = BCrypt.Net.BCrypt.HashPassword(userRequestDtos.Password),
                 MerritalStatus = userRequestDtos.MerritalStatus,
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
                 Gender = userRequestDtos.Gender,
+                Image = userRequestDtos.Image
 
             };
             var data = await _userRepo.AddStaff(user);
@@ -82,12 +93,14 @@ namespace HRMS.Service
                 LastName = data.LastName,
                 Nic = data.Nic,
                 Email = data.Email,
+                Password = data.PassWord,
                 MerritalStatus = data.MerritalStatus.ToString(),
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image
 
             };
             return resuser;
@@ -103,10 +116,12 @@ namespace HRMS.Service
                 LastName = userRequestDtos.LastName,
                 Nic = userRequestDtos.Nic,
                 Email = userRequestDtos.Email,
+                PassWord = BCrypt.Net.BCrypt.HashPassword(userRequestDtos.Password),
                 MerritalStatus = userRequestDtos.MerritalStatus,
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
                 Gender = userRequestDtos.Gender,
+                Image = userRequestDtos.Image
 
             };
             var data = await _userRepo.AddEmployee(user);
@@ -119,12 +134,14 @@ namespace HRMS.Service
                 LastName = data.LastName,
                 Nic = data.Nic,
                 Email = data.Email,
+                Password = data.PassWord,
                 MerritalStatus = data.MerritalStatus.ToString(),
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image
 
             };
             return resuser;
@@ -140,10 +157,12 @@ namespace HRMS.Service
                 LastName = userRequestDtos.LastName,
                 Nic = userRequestDtos.Nic,
                 Email = userRequestDtos.Email,
+                PassWord = BCrypt.Net.BCrypt.HashPassword(userRequestDtos.Password),
                 MerritalStatus = userRequestDtos.MerritalStatus,
                 PhoneNumber = userRequestDtos.PhoneNumber,
                 DateOfBirth = userRequestDtos.DateOfBirth,
                 Gender = userRequestDtos.Gender,
+                Image = userRequestDtos.Image
 
             };
             var data = await _userRepo.AddLecturer(user);
@@ -156,12 +175,14 @@ namespace HRMS.Service
                 LastName = data.LastName,
                 Nic = data.Nic,
                 Email = data.Email,
+                Password = data.PassWord,
                 MerritalStatus = data.MerritalStatus.ToString(),
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
+                Image = data.Image
 
             };
             return resuser;
@@ -179,11 +200,14 @@ namespace HRMS.Service
                 LastName = a.LastName,
                 Nic = a.Nic,
                 Email = a.Email,
+                Password = a.PassWord,
                 MerritalStatus = a.MerritalStatus.ToString(),
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
+                Gender = a.Gender.ToString(),
+                Image = a.Image,
 
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -263,12 +287,15 @@ namespace HRMS.Service
                 LastName = a.LastName,
                 Nic = a.Nic,
                 Email = a.Email,
+                Password = a.PassWord,
                 MerritalStatus = a.MerritalStatus.ToString(),
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
-               
+                Gender = a.Gender.ToString(),
+                Image = a.Image,
+
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
                     Id = s.Id,
@@ -347,11 +374,14 @@ namespace HRMS.Service
                 LastName = a.LastName,
                 Nic = a.Nic,
                 Email = a.Email,
+                Password = a.PassWord,
                 MerritalStatus = a.MerritalStatus.ToString(),
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
+                Gender = a.Gender.ToString(),
+                Image = a.Image,
 
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -432,11 +462,14 @@ namespace HRMS.Service
                 LastName = a.LastName,
                 Nic = a.Nic,
                 Email = a.Email,
+                Password = a.PassWord,
                 MerritalStatus = a.MerritalStatus.ToString(),
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
+                Gender = a.Gender.ToString(),
+                Image = a.Image,
 
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -517,11 +550,14 @@ namespace HRMS.Service
                 LastName = a.LastName,
                 Nic = a.Nic,
                 Email = a.Email,
+                Password = a.PassWord,
                 MerritalStatus = a.MerritalStatus.ToString(),
                 PhoneNumber = a.PhoneNumber,
                 DateOfBirth = a.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = a.Role.ToString(),
                 IsDeleted = a.IsDeleted,
+                Gender = a.Gender.ToString(),
+                Image = a.Image,
 
                 Useraddress = a.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
@@ -603,13 +639,16 @@ namespace HRMS.Service
                 LastName = data.LastName,
                 Nic = data.Nic,
                 Email = data.Email,
+                Password = data.PassWord,
                 MerritalStatus = data.MerritalStatus.ToString(),
                 PhoneNumber = data.PhoneNumber,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
                 Role = data.Role.ToString(),
                 IsDeleted = data.IsDeleted,
                 Gender = data.Gender.ToString(),
-              
+                Image = data.Image,
+
+
                 Useraddress = data.userAddresses?.Select(s => new UserAddressResponceDtos
                 {
                     Id = s.Id,
@@ -690,16 +729,10 @@ namespace HRMS.Service
             user.UsersId = userRequestDtos.UsersId;
             user.FirstName = userRequestDtos.FirstName;
             user.LastName = userRequestDtos.LastName;
-            user.Nic = userRequestDtos.Nic;
-            user.Email = userRequestDtos.Email;
             user.MerritalStatus = userRequestDtos.MerritalStatus;
             user.PhoneNumber = userRequestDtos.PhoneNumber;
             user.DateOfBirth = userRequestDtos.DateOfBirth;
-            user.Role = userRequestDtos.Role;
-            user.Gender = userRequestDtos.Gender;
-            
 
-           
             var updatedUser = await _userRepo.UpdateUser(user);
 
          
@@ -711,11 +744,13 @@ namespace HRMS.Service
                 LastName = updatedUser.LastName,
                 Nic = updatedUser.Nic,
                 Email = updatedUser.Email,
+                Password = userRequestDtos.Password,
                 MerritalStatus = updatedUser.MerritalStatus.ToString(),
                 PhoneNumber = updatedUser.PhoneNumber,
                 DateOfBirth = updatedUser.DateOfBirth.ToString("yyyy-MM-dd"),
                 IsDeleted = updatedUser.IsDeleted,
                 Gender = updatedUser.Gender.ToString(),
+                Image = userRequestDtos.Image
              
             };
 
@@ -726,5 +761,9 @@ namespace HRMS.Service
         {
             await _userRepo.DeleteUser( Id );
         }
+
+
+
+       
     }
 }

@@ -2601,3 +2601,5 @@ C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\obj\Debug\net8.0\refin
 C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\obj\Debug\net8.0\HRMS.pdb
 C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\obj\Debug\net8.0\HRMS.genruntimeconfig.cache
 C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\obj\Debug\net8.0\ref\HRMS.dll
+C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\bin\Debug\net8.0\BCrypt.Net.dll
+C:\Users\marif\OneDrive\Desktop\hrmanage\HRMS_Unitic\HRMS\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -557,6 +557,33 @@ namespace HRMS.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("HRMS.Entities.SuperAdmin", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("superAdmins");
+                });
+
             modelBuilder.Entity("HRMS.Entities.UserALevel", b =>
                 {
                     b.Property<Guid>("Id")
@@ -659,7 +686,7 @@ namespace HRMS.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("InTime")
+                    b.Property<DateTime?>("InTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
@@ -843,6 +870,10 @@ namespace HRMS.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -853,6 +884,10 @@ namespace HRMS.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nic")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PassWord")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

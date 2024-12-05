@@ -40,6 +40,8 @@ namespace HRMS.DataBase
         public DbSet<StudentAttendance> studentAttendances { get; set; }
         public DbSet<UserAttendance> userAttendances { get; set; }
 
+        public DbSet<SuperAdmin> superAdmins { get; set; }
+
 
 
 

@@ -91,8 +91,6 @@ namespace HRMS.Repository
             existingUser.UsersId = user.UsersId;
             existingUser.FirstName = user.FirstName;
             existingUser.LastName = user.LastName;
-            existingUser.Nic = user.Nic;
-            existingUser.Email = user.Email;
             existingUser.MerritalStatus = user.MerritalStatus;
             existingUser.PhoneNumber = user.PhoneNumber;
             existingUser.DateOfBirth = user.DateOfBirth;
