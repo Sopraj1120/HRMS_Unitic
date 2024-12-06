@@ -20,6 +20,7 @@ namespace HRMS.Service
         {
             var student = new Students
             {
+                StudentId = studentRequestDtos.StudentId,
                 FirstName = studentRequestDtos.FirstName,
                 LastName = studentRequestDtos.LastName,
                 DateOfBirth = studentRequestDtos.DateOfBirth,
@@ -35,6 +36,7 @@ namespace HRMS.Service
             var resStudents = new StudentResponseDtos
             {
                 Id = data.Id,
+                StudentId = data.StudentId,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
@@ -59,6 +61,7 @@ namespace HRMS.Service
             var resstu = data.Select(s => new StudentResponseDtos
             {
                 Id = s.Id,
+                StudentId = s.StudentId,
                 FirstName = s.FirstName,
                 LastName = s.LastName,
                 DateOfBirth = s.DateOfBirth.ToString("yyyy-MM-dd"),
@@ -154,6 +157,7 @@ namespace HRMS.Service
             var resstu = new StudentResponseDtos
             {
                 Id = data.Id,
+                StudentId = data.StudentId,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),
@@ -242,6 +246,8 @@ namespace HRMS.Service
         {
             var student = new Students
             {
+
+                StudentId = studentRequestDtos.StudentId,
                 FirstName = studentRequestDtos.FirstName,
                 LastName = studentRequestDtos.LastName,
                 DateOfBirth = studentRequestDtos.DateOfBirth,
@@ -259,6 +265,7 @@ namespace HRMS.Service
             var resstu = new StudentResponseDtos
             {
                 Id = data.Id,
+                StudentId = data.StudentId,
                 FirstName = data.FirstName,
                 LastName = data.LastName,
                 DateOfBirth = data.DateOfBirth.ToString("yyyy-MM-dd"),

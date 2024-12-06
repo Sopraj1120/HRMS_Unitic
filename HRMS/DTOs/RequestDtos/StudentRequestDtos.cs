@@ -5,6 +5,7 @@ namespace HRMS.DTOs.RequestDtos
 {
     public class StudentRequestDtos
     {
+        public string StudentId { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

@@ -5,6 +5,7 @@ namespace HRMS.DTOs.ResponseDtos
     public class StudentResponseDtos
     {
         public Guid Id { get; set; }
+        public string StudentId {  get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string DateOfBirth { get; set; }
