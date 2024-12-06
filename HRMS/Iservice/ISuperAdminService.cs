@@ -7,6 +7,6 @@ namespace HRMS.Iservice
     public interface ISuperAdminService
     {
         Task<SuperAdminResponceDto> RegisterSuperAdmin(SuperAdminRequestDto admin);
-        Task<TokenModal> LoginSuperAdmin(SuperAdminRequestDto admin);
+        Task<TokenModal> LoginSuperAdmin(UserLoginDTo admin);
     }
 }

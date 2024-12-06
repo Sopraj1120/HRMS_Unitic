@@ -2742,3 +2742,5 @@ C:\Users\UT01286\Desktop\HRManageme nt\New folder\HRMS_Unitic\HRMS\obj\Debug\net
 C:\Users\UT01286\Desktop\HRManageme nt\New folder\HRMS_Unitic\HRMS\obj\Debug\net8.0\HRMS.pdb
 C:\Users\UT01286\Desktop\HRManageme nt\New folder\HRMS_Unitic\HRMS\obj\Debug\net8.0\HRMS.genruntimeconfig.cache
 C:\Users\UT01286\Desktop\HRManageme nt\New folder\HRMS_Unitic\HRMS\obj\Debug\net8.0\ref\HRMS.dll
+C:\Users\UT01286\Desktop\HRMS_Unitic\HRMS\bin\Debug\net8.0\BCrypt.Net.dll
+C:\Users\UT01286\Desktop\HRMS_Unitic\HRMS\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
