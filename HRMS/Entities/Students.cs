@@ -5,6 +5,8 @@ namespace HRMS.Entities
     public class Students
     {
         public Guid Id { get; set; }
+
+        public string StudentId {  get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]
