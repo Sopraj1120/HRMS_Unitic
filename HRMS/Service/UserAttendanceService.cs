@@ -24,51 +24,50 @@ namespace HRMS.Service
             UserAttendance userAttendance = new UserAttendance();
             var user = await _userRepo.GetUserById(UserId).ConfigureAwait(false);
             userAttendance = await _userAttendanceRepository.GetAttendanceForUser(UserId).ConfigureAwait(false);
+
             if (userAttendance == null)
             {
-
+                
                 userAttendance = new UserAttendance
                 {
                     Id = Guid.NewGuid(),
                     UserId = user.Id,
                     Name = user.FirstName,
+                    User_Id = user.UsersId,
                     Role = user.Role,
                     Date = userAttendanceRequestDtos.Date,
-                    InTime = userAttendanceRequestDtos.InTime,
-                    OutTime = userAttendanceRequestDtos.OutTime ?? null,
-                    Status = userAttendanceRequestDtos.Status,
+                    InTime = DateTime.Now,  
+                    OutTime = DateTime.Now, 
+                    Status = AttendanceStatus.Present,     
                 };
 
                 await _userAttendanceRepository.AddAttendanceForUser(userAttendance).ConfigureAwait(false);
             }
-            else {
-                userAttendance.OutTime = userAttendanceRequestDtos?.OutTime ?? DateTime.Now;
-               await _userAttendanceRepository.UpdateUserAttendance(userAttendance).ConfigureAwait(false);
+            else
+            {
+              
+                userAttendance.OutTime = DateTime.Now; 
+                userAttendance.Status = AttendanceStatus.Present;     
 
+                await _userAttendanceRepository.UpdateUserAttendance(userAttendance).ConfigureAwait(false);
             }
-
-
-
-
-
-
-
-
 
             var response = new UserAttendanceResponseDtos
             {
                 Id = userAttendance.Id,
-                UserId = userAttendance.UserId, 
+                UserId = userAttendance.UserId,
+                User_Id = userAttendance.User_Id,
                 Name = userAttendance.Name,
                 Role = userAttendance.Role.ToString(),
-                Date = userAttendance.Date.ToString("yyyy-MM-dd")?? default,
-                InTime = userAttendance.InTime.ToString()??"",
+                Date = userAttendance.Date.ToString("yyyy-MM-dd") ?? default,
+                InTime = userAttendance.InTime.ToString() ?? "",
                 OutTime = userAttendance.OutTime.ToString() ?? "",
                 Status = userAttendance.Status.ToString(),
             };
 
             return response;
         }
+
 
 
         public async Task<UserAttendanceResponseDtos> GetUserAttendanceByUserIdAndDate(Guid userId, DateTime date)
@@ -80,6 +79,7 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 UserId = data.Id,
+                User_Id = data.User_Id,
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
@@ -106,6 +106,7 @@ namespace HRMS.Service
             {
                 Id = x.Id,
                 UserId = x.UserId,
+                User_Id = x.User_Id,
                 Name = x.Name,
                 Role = x.Role.ToString(),
                 Date = x.Date.ToString("yyyy-MM-dd"),
@@ -124,27 +125,53 @@ namespace HRMS.Service
             return attendanceReport;
 
         }
-     
 
 
 
-        public async Task<List<UserAttendanceResponseDtos>> GetAllAttendanceByDate(DateTime date)
+
+        public async Task<List<UserAttendanceResponseDtos>> GetAllAttendanceByDate()
         {
-            var data = await _userAttendanceRepository.GetAllAttendanceByDate(date).ConfigureAwait(false);
+            var users = await _userRepo.GetAllUsers();
+            var attendanceData = await _userAttendanceRepository.GetAllAttendanceByDate();
 
-            var responce = data.Select(x => new UserAttendanceResponseDtos
+           
+            var response = users.Select(user =>
             {
-                Id = x.Id,
-                UserId = x.Id,
-                Name = x.Name,
-                Role = x.Role.ToString(),
-                Date = x.Date.ToString("yyyy-MM-dd"),
-                InTime = x.InTime.ToString() ?? "",
-                OutTime = x.OutTime.ToString() ?? "",
-                Status = x.Status.ToString(),
+                var userAttendance = attendanceData.FirstOrDefault(a => a.UserId == user.Id);
+
+                if (userAttendance == null)
+                {
+                    
+                    return new UserAttendanceResponseDtos
+                    {
+                        Id = Guid.NewGuid(),
+                        UserId = user.Id,
+                        User_Id = user.UsersId,
+                        Name = user.FirstName,
+                        Role = user.Role.ToString(),
+                        Date = DateTime.Now.ToString("yyyy-MM-dd"),
+                        InTime = null, 
+                        OutTime = null, 
+                        Status = AttendanceStatus.absent.ToString()  
+                    };
+                }
+
+                
+                return new UserAttendanceResponseDtos
+                {
+                    Id = userAttendance.Id,
+                    UserId = userAttendance.UserId,
+                    User_Id = userAttendance.User_Id,
+                    Name = userAttendance.Name,
+                    Role = userAttendance.Role.ToString(),
+                    Date = userAttendance.Date.ToString("yyyy-MM-dd"),
+                    InTime = userAttendance.InTime?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    OutTime = userAttendance.OutTime?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    Status = AttendanceStatus.Present.ToString()
+                };
             }).ToList();
 
-            return responce;
+            return response;
         }
 
         public async Task<UserAttendanceResponseDtos> UpdateUserAttendance(Guid UserId, DateTime date, UserAttendanceRequestDtos userAttendanceRequestDtos)
@@ -160,6 +187,7 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 UserId = data.Id,
+                User_Id = data.User_Id,
                 Name = data.Name,
                 Role = data.Role.ToString(),
                 Date = data.Date.ToString("yyyy-MM-dd"),
