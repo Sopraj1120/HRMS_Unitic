@@ -6,6 +6,7 @@ namespace HRMS.DTOs.ResponseDtos
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
+        public string User_Id { get; set; }
         public string Name { get; set; }
         public string Role {  get; set; }   
         public string Date { get; set; } 

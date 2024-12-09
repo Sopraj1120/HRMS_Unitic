@@ -42,12 +42,12 @@ namespace HRMS.Repository
 
             return report;
         }
-     
 
-        public async Task<List<UserAttendance>> GetAllAttendanceByDate(DateTime date)
+
+        public async Task<List<UserAttendance>> GetAllAttendanceByDate()
         {
             var attendanceData = await _context.userAttendances
-                .Where(x => x.Date.Date == date.Date) 
+                .Where(x => x.Date.Date == DateTime.Now.Date) 
                 .ToListAsync();
 
             return attendanceData;
