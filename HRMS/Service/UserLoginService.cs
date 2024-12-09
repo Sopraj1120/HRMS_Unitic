@@ -1,9 +1,11 @@
 ﻿using HRMS.DTOs;
 using HRMS.DTOs.RequestDtos;
+using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace HRMS.Service
@@ -27,11 +29,17 @@ namespace HRMS.Service
                     return null;
                 }
 
-            return CreateToken();
+            return CreateToken(user);
             }
 
-        private TokenModal CreateToken()
+        private TokenModal CreateToken(Users user)
         {
+            var claimList = new List<Claim>();
+            claimList.Add(new Claim("Id",user.Id.ToString()));
+            claimList.Add(new Claim("UserName",user.FirstName));
+            claimList.Add(new Claim("Email",user.Email));
+            claimList.Add(new Claim("Role", user.Role.ToString()));
+
             var key = _configuration["Jwt:Key"];
             var secKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
 
@@ -40,6 +48,8 @@ namespace HRMS.Service
             var token = new JwtSecurityToken(
               issuer: _configuration["Jwt:Issuer"],
               audience: _configuration["Jwt:Audience"],
+            claims: claimList,
+           
               expires: DateTime.UtcNow.AddDays(1),
               signingCredentials: crediatial);
 

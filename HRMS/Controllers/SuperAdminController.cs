@@ -24,7 +24,7 @@ namespace HRMS.Controllers
         }
 
         [HttpPost("LogIn_Sup_Admin")]
-        public async Task<IActionResult> loginSuperAdmin (SuperAdminRequestDto admin)
+        public async Task<IActionResult> loginSuperAdmin (UserLoginDTo admin)
         {
             var data = await _superAdminService.LoginSuperAdmin (admin);
             return Ok(data);
