@@ -23,46 +23,77 @@ namespace HRMS.Service
             _studentRepo = studentRepo;
         }
 
+       
+
         public async Task<StudentAttendanceResponseDtos> AddStudentAttendance(Guid StudenId, StudentAttendanceRequestDtos studentAttendanceRequestDtos)
         {
-            var student = await _studentRepo.GetStudentById(StudenId);
-            var attendance = new StudentAttendance
-            {
-                Id = Guid.NewGuid(),
-                StudentId = StudenId,
-                Name = student.FirstName,
-                Date = studentAttendanceRequestDtos.Date,
-                Status = studentAttendanceRequestDtos.Status
-            };
-            var data = await _studentAttendanceRepo.AddAttendanceForStudmt(attendance);
+            StudentAttendance studentAttendance = new StudentAttendance();
+            var student = await _studentRepo.GetStudentById(StudenId).ConfigureAwait(false);
+            studentAttendance = await _studentAttendanceRepo.GetAttendanceForStudent(student.Id).ConfigureAwait(false);
 
-            var responce = new StudentAttendanceResponseDtos
+            if (studentAttendance == null)
             {
-                Id = data.Id,
-                StudentId = data.StudentId,
-                Name = data.Name,
-                Date = data.Date.ToString("yyyy-MM-dd"),
-                Status = data.Status.ToString()
+                studentAttendance = new StudentAttendance
+                {
+                    Id = Guid.NewGuid(),
+                    StudentId = student.Id,
+                    Name = student.FirstName,
+                    Student_Id = student.StudentId,
+                    Date = studentAttendanceRequestDtos.Date,
+                    InTime = DateTime.Now,
+                    OutTime = DateTime.Now,
+                    Status = AttendanceStatus.Present,
+                };
+                await _studentAttendanceRepo.AddAttendanceForStudmt(studentAttendance).ConfigureAwait(false);
+            }
+            else
+            {
 
+                studentAttendance.OutTime = DateTime.Now;
+                studentAttendance.Status = AttendanceStatus.Present;
+
+                await _studentAttendanceRepo.UpdateStuAttendance(studentAttendance).ConfigureAwait(false);
+            }
+
+            var response = new StudentAttendanceResponseDtos
+            {
+                Id = studentAttendance.Id,
+                StudentId = studentAttendance.StudentId,
+                Student_Id = studentAttendance.Student_Id,
+                Name = studentAttendance.Name,   
+                Date = studentAttendance.Date.ToString("yyyy-MM-dd") ?? default,
+                InTime = studentAttendance.InTime.ToString() ?? "",
+                OutTime = studentAttendance.OutTime.ToString() ?? "",
+                Status = studentAttendance.Status.ToString(),
             };
-            return responce;
+
+            return response;
+
+
         }
-       public async  Task<StudentAttendanceResponseDtos> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
+
+   
+        public async  Task<StudentAttendanceResponseDtos> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
         {
             var data = await _studentAttendanceRepo.GetStudentAttendanceByStuIdAndDate(stuID, date).ConfigureAwait(false);
             var responce = new StudentAttendanceResponseDtos
             {
                 Id = data.Id,
                 StudentId = data.StudentId,
+                Student_Id = data.Student_Id,
                 Name = data.Name,
                 Date = data.Date.ToString("yyyy-MM-dd"),
+                InTime = data.InTime.ToString() ??"",
+                OutTime = data.OutTime?.ToString() ?? "",
                 Status = data.Status.ToString()
 
             };
             return responce;
         }
 
-       
+
+      
+
 
         public async Task<AttendanceReportWithStatusCount> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate)
         {
@@ -81,9 +112,12 @@ namespace HRMS.Service
  {
                   Id = x.Id,
                   StudentId = x.StudentId,
+                  Student_Id = x.Student_Id,
                   Name = x.Name,
                   Date = x.Date.ToString("yyyy-MM-dd"),
-                  Status = x.Status.ToString()
+                  InTime = x.InTime.ToString() ?? "",
+                  OutTime = x.OutTime.ToString() ?? "",
+                    Status = x.Status.ToString()
                  }).ToList();
 
             var attendanceReport = new AttendanceReportWithStatusCount
@@ -95,29 +129,66 @@ namespace HRMS.Service
             return attendanceReport;
 
         }
-       public async Task<List<StudentAttendanceResponseDtos>> GetAllAttendanceByDate(DateTime date)
+
+
+
+        public async Task<List<StudentAttendanceResponseDtos>> GetAllAttendanceByDate()
         {
-            var data = await _studentAttendanceRepo.GetAllAttendanceByDate(date).ConfigureAwait(false);
-            
-                
+            var students = await _studentRepo.GetAllStudents(1, 120);
+            var studentAttendance = await _studentAttendanceRepo.GetAllAttendanceByDate();
 
-                var responce = data.Select(x => new StudentAttendanceResponseDtos
+
+            var response = students.Select(stu =>
+            {
+                var stuAttendance = studentAttendance.FirstOrDefault(a => a.StudentId == stu.Id);
+
+
+                if (stuAttendance == null)
                 {
-                    Id = x.Id,
-                    StudentId = x.StudentId,
-                    Name = x.Name,
-                    Date = x.Date.ToString("yyyy-MM-dd"),
-                    Status = x.Status.ToString()
-                }).ToList();
 
-                return responce;
-       }
-        
+                    return new StudentAttendanceResponseDtos
+                    {
+                        Id = Guid.NewGuid(),
+                        StudentId = stu.Id,
+                        Student_Id = stu.StudentId,
+                        Name = stu.FirstName,
+                        Date = DateTime.Now.ToString("yyyy-MM-dd"),
+                        InTime = null,
+                        OutTime = null,
+                        Status = AttendanceStatus.absent.ToString()
+
+
+                    };
+                }
+
+
+                return new StudentAttendanceResponseDtos
+                {
+
+                    Id = stuAttendance.Id,
+                    StudentId = stuAttendance.StudentId,
+                    Student_Id = stuAttendance.Student_Id,
+                    Name = stuAttendance.Name,
+                    Date = stuAttendance.Date.ToString("yyyy-MM-dd"),
+                    InTime = stuAttendance.InTime?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    OutTime = stuAttendance.OutTime?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    Status = AttendanceStatus.Present.ToString()
+                };
+
+            }).ToList();
+
+            return response;
+       
+
+        }
+      
+
         public async Task<StudentAttendanceResponseDtos> UpdateStuAttendance(Guid studentId, DateTime date, StudentAttendanceRequestDtos studentAttendanceRequestDtos)
         {
            
             var student = await _studentAttendanceRepo.GetStudentAttendanceByStuIdAndDate(studentId, date).ConfigureAwait(false);
 
+            student.OutTime = studentAttendanceRequestDtos.OutTime;
             student.Status = studentAttendanceRequestDtos.Status;
 
             var data = await _studentAttendanceRepo.UpdateStuAttendance(student).ConfigureAwait(false);
@@ -125,9 +196,12 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 StudentId = data.StudentId,
+                Student_Id = data.Student_Id,
                 Name = data.Name,
                 Date = data.Date.ToString("yyyy-MM-dd"),
-                Status = data.Status.ToString()
+                InTime = data.InTime.ToString() ?? "",
+                OutTime = data.OutTime.ToString() ?? "",
+                Status = data.Status.ToString(),
             };
 
             return response;

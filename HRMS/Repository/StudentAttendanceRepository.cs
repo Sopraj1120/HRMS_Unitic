@@ -15,7 +15,13 @@ namespace HRMS.Repository
         {
             _context = context;
         }
-
+        public async Task<StudentAttendance> GetAttendanceForStudent(Guid Id)
+        {
+            var nowdate = DateTime.UtcNow.Date;
+            var data = await _context.studentAttendances.Where(x => x.StudentId == Id && x.Date.Date == nowdate).FirstOrDefaultAsync();
+            return data;
+        }
+    
         public async Task<StudentAttendance> AddAttendanceForStudmt(StudentAttendance studentAttendance)
         {
          
@@ -24,13 +30,14 @@ namespace HRMS.Repository
             return studentAttendance;
 
         }
-
+   
         public async Task<StudentAttendance> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date)
         {
             var data = await _context.studentAttendances.FirstOrDefaultAsync(x => x.StudentId == stuID && x.Date.Date == date.Date);
             return data;
         }
 
+   
         public async Task<List<StudentAttendance>> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate)
         {
             var attendanceData = await _context.studentAttendances
@@ -40,19 +47,25 @@ namespace HRMS.Repository
         }
 
 
-        public async Task<List<StudentAttendance>> GetAllAttendanceByDate(DateTime date)
+     
+        public async Task<List<StudentAttendance>> GetAllAttendanceByDate()
         {
             var attendanceData = await _context.studentAttendances
-               .Where(x => x.Date.Date == date.Date)
+               .Where(x => x.Date.Date == DateTime.Now.Date)
                .ToListAsync();
 
             return attendanceData;
         }
+
+   
+
         public async Task<StudentAttendance> UpdateStuAttendance(StudentAttendance studentAttendance)
         {
             var student = await _context.studentAttendances.FirstOrDefaultAsync(x => x.StudentId == studentAttendance.StudentId);
             if (student == null) return null;
 
+
+            student.OutTime = studentAttendance.OutTime;
             student.Status = studentAttendance.Status;
 
              _context.studentAttendances.Update(student);

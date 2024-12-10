@@ -4,9 +4,15 @@
     {
         public Guid Id { get; set; }
         public Guid StudentId { get; set; }
+        public string Student_Id { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-        public AttendanceStatus  Status  { get; set; }
+        public DateTime? InTime { get; set; }
+        public DateTime? OutTime { get; set; }
+        public AttendanceStatus Status { get; set; }
+
+
+   
 
         public Students Student { get; set; }
     }

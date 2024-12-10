@@ -9,7 +9,7 @@ namespace HRMS.Iservice
         Task<StudentAttendanceResponseDtos> AddStudentAttendance(Guid StudenId, StudentAttendanceRequestDtos studentAttendanceRequestDtos);
         Task<StudentAttendanceResponseDtos> GetStudentAttendanceByStuIdAndDate(Guid stuID, DateTime date);
         Task<AttendanceReportWithStatusCount> GenerateAttendanceReport(Guid StuId, DateTime startDate, DateTime endDate);
-        Task<List<StudentAttendanceResponseDtos>> GetAllAttendanceByDate(DateTime date);
+        Task<List<StudentAttendanceResponseDtos>> GetAllAttendanceByDate();
         Task<StudentAttendanceResponseDtos> UpdateStuAttendance(Guid studentId, DateTime date, StudentAttendanceRequestDtos studentAttendanceRequestDtos);
     }
 }
