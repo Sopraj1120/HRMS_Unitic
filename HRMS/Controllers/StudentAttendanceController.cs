@@ -41,9 +41,9 @@ namespace HRMS.Controllers
         }
 
         [HttpGet("Get_All_Attendance")]
-        public async Task<IActionResult> GetAllAttendanceByDate(DateTime date)
+        public async Task<IActionResult> GetAllAttendanceByDate()
         {
-            var data = await _studentAttendanceService.GetAllAttendanceByDate(date);
+            var data = await _studentAttendanceService.GetAllAttendanceByDate();
             return Ok(data);
         }
 
