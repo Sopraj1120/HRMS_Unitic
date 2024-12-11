@@ -39,7 +39,7 @@ namespace HRMS.Service
             var responce = new WorkingDaysResponseDtos
             {
                 Id = data.Id,
-                UserId = data.Id,
+                UserId = data.UserId,
                 UserName = data.UserName,
                 Role = data.Role.ToString(),
                 Weekdays = data.WeekWorkingDays.Select(a => a.Weekday.ToString()).ToList(),
@@ -53,7 +53,7 @@ namespace HRMS.Service
             var responce = new WorkingDaysResponseDtos
             {
                 Id = data.Id,
-                UserId = data.Id,
+                UserId = data.UserId,
                 UserName = data.UserName,
                 Role = data.Role.ToString(),
                 Weekdays = data.WeekWorkingDays.Select(a => a.Weekday.ToString()).ToList()

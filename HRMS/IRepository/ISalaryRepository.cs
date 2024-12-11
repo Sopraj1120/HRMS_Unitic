@@ -9,6 +9,8 @@ namespace HRMS.IRepository
         Task<Salary> GetSalaryById(Guid Id);
         Task<Salary> GetSalaryByUserId(Guid UserId);
         Task<Salary> UpdateSalary(Salary salary);
-        Task<int> GetNoPayLeaveCount(Guid userId, Guid leaveTypeId);
+        Task<Salary> UpdateSalaryStatus(Salary salary);
+
+
     }
 }
