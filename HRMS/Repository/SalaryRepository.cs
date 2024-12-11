@@ -54,23 +54,11 @@ namespace HRMS.Repository
             data.SalaryStatus = salary.SalaryStatus;
             data.WorkingDays = salary.WorkingDays;
             data.Bonus = salary.Bonus;
-            data.Allowenss = salary.Allowenss;
+            data.Allowances = salary.Allowances;
             data.NetSalary = salary.NetSalary;
-            data.Dedection = salary.Dedection;
+            data.Deduction = salary.Deduction;
 
-            //if (salary.SalaryStatus == salarystatus.Get)
-            //{
-                
-            //    var leaveType = await _hRMDBContext.leaveType
-            //        .FirstOrDefaultAsync(lt => lt.Name == "No Pay Leave");
-
-            //    if (leaveType != null)
-            //    {
-            //        leaveType.CountPerYear--; 
-            //        _hRMDBContext.leaveType.Update(leaveType);
-            //    }
-                
-            //}
+           
 
             _hRMDBContext.salary.Update(data);
             await _hRMDBContext.SaveChangesAsync();
@@ -79,15 +67,19 @@ namespace HRMS.Repository
 
         }
 
-        public async Task<int> GetNoPayLeaveCount(Guid userId, Guid leaveTypeId)
+        public async Task<Salary> UpdateSalaryStatus(Salary salary)
         {
-            // Count the total "No Pay Leave" days where availableLeaves is less than or equal to zero
-            return await _hRMDBContext.leaveRequest
-                .Where(lr => lr.usersId == userId
-                             && lr.leaveTypeId == leaveTypeId
-                             && lr.AvailableLeaves <= 0) // Only include negative or zero leaves
-                .SumAsync(lr => Math.Abs(lr.AvailableLeaves)); // Sum the absolute values of the negative leave days
+            var data = await GetSalaryById(salary.Id);
+            if (data == null) return null;
+
+            data.SalaryStatus = salary.SalaryStatus;  
+
+            _hRMDBContext.salary.Update(data);
+            await _hRMDBContext.SaveChangesAsync();
+            return data;
         }
+
+
 
     }
 }
