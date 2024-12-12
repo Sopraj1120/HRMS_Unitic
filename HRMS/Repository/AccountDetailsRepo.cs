@@ -55,11 +55,7 @@ namespace HRMS.Repository
                 throw new KeyNotFoundException("User not found.");
             }
 
-            userAccountData.Id = accountDetail.Id;
-            userAccountData.UsersName = accountDetail.UsersName;
-            userAccountData.UsersNIC_No = accountDetail.UsersNIC_No;
-            userAccountData.UsersEmail = accountDetail.UsersEmail;
-            userAccountData.UsersPhoneNumber = accountDetail.UsersPhoneNumber;
+           
             userAccountData.AccountNumber = accountDetail.AccountNumber;
             userAccountData.BankName = accountDetail.BankName;
             userAccountData.BranchName = accountDetail.BranchName;
@@ -68,5 +64,15 @@ namespace HRMS.Repository
             return userAccountData;
         }
 
+        public async Task DeleteAccountById(Guid Id)
+        {
+            var data = await GetAccountById(Id);
+            if(data != null)
+            {
+                _context.accountDetail.Remove(data);
+                await _context.SaveChangesAsync();
+
+            }
+        }
     }
 }

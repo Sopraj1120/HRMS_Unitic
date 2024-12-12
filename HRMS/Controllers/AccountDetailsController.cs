@@ -20,7 +20,7 @@ namespace HRMS.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("Add_Account")]
         public async Task<IActionResult> AddAccount (Guid UserId, AccountDetailsRequestDtos accountDetailsRequestDtos)
         {
             var data = await _accountDetailService.AddAccount(UserId, accountDetailsRequestDtos);
@@ -34,25 +34,34 @@ namespace HRMS.Controllers
             return Ok(data);
         }
 
-        [HttpGet("userId")]
+        [HttpGet("Get_Account_By_userId")]
         public async Task<IActionResult> GetAccountByUserId(Guid userId)
         {
             var  data = await _accountDetailService.GetAccountByUserId(userId);
             return Ok(data);
         }
 
-        [HttpGet("id")]
+        [HttpGet("Get_Account_By-Id")]
         public async Task<IActionResult> GetAccountById(Guid id)
         {
             var data = await _accountDetailService.GetAccountById(id);
             return Ok(data);
         }
 
-        [HttpPut]
+        [HttpPut("Update_Accound")]
         public async Task<IActionResult> UpdateAccountDetailsByUserId(Guid UserId, AccountDetailsRequestDtos accountDetailsRequestDtos)
         {
             var data = await _accountDetailService.UpdateAccountDetailsByUserId(UserId, accountDetailsRequestDtos);
             return Ok(data);
         }
+        [HttpDelete("Delete_AccountDetails")]
+        public async Task<IActionResult> DeleteAccount(Guid id)
+        {
+            await _accountDetailService.DeleteAccountById(id);
+            return Ok("Account deleted successfully.");
+        }
+
+
+
     }
 }

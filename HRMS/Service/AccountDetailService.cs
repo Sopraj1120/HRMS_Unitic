@@ -3,7 +3,7 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
-using HRMS.Migrations;
+
 
 namespace HRMS.Service
 {
@@ -176,6 +176,11 @@ namespace HRMS.Service
             };
             return responce;
 
+        }
+
+        public async Task DeleteAccountById(Guid Id)
+        {
+            await _accountDetailRepo.DeleteAccountById(Id);
         }
     }
 }

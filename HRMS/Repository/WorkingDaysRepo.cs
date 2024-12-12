@@ -21,6 +21,14 @@ namespace HRMS.Repository
             return data.Entity;
         }
 
+        public async Task<List<WorkingDays>> GetAllWorkingdays()
+        {
+            var data = await _hRMDBContext.workingDays
+                .Include(wd => wd.WeekWorkingDays) 
+                .ToListAsync();
+            return data;
+        }
+
         public async Task<WorkingDays> GetWorkingDaysByUserId(Guid UserId)
         {
             var data = await _hRMDBContext.workingDays.Include(a => a.WeekWorkingDays).FirstOrDefaultAsync(x => x.UserId == UserId);

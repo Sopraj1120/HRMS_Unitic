@@ -10,5 +10,6 @@ namespace HRMS.Iservice
         Task<AccountDetailsResponceDtos> GetAccountByUserId(Guid userId);
         Task<AccountDetailsResponceDtos> GetAccountById(Guid id);
         Task<AccountDetailsResponceDtos> UpdateAccountDetailsByUserId(Guid UserId, AccountDetailsRequestDtos accountDetailsRequestDtos);
+        Task DeleteAccountById(Guid Id);
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    [Migration("20241210054658_user")]
-    partial class user
+    [Migration("20241212090605_check")]
+    partial class check
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -84,16 +84,17 @@ namespace HRMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AccountNumber")
+                    b.Property<int?>("AccountNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("BankName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BranchName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.Property<string>("UsersEmail")
                         .HasColumnType("nvarchar(max)");
@@ -108,6 +109,10 @@ namespace HRMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UsersPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Users_Id")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -438,7 +443,7 @@ namespace HRMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("Allowenss")
+                    b.Property<decimal>("Allowances")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("BasicSalary")
@@ -447,7 +452,7 @@ namespace HRMS.Migrations
                     b.Property<decimal>("Bonus")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Dedection")
+                    b.Property<decimal>("Deduction")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("EPF")
