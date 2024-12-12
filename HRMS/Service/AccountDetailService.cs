@@ -3,6 +3,7 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
+using HRMS.Migrations;
 
 namespace HRMS.Service
 {
@@ -24,6 +25,11 @@ namespace HRMS.Service
             {
                 Id = Guid.NewGuid(),
                 UsersId = UserId,
+                Users_Id = user.UsersId,
+                Role = user.Role,
+                UsersName = user.FirstName,
+                UsersEmail = user.Email,
+                UsersNIC_No = user.Nic,
                 BankName = accountDetailsRequestDtos.BankName,
                 AccountNumber = accountDetailsRequestDtos.AccountNumber,
                 BranchName = accountDetailsRequestDtos.BranchName,
@@ -37,10 +43,11 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 UsersId = data.UsersId,
-                UsersName = user.FirstName,
-                UsersEmail = user.Email,
-                UsersPhoneNumber = user.PhoneNumber,
-                UsersNIC_No = user.Nic,
+                Users_Id = data.Users_Id,
+                Role = data.Role.ToString(),
+                UsersName = data.UsersName,
+                UsersEmail = data.UsersEmail,
+                UsersNIC_No = data.UsersNIC_No,
                 AccountNumber = data.AccountNumber,
                 BankName = data.BankName,
                 BranchName = data.BranchName,
@@ -51,47 +58,67 @@ namespace HRMS.Service
 
         public async Task<List<AccountDetailsResponceDtos>> GetAllAccountDetails()
         {
+            var users = await _userRepo.GetAllUsers();
             var data = await _accountDetailRepo.GetAllAccountDetails();
 
-            var responce = new List<AccountDetailsResponceDtos>();
 
-            foreach (var account in data)
+
+            var response = users.Select(user =>
             {
-                var user = await _userRepo.GetUserById(account.UsersId);
+                var userAccount = data.FirstOrDefault(a => a.UsersId == user.Id);
 
-                var resacc = new AccountDetailsResponceDtos
+                if (userAccount == null)
                 {
-                    Id = account.Id,
-                    UsersId = account.UsersId,
-                    UsersName = user.FirstName,
-                    UsersEmail = user.Email,
-                    UsersPhoneNumber = user.PhoneNumber,
-                    UsersNIC_No = user.Nic,
-                    AccountNumber = account.AccountNumber,
-                    BankName = account.BankName,
-                    BranchName = account.BranchName,
-                };
-                responce.Add(resacc);
 
-            };
-            return responce;
+                    return new AccountDetailsResponceDtos
+                    {
+                      Id = Guid.NewGuid(),
+                        UsersId = user.Id,
+                        Users_Id = user.UsersId,
+                        Role = user.Role.ToString(),
+                        UsersName = user.FirstName,
+                        UsersEmail = user.Email,
+                        UsersNIC_No = user.Nic,
+                        BankName = null,
+                        AccountNumber = null,
+                        BranchName = null,
+                    };
+                }
+
+                return new AccountDetailsResponceDtos
+                {
+                    Id = userAccount.Id,
+                    UsersId = userAccount.UsersId,
+                    Users_Id = userAccount.Users_Id,
+                    Role = userAccount.Role.ToString(),
+                    UsersName = userAccount.UsersName,
+                    UsersEmail = userAccount.UsersEmail,
+                    UsersNIC_No = userAccount.UsersNIC_No,
+                    BankName = userAccount.BankName,
+                    AccountNumber = userAccount.AccountNumber,
+                    BranchName = userAccount.BranchName
+                };
+            }).ToList();
+            return response;
         }
 
 
         public async Task<AccountDetailsResponceDtos> GetAccountByUserId(Guid userId)
         {
-            var user = await _userRepo.GetUserById(userId);
+      
 
             var data = await _accountDetailRepo.GetAccountByUserId(userId);
 
             var responce = new AccountDetailsResponceDtos
             {
+
                 Id = data.Id,
-                UsersId = userId,
-                UsersName = user.FirstName,
-                UsersEmail = user.Email,
-                UsersPhoneNumber = user.PhoneNumber,
-                UsersNIC_No = user.Nic,
+                UsersId = data.UsersId,
+                Users_Id = data.Users_Id,
+                Role = data.Role.ToString(),
+                UsersName = data.UsersName,
+                UsersEmail = data.UsersEmail,
+                UsersNIC_No = data.UsersNIC_No,
                 AccountNumber = data.AccountNumber,
                 BankName = data.BankName,
                 BranchName = data.BranchName,
@@ -104,16 +131,16 @@ namespace HRMS.Service
         {
             var data = await _accountDetailRepo.GetAccountById(id);
 
-            var user = await _userRepo.GetUserById(data.UsersId);
 
             var responce = new AccountDetailsResponceDtos
             {
                 Id = data.Id,
-                UsersId = user.Id,
-                UsersName = user.FirstName,
-                UsersEmail = user.Email,
-                UsersPhoneNumber = user.PhoneNumber,
-                UsersNIC_No = user.Nic,
+                UsersId = data.UsersId,
+                Users_Id = data.Users_Id,
+                Role = data.Role.ToString(),
+                UsersName = data.UsersName,
+                UsersEmail = data.UsersEmail,
+                UsersNIC_No = data.UsersNIC_No,
                 AccountNumber = data.AccountNumber,
                 BankName = data.BankName,
                 BranchName = data.BranchName,
@@ -124,7 +151,7 @@ namespace HRMS.Service
 
         public async Task<AccountDetailsResponceDtos> UpdateAccountDetailsByUserId(Guid UserId, AccountDetailsRequestDtos accountDetailsRequestDtos)
         {
-            var user = await _userRepo.GetUserById(UserId);
+          
 
             var account = await _accountDetailRepo.GetAccountByUserId(UserId);
 
@@ -137,11 +164,12 @@ namespace HRMS.Service
             var responce = new AccountDetailsResponceDtos
             {
                 Id = data.Id,
-                UsersId = UserId,
-                UsersName = user.FirstName,
-                UsersEmail = user.Email,
-                UsersPhoneNumber = user.PhoneNumber,
-                UsersNIC_No = user.Nic,
+                UsersId = data.UsersId,
+                Users_Id = data.Users_Id,
+                Role = data.Role.ToString(),
+                UsersName = data.UsersName,
+                UsersEmail = data.UsersEmail,
+                UsersNIC_No = data.UsersNIC_No,
                 AccountNumber = data.AccountNumber,
                 BankName = data.BankName,
                 BranchName = data.BranchName,
