@@ -1,26 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\",
+  "WorkspaceRootPath": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrmanage\\new folder\\hrms_unitic\\hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrmanage\\new folder\\hrms_unitic\\hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\migrations\\20241212131340_wok252.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\migrations\\20241212131340_wok252.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\controllers\\accountdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\accountdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\entities\\weekworkingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\weekworkingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\new folder (3)\\hrms_unitic\\hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrmanage\\new folder\\hrms_unitic\\hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrmanage\\new folder\\hrms_unitic\\hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrmanage\\new folder\\hrms_unitic\\hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +50,128 @@
       "DocumentGroups": [
         {
           "DockedHeight": 381,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountDetailsResponceDtos.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
-              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
-              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
-              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
+              "DocumentIndex": 4,
+              "Title": "20241212131340_wok252.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Migrations\\20241212131340_wok252.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241212131340_wok252.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Migrations\\20241212131340_wok252.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241212131340_wok252.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:38:41.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountDetail.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\AccountDetail.cs",
-              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
-              "RelativeToolTip": "HRMS\\Entities\\AccountDetail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:38:10.024Z"
+              "WhenOpened": "2024-12-12T13:13:41.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserAttendanceService.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\UserAttendanceService.cs",
-              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
-              "RelativeToolTip": "HRMS\\Service\\UserAttendanceService.cs",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAKsAAAAYAAAA",
+              "Title": "WorkingDaysController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:24:55.05Z"
+              "WhenOpened": "2024-12-12T13:11:29.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWorkingDaysService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:11:20.111Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AccountDetailService.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
-              "RelativeDocumentMoniker": "HRMS\\Service\\AccountDetailService.cs",
-              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
-              "RelativeToolTip": "HRMS\\Service\\AccountDetailService.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAmwKgAAAAsAAAA",
+              "Title": "WorkingDaysService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\WorkingDaysService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Service\\WorkingDaysService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowE8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:56:30.876Z"
+              "WhenOpened": "2024-12-12T13:02:36.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Salary.cs",
-              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
-              "RelativeDocumentMoniker": "HRMS\\Entities\\Salary.cs",
-              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\hrmanage\\New folder\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
-              "RelativeToolTip": "HRMS\\Entities\\Salary.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "DocumentIndex": 6,
+              "Title": "IWorkingDaysRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T06:59:48.168Z"
+              "WhenOpened": "2024-12-12T13:02:24.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkingDaysRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBoAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:00:15.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeekWorkingDays.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Entities\\WeekWorkingDays.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\WeekWorkingDays.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Entities\\WeekWorkingDays.cs",
+              "RelativeToolTip": "HRMS\\Entities\\WeekWorkingDays.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T12:50:36.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountDetailsRepo.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T12:37:14.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountDetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Controllers\\AccountDetailsController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\AccountDetailsController.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Controllers\\AccountDetailsController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\AccountDetailsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:53:33.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\AccountDetailService.cs",
+              "ToolTip": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeToolTip": "HRMS\\Service\\AccountDetailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:53:19.173Z"
             }
           ]
         }
