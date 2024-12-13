@@ -6,7 +6,7 @@ namespace HRMS.DTOs.RequestDtos
     {
 
 
-        public List<weekdays> Weekdays { get; set; }
+        public List<weekdaysRequest> Weekdays { get; set; }
 
     }
     

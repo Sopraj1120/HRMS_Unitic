@@ -27,7 +27,7 @@ namespace HRMS.Controllers
         [HttpGet("Get_All_workingDays")]
         public async Task<IActionResult> GetAllWorkingDays()
         {
-            var data = await _workingDaysService.GetAllWorkigDays();
+            var data = await _workingDaysService.GetAllWorkingDays();
             return Ok(data);
         }
 
@@ -41,7 +41,7 @@ namespace HRMS.Controllers
         [HttpPut("Update_wokingDays")]
         public async Task<IActionResult> UpdateWorkingdays(Guid userId, WorkingDaysRequestDtos workingDaysRequest)
         {
-            var data = await _workingDaysService.UpdateWorkingdays(userId, workingDaysRequest);
+            var data = await _workingDaysService.UpdateWorkingDays(userId, workingDaysRequest);
             return Ok(data);
         }
 
@@ -49,7 +49,7 @@ namespace HRMS.Controllers
         [HttpDelete("Delete_WorkingDays")]
         public async Task<IActionResult>  deleteWorkingDays(Guid Id)
         {
-            await _workingDaysService.deleteWorkingDays(Id);
+            await _workingDaysService.DeleteWorkingDays(Id);
             return NoContent();
         }
 

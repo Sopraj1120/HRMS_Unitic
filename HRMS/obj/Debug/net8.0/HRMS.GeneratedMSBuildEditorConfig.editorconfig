@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HRMS
 build_property.RootNamespace = HRMS
-<<<<<<< HEAD
-build_property.ProjectDir = D:\Projects\M3_GroupProject\12-12_hrms\HRMS_Unitic\HRMS\
-=======
-build_property.ProjectDir = C:\Users\UT01286\Desktop\New folder (3)\HRMS_Unitic\HRMS\
->>>>>>> 1569a4885fd6b24a3520f05e5295b4eabf203d8b
+build_property.ProjectDir = C:\Users\UT01286\Desktop\HRM\HRMS_Unitic\HRMS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
-build_property.MSBuildProjectDirectory = D:\Projects\M3_GroupProject\12-12_hrms\HRMS_Unitic\HRMS
-=======
-build_property.MSBuildProjectDirectory = C:\Users\UT01286\Desktop\New folder (3)\HRMS_Unitic\HRMS
->>>>>>> 1569a4885fd6b24a3520f05e5295b4eabf203d8b
+build_property.MSBuildProjectDirectory = C:\Users\UT01286\Desktop\HRM\HRMS_Unitic\HRMS
 build_property._RazorSourceGeneratorDebug = 

@@ -17,7 +17,7 @@ namespace HRMS.Service
         private readonly IHollyDayRepo _hollyDayRepo;
         private readonly IWorkingDaysRepo _workingDaysRepo;
 
-        public SalaryService(ISalaryRepository repository, IUserRepo userRepo, ILeaveTypeRepo leaveTypeRepo, ILeaveRequestrepo leaveRequestrepo,IWorkingDaysRepo workingDaysRepo, IHollyDayRepo hollyDayRepo)
+        public SalaryService(ISalaryRepository repository, IUserRepo userRepo, ILeaveTypeRepo leaveTypeRepo, ILeaveRequestrepo leaveRequestrepo, IWorkingDaysRepo workingDaysRepo, IHollyDayRepo hollyDayRepo)
         {
             _repository = repository;
             _userRepo = userRepo;
@@ -27,24 +27,44 @@ namespace HRMS.Service
             _hollyDayRepo = hollyDayRepo;
         }
 
+        private bool IsWorkingDay(WorkingDays workingDays, DayOfWeek dayOfWeek)
+        {
+            var weekDays = workingDays.WeekDays.FirstOrDefault();
+            if (weekDays == null)
+            {
+                return false; 
+            }
+
+            return dayOfWeek switch
+            {
+                DayOfWeek.Monday => weekDays.Monday,
+                DayOfWeek.Tuesday => weekDays.Tuesday,
+                DayOfWeek.Wednesday => weekDays.Wednesday,
+                DayOfWeek.Thursday => weekDays.Thursday,
+                DayOfWeek.Friday => weekDays.Friday,
+                DayOfWeek.Saturday => weekDays.Saturday,
+                DayOfWeek.Sunday => weekDays.Sunday,
+                _ => false
+            };
+        }
         public async Task<SalaryResponceDtos> AddSalary(Guid userId, SalaryRequestDtos salaryRequestDtos)
         {
             var user = await _userRepo.GetUserById(userId);
             if (user == null)
                 throw new KeyNotFoundException($"User with ID {userId} not found.");
 
-           
+
             int workingDays = await GetWorkingDaysForMonth(userId, DateTime.Now.Year, DateTime.Now.Month);
 
-  
-            var dailyRate = salaryRequestDtos.BasicSalary / (workingDays*9); 
+
+            var dailyRate = salaryRequestDtos.BasicSalary / (workingDays * 9);
             var deduction = salaryRequestDtos.Deduction;
             var epf = salaryRequestDtos.BasicSalary * 0.08m;
             var employerEpf = salaryRequestDtos.BasicSalary * 0.12m;
             var etf = salaryRequestDtos.BasicSalary * 0.003m;
             var totalDeductions = deduction + epf + employerEpf + etf;
 
-          
+
             var netSalary = salaryRequestDtos.BasicSalary
                             + salaryRequestDtos.Bonus
                             + salaryRequestDtos.Allowances
@@ -54,6 +74,7 @@ namespace HRMS.Service
             {
                 Id = Guid.NewGuid(),
                 UserId = userId,
+                User_Id = user.UsersId,
                 UserName = $"{user.FirstName} {user.LastName}",
                 Role = user.Role,
                 BasicSalary = salaryRequestDtos.BasicSalary,
@@ -67,13 +88,14 @@ namespace HRMS.Service
                 SalaryStatus = salaryRequestDtos.SalaryStatus
             };
 
-  
+
             var savedSalary = await _repository.AddSalary(salary);
 
             return new SalaryResponceDtos
             {
                 Id = savedSalary.Id,
                 UserId = savedSalary.UserId,
+                User_Id = savedSalary.User_Id,
                 UserName = savedSalary.UserName,
                 Role = savedSalary.Role.ToString(),
                 BasicSalary = savedSalary.BasicSalary,
@@ -92,44 +114,80 @@ namespace HRMS.Service
 
         public async Task<int> GetWorkingDaysForMonth(Guid userId, int year, int month)
         {
-       
-            var holidays = await _hollyDayRepo.GatAllHollyDays() ?? new List<HollyDays>();  
+            
+            var holidays = await _hollyDayRepo.GatAllHollyDays() ?? new List<HollyDays>();
             var workingDays = await _workingDaysRepo.GetWorkingDaysByUserId(userId);
 
+            if (workingDays == null || workingDays.WeekDays == null || !workingDays.WeekDays.Any())
+            {
+                throw new InvalidOperationException("Working days are not defined for this user.");
+            }
 
             var daysInMonth = DateTime.DaysInMonth(year, month);
             var allDatesInMonth = Enumerable.Range(1, daysInMonth)
                 .Select(day => new DateTime(year, month, day))
                 .ToList();
 
-            
+         
             var validWorkingDays = allDatesInMonth
                 .Where(date => !holidays.Any(h => h.Date.Date == date.Date) &&
-                               workingDays.WeekWorkingDays.Any(w => w.Weekday.ToString() == date.DayOfWeek.ToString()))  
+                               IsWorkingDay(workingDays, date.DayOfWeek))
                 .ToList();
 
-            return validWorkingDays.Count(); 
+       
+            return validWorkingDays.Count;
         }
+
+
 
 
         public async Task<List<SalaryResponceDtos>> GetAllsalaries()
         {
+            var users = await _userRepo.GetAllUsers();
             var data = await _repository.GetAllsalaries();
-            var responce = data.Select(x => new SalaryResponceDtos
+
+            var responce = users.Select(x =>
             {
-                Id = x.Id,
-                UserName = x.UserName,
-                UserId = x.UserId,
-                Role = x.Role.ToString(),
-                BasicSalary = x.BasicSalary,
-                WorkingDays = x.WorkingDays,
-                Deduction = x.Deduction,
-                EPF = x.EPF,
-                Etf = x.Etf,
-                Allowances = x.Allowances,
-                Bonus = x.Bonus,
-                NetSalary = x.NetSalary,
-                SalaryStatus = x.SalaryStatus.ToString()
+                var userSalary = data.FirstOrDefault(a => a.UserId == x.Id);
+
+                if (userSalary == null)
+                {
+                    return new SalaryResponceDtos
+                    {
+                        Id = Guid.NewGuid(),
+                        UserName = x.FirstName,
+                        UserId = x.Id,
+                        User_Id = x.UsersId,
+                        Role = x.Role.ToString(),
+                        BasicSalary = null,
+                        WorkingDays = null,
+                        Deduction = null,
+                        EPF = null,
+                        Etf = null,
+                        Allowances = null,
+                        Bonus = null,
+                        NetSalary = null,
+                        SalaryStatus = null
+
+                    };
+                }
+                return new SalaryResponceDtos
+                {
+                    Id = userSalary.Id,
+                    UserName = userSalary.UserName,
+                    UserId = userSalary.UserId,
+                    User_Id = userSalary.User_Id,
+                    Role = userSalary.Role.ToString(),
+                    BasicSalary = userSalary.BasicSalary,
+                    WorkingDays = userSalary.WorkingDays,
+                    Deduction = userSalary.Deduction,
+                    EPF = userSalary.EPF,
+                    Etf = userSalary.Etf,
+                    Allowances = userSalary.Allowances,
+                    Bonus = userSalary.Bonus,
+                    NetSalary = userSalary.NetSalary,
+                    SalaryStatus = userSalary.SalaryStatus.ToString()
+                };
             }).ToList();
             return responce;
         }
@@ -142,6 +200,7 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 UserId = data.UserId,
+                User_Id = data.User_Id,
                 UserName = data.UserName,
                 Role = data.Role.ToString(),
                 BasicSalary = data.BasicSalary,
@@ -166,6 +225,7 @@ namespace HRMS.Service
             {
                 Id = data.Id,
                 UserId = data.UserId,
+                User_Id = data.User_Id,
                 UserName = data.UserName,
                 Role = data.Role.ToString(),
                 BasicSalary = data.BasicSalary,
@@ -182,20 +242,19 @@ namespace HRMS.Service
             return responce;
         }
 
-        public async Task<SalaryResponceDtos> UpdateSalary(Guid id, SalaryRequestDtos salaryRequestDtos)
+        public async Task<SalaryResponceDtos> UpdateSalary(Guid userId, SalaryRequestDtos salaryRequestDtos)
         {
 
-            var existingSalary = await _repository.GetSalaryById(id);
+            var existingSalary = await _repository.GetSalaryByUserId(userId);
             if (existingSalary == null)
-                throw new KeyNotFoundException($"Salary with ID {id} not found.");
+                throw new KeyNotFoundException($"Salary with ID {userId} not found.");
 
 
-           
+
 
 
             existingSalary.BasicSalary = salaryRequestDtos.BasicSalary;
             existingSalary.SalaryStatus = salaryRequestDtos.SalaryStatus;
-            existingSalary.WorkingDays = salaryRequestDtos.WorkingDays;
             existingSalary.Bonus = salaryRequestDtos.Bonus;
             existingSalary.Allowances = salaryRequestDtos.Allowances;
             existingSalary.NetSalary = salaryRequestDtos.BasicSalary + salaryRequestDtos.Bonus + salaryRequestDtos.Allowances - salaryRequestDtos.Deduction;
@@ -207,6 +266,7 @@ namespace HRMS.Service
             {
                 Id = updatedSalary.Id,
                 UserId = updatedSalary.UserId,
+                User_Id = updatedSalary.User_Id,
                 UserName = updatedSalary.UserName,
                 Role = updatedSalary.Role.ToString(),
                 BasicSalary = updatedSalary.BasicSalary,
@@ -221,8 +281,8 @@ namespace HRMS.Service
             };
         }
 
-       
-        
+
+
 
 
     }

@@ -31,21 +31,39 @@ namespace HRMS.Service
         {
             var holidays = await _hollyDayRepo.GatAllHollyDays();
             var workingdays = await _workingDaysRepo.GetWorkingDaysByUserId(UserId);
+
           
-            
             var allDates = Enumerable
-                .Range(0, (returnDate - leaveDate).Days )
+                .Range(0, (returnDate - leaveDate).Days + 1) 
                 .Select(d => leaveDate.AddDays(d))
                 .ToList();
 
-            
             var validLeaveDays = allDates
-                .Where(date => !holidays.Any(holidays=> holidays.Date.Date == date.Date) &&
-                                workingdays.WeekWorkingDays.Any(w => w.Weekday == (weekdays)date.DayOfWeek))
+                .Where(date =>
+                    !holidays.Any(h => h.Date.Date == date.Date) && 
+                    IsWorkingDay(workingdays, date.DayOfWeek))    
                 .ToList();
 
+           
             return validLeaveDays.Count;
         }
+
+        
+        private bool IsWorkingDay(WorkingDays workingDays, DayOfWeek dayOfWeek)
+        {
+            return dayOfWeek switch
+            {
+                DayOfWeek.Monday => workingDays.WeekDays.FirstOrDefault()?.Monday ?? false,
+                DayOfWeek.Tuesday => workingDays.WeekDays.FirstOrDefault()?.Tuesday ?? false,
+                DayOfWeek.Wednesday => workingDays.WeekDays.FirstOrDefault()?.Wednesday ?? false,
+                DayOfWeek.Thursday => workingDays.WeekDays.FirstOrDefault()?.Thursday ?? false,
+                DayOfWeek.Friday => workingDays.WeekDays.FirstOrDefault()?.Friday ?? false,
+                DayOfWeek.Saturday => workingDays.WeekDays.FirstOrDefault()?.Saturday ?? false,
+                DayOfWeek.Sunday => workingDays.WeekDays.FirstOrDefault()?.Sunday ?? false,
+                _ => false
+            };
+        }
+
 
 
         public async Task<LeaveReqResponseDto> AddLeaveRequest(Guid UserId, Guid LeaveTypeId, LeaveReqestDtos leaveReqestDtos)

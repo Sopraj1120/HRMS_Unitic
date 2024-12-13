@@ -69,7 +69,7 @@ namespace HRMS.Repository
 
         public async Task<Salary> UpdateSalaryStatus(Salary salary)
         {
-            var data = await GetSalaryById(salary.Id);
+            var data = await GetSalaryById(salary.UserId);
             if (data == null) return null;
 
             data.SalaryStatus = salary.SalaryStatus;  

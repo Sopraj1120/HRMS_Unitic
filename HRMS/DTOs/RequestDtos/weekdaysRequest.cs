@@ -1,8 +1,7 @@
-﻿namespace HRMS.Entities
+﻿namespace HRMS.DTOs.RequestDtos
 {
-    public class WeekDays
+    public class weekdaysRequest
     {
-        public int Id { get; set; }
         public bool Monday { get; set; }
         public bool Tuesday { get; set; }
         public bool Wednesday { get; set; }

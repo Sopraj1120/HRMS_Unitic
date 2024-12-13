@@ -4218,34 +4218,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\thana\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\UT01286\\.nuget\\packages\\": {}
->>>>>>> 1569a4885fd6b24a3520f05e5295b4eabf203d8b
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\Projects\\M3_GroupProject\\12-12_hrms\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "projectUniqueName": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\HRMS\\HRMS.csproj",
       "projectName": "HRMS",
-      "projectPath": "D:\\Projects\\M3_GroupProject\\12-12_hrms\\HRMS_Unitic\\HRMS\\HRMS.csproj",
-      "packagesPath": "C:\\Users\\thana\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\M3_GroupProject\\12-12_hrms\\HRMS_Unitic\\HRMS\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\thana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\HRMS.csproj",
-      "projectName": "HRMS",
-      "projectPath": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "projectPath": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\HRMS\\HRMS.csproj",
       "packagesPath": "C:\\Users\\UT01286\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UT01286\\Desktop\\New folder (3)\\HRMS_Unitic\\HRMS\\obj\\",
+      "outputPath": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\HRMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UT01286\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 1569a4885fd6b24a3520f05e5295b4eabf203d8b
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4327,7 +4312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

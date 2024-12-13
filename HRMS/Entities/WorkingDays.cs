@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using System.Net.Http.Headers;
 
 namespace HRMS.Entities
 {
@@ -6,24 +7,16 @@ namespace HRMS.Entities
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
+        public string User_Id {  get; set; }    
         public string UserName { get; set; }
         public Role Role { get; set; }
         public Users User { get; set; }
 
-     
-        public ICollection<WeekWorkingDays> WeekWorkingDays { get; set; }
+        public ICollection<WeekDays> WeekDays { get; set; }
+
 
     }
 
 
-    public enum weekdays
-    {
-        Sunday = 1,
-        Monday = 2,
-        Tuesday = 3,
-        Wednesday = 4,
-        Thursday = 5,
-        Friday = 6,
-        Saturday = 7
-    }
+  
 }

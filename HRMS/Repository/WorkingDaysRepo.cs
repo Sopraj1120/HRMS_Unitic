@@ -24,20 +24,23 @@ namespace HRMS.Repository
         public async Task<List<WorkingDays>> GetAllWorkingdays()
         {
             var data = await _hRMDBContext.workingDays
-                .Include(wd => wd.WeekWorkingDays) 
+                .Include(wd => wd.WeekDays) 
                 .ToListAsync();
             return data;
         }
 
         public async Task<WorkingDays> GetWorkingDaysByUserId(Guid UserId)
         {
-            var data = await _hRMDBContext.workingDays.Include(a => a.WeekWorkingDays).FirstOrDefaultAsync(x => x.UserId == UserId);
+            var data = await _hRMDBContext.workingDays.Include(a => a.WeekDays).FirstOrDefaultAsync(x => x.UserId == UserId);
             return data;
         }
 
         public async Task<WorkingDays> UpdateWorkingdays(WorkingDays workingDays)
         {
             var user = await GetWorkingDaysByUserId(workingDays.UserId);
+            if (user == null) return null;
+            user.WeekDays = workingDays.WeekDays;
+
 
             _hRMDBContext.workingDays.Update(user);
             await _hRMDBContext.SaveChangesAsync();
