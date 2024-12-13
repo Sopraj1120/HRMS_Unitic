@@ -1,4 +1,5 @@
 
+using HRMS.Controllers;
 using HRMS.DataBase;
 using HRMS.IRepository;
 using HRMS.Iservice;
@@ -26,6 +27,7 @@ namespace HRMS
 
             builder.Services.AddDbContext<HRMDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("HRM")));
+
 
 
             builder.Services.AddScoped<IStudentRepo, StudentRepository>();
@@ -105,6 +107,8 @@ namespace HRMS
             builder.Services.AddScoped<IUserLoginRepository, UserloginRepo >();
             builder.Services.AddScoped<IUserLoginService, UserLoginService >();
 
+
+            
 
 
 
