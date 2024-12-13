@@ -6,10 +6,14 @@ namespace HRMS.Iservice
 {
     public interface IWorkingDaysService
     {
-        Task<WorkingDaysResponseDtos> AddWorkingDays(Guid UserId, WorkingDaysRequestDtos requestDtos);
-        Task<List<WorkingDaysResponseDtos>> GetAllWorkigDays();
-        Task<WorkingDaysResponseDtos> GetWorkingDaysByUserId(Guid UserId);
-        Task<WorkingDaysResponseDtos> UpdateWorkingdays(Guid userId, WorkingDaysRequestDtos workingDaysRequest);
-        Task deleteWorkingDays(Guid Id);
+        
+        Task<WorkingDaysResponseDtos> AddWorkingDays(Guid userId, WorkingDaysRequestDtos requestDtos);
+
+        Task<List<WorkingDaysResponseDtos>> GetAllWorkingDays();
+
+        Task<WorkingDaysResponseDtos> GetWorkingDaysByUserId(Guid userId);
+   
+        Task<WorkingDaysResponseDtos> UpdateWorkingDays(Guid userId, WorkingDaysRequestDtos requestDto);
+        Task DeleteWorkingDays(Guid id);
     }
 }

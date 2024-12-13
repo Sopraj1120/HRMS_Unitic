@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class check : Migration
+    public partial class init10 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -458,6 +458,7 @@ namespace HRMS.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    User_Id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false)
                 },
@@ -493,22 +494,28 @@ namespace HRMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "WeekWorkingDays",
+                name: "WeekDays",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    WorkingDaysId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Weekday = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Monday = table.Column<bool>(type: "bit", nullable: false),
+                    Tuesday = table.Column<bool>(type: "bit", nullable: false),
+                    Wednesday = table.Column<bool>(type: "bit", nullable: false),
+                    Thursday = table.Column<bool>(type: "bit", nullable: false),
+                    Friday = table.Column<bool>(type: "bit", nullable: false),
+                    Saturday = table.Column<bool>(type: "bit", nullable: false),
+                    Sunday = table.Column<bool>(type: "bit", nullable: false),
+                    WorkingDaysId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_WeekWorkingDays", x => x.Id);
+                    table.PrimaryKey("PK_WeekDays", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_WeekWorkingDays_workingDays_WorkingDaysId",
+                        name: "FK_WeekDays_workingDays_WorkingDaysId",
                         column: x => x.WorkingDaysId,
                         principalTable: "workingDays",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -551,17 +558,18 @@ namespace HRMS.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    User_Id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
-                    BasicSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Deduction = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Bonus = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    EPF = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Etf = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Allowances = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    WorkingDays = table.Column<int>(type: "int", nullable: false),
-                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SalaryStatus = table.Column<int>(type: "int", nullable: false),
+                    BasicSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Deduction = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Bonus = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    EPF = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Etf = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Allowances = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    WorkingDays = table.Column<int>(type: "int", nullable: true),
+                    NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    SalaryStatus = table.Column<int>(type: "int", nullable: true),
                     LeaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
@@ -707,8 +715,8 @@ namespace HRMS.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WeekWorkingDays_WorkingDaysId",
-                table: "WeekWorkingDays",
+                name: "IX_WeekDays_WorkingDaysId",
+                table: "WeekDays",
                 column: "WorkingDaysId");
 
             migrationBuilder.CreateIndex(
@@ -773,7 +781,7 @@ namespace HRMS.Migrations
                 name: "userOLevels");
 
             migrationBuilder.DropTable(
-                name: "WeekWorkingDays");
+                name: "WeekDays");
 
             migrationBuilder.DropTable(
                 name: "leaveRequest");

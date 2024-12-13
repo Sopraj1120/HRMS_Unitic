@@ -10,6 +10,6 @@ namespace HRMS.Iservice
         Task<List<SalaryResponceDtos>> GetAllsalaries();
         Task<SalaryResponceDtos> GetSalaryById(Guid Id);
         Task<SalaryResponceDtos> GetSalaryByUserId(Guid UserId);
-        Task<SalaryResponceDtos> UpdateSalary(Guid id, SalaryRequestDtos salaryRequestDtos);
+        Task<SalaryResponceDtos> UpdateSalary(Guid userId, SalaryRequestDtos salaryRequestDtos);
     }
 }

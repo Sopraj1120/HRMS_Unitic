@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRMS.Migrations
 {
     [DbContext(typeof(HRMDBContext))]
-    [Migration("20241212090605_check")]
-    partial class check
+    [Migration("20241213070531_init10")]
+    partial class init10
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -443,34 +443,34 @@ namespace HRMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("Allowances")
+                    b.Property<decimal?>("Allowances")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("BasicSalary")
+                    b.Property<decimal?>("BasicSalary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Bonus")
+                    b.Property<decimal?>("Bonus")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Deduction")
+                    b.Property<decimal?>("Deduction")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("EPF")
+                    b.Property<decimal?>("EPF")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Etf")
+                    b.Property<decimal?>("Etf")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<Guid?>("LeaveTypeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<decimal>("NetSalary")
+                    b.Property<decimal?>("NetSalary")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
-                    b.Property<int>("SalaryStatus")
+                    b.Property<int?>("SalaryStatus")
                         .HasColumnType("int");
 
                     b.Property<Guid>("UserId")
@@ -480,7 +480,11 @@ namespace HRMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WorkingDays")
+                    b.Property<string>("User_Id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("WorkingDays")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -933,23 +937,43 @@ namespace HRMS.Migrations
                     b.ToTable("users");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.WeekWorkingDays", b =>
+            modelBuilder.Entity("HRMS.Entities.WeekDays", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Weekday")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("WorkingDaysId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Friday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Monday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Saturday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Sunday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Thursday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Tuesday")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Wednesday")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("WorkingDaysId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("WorkingDaysId");
 
-                    b.ToTable("WeekWorkingDays");
+                    b.ToTable("WeekDays");
                 });
 
             modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
@@ -965,6 +989,10 @@ namespace HRMS.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("User_Id")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -1208,15 +1236,11 @@ namespace HRMS.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("HRMS.Entities.WeekWorkingDays", b =>
+            modelBuilder.Entity("HRMS.Entities.WeekDays", b =>
                 {
-                    b.HasOne("HRMS.Entities.WorkingDays", "WorkingDays")
-                        .WithMany("WeekWorkingDays")
-                        .HasForeignKey("WorkingDaysId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("WorkingDays");
+                    b.HasOne("HRMS.Entities.WorkingDays", null)
+                        .WithMany("WeekDays")
+                        .HasForeignKey("WorkingDaysId");
                 });
 
             modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
@@ -1290,7 +1314,7 @@ namespace HRMS.Migrations
 
             modelBuilder.Entity("HRMS.Entities.WorkingDays", b =>
                 {
-                    b.Navigation("WeekWorkingDays");
+                    b.Navigation("WeekDays");
                 });
 
             modelBuilder.Entity("LeaveType", b =>

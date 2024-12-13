@@ -3,7 +3,10 @@ using HRMS.DTOs.ResponseDtos;
 using HRMS.Entities;
 using HRMS.IRepository;
 using HRMS.Iservice;
-using System.Runtime.InteropServices;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace HRMS.Service
 {
@@ -18,116 +21,159 @@ namespace HRMS.Service
             _userRepo = userRepo;
         }
 
-        public async Task<WorkingDaysResponseDtos> AddWorkingDays(Guid UserId, WorkingDaysRequestDtos requestDtos)
+        public async Task<WorkingDaysResponseDtos> AddWorkingDays(Guid userId, WorkingDaysRequestDtos requestDtos)
         {
-            var user = await _userRepo.GetUserById(UserId);
+            var user = await _userRepo.GetUserById(userId);
             if (user == null)
             {
-
-                throw new Exception($"User with ID {UserId} not found.");
+                throw new Exception($"User with ID {userId} not found.");
             }
-            var workdays = new WorkingDays
+
+            var workingDays = new WorkingDays
             {
                 Id = Guid.NewGuid(),
-                UserId = UserId,
+                UserId = userId,
+                User_Id = user.UsersId,
                 UserName = user.FirstName,
                 Role = user.Role,
-                WeekWorkingDays = requestDtos.Weekdays.Select(x => new WeekWorkingDays
+                WeekDays = requestDtos.Weekdays.Select(day => new WeekDays
                 {
-                    Weekday = x
+                    Monday = day.Monday,
+                    Tuesday = day.Tuesday,
+                    Wednesday = day.Wednesday,
+                    Thursday = day.Thursday,
+                    Friday = day.Friday,
+                    Saturday = day.Saturday,
+                    Sunday = day.Sunday
                 }).ToList()
-
-
             };
 
-            var data = await _repo.AddWorkingDays(workdays);
-            var responce = new WorkingDaysResponseDtos
-            {
-                Id = data.Id,
-                UserId = data.UserId,
-                UserName = data.UserName,
-                Role = data.Role.ToString(),
-                Weekdays = data.WeekWorkingDays.Select(a => a.Weekday.ToString()).ToList(),
-            };
-            return responce;
-        }
-
-        public async Task<List<WorkingDaysResponseDtos>> GetAllWorkigDays()
-        {
-            try
-            {
-                var data = await _repo.GetAllWorkingdays();
-
-                if (data == null || !data.Any())
-                {
-            
-                    return new List<WorkingDaysResponseDtos>();
-                }
-
-                var response = data.Select(a => new WorkingDaysResponseDtos
-                {
-                    Id = a.Id,
-                    UserId = a.UserId,
-                    UserName = a.UserName,
-                    Role = a.Role.ToString() ?? "Unknown",
-                    Weekdays = a.WeekWorkingDays?.Select(b => b.Weekday.ToString()).ToList() ?? new List<string>(),
-                }).ToList();
-
-                return response;
-            }
-            catch (Exception ex)
-            {
-            
-                throw new Exception("An error occurred while retrieving working days", ex);
-            }
-        }
-
-        public async Task<WorkingDaysResponseDtos> GetWorkingDaysByUserId(Guid UserId)
-        {
-            var data = await _repo.GetWorkingDaysByUserId(UserId);
-            var responce = new WorkingDaysResponseDtos
-            {
-                Id = data.Id,
-                UserId = data.UserId,
-                UserName = data.UserName,
-                Role = data.Role.ToString(),
-                Weekdays = data.WeekWorkingDays.Select(a => a.Weekday.ToString()).ToList()
-            };
-            return responce;
-        }
-
-        public async Task<WorkingDaysResponseDtos> UpdateWorkingdays(Guid userId, WorkingDaysRequestDtos workingDaysRequest)
-        {
-
-            var data = await _repo.GetWorkingDaysByUserId(userId);
-
-
-
-            data.WeekWorkingDays = workingDaysRequest.Weekdays.Select(day => new WeekWorkingDays
-            {
-                Weekday = day
-            }).ToList();
-
-            var updatedWorkingDays = await _repo.UpdateWorkingdays(data);
+            var savedData = await _repo.AddWorkingDays(workingDays);
 
             var response = new WorkingDaysResponseDtos
             {
-                Id = updatedWorkingDays.Id,
-                UserId = updatedWorkingDays.UserId,
-                UserName = updatedWorkingDays.UserName,
-                Role = updatedWorkingDays.Role.ToString(),
-                Weekdays = updatedWorkingDays.WeekWorkingDays.Select(w => w.Weekday.ToString()).ToList()
+                Id = savedData.Id,
+                UserId = savedData.UserId,
+                User_Id = savedData.User_Id,
+                UserName = savedData.UserName,
+                Role = savedData.Role.ToString(),
+                Weekdays = savedData.WeekDays.Select(w => new List<string>
+                {
+                    w.Monday ? "Monday" : null,
+                    w.Tuesday ? "Tuesday" : null,
+                    w.Wednesday ? "Wednesday" : null,
+                    w.Thursday ? "Thursday" : null,
+                    w.Friday ? "Friday" : null,
+                    w.Saturday ? "Saturday" : null,
+                    w.Sunday ? "Sunday" : null
+                }.Where(day => day != null).ToList()).SelectMany(x => x).ToList()
             };
 
             return response;
         }
 
-        public async Task deleteWorkingDays(Guid Id)
+        public async Task<List<WorkingDaysResponseDtos>> GetAllWorkingDays()
         {
-            await _repo.deleteWorkingDays(Id);
+            var users = await _userRepo.GetAllUsers();
+            var workingDaysData = await _repo.GetAllWorkingdays();
+
+            var response = users.Select(user =>
+            {
+                var userWorkingDays = workingDaysData.FirstOrDefault(wd => wd.UserId == user.Id);
+
+                return new WorkingDaysResponseDtos
+                {
+                    Id = userWorkingDays?.Id ?? Guid.NewGuid(),
+                    UserId = user.Id,
+                    User_Id = user.UsersId,
+                    UserName = user.FirstName,
+                    Role = user.Role.ToString(),
+                    Weekdays = userWorkingDays?.WeekDays.Select(w => new List<string>
+                    {
+                        w.Monday ? "Monday" : null,
+                        w.Tuesday ? "Tuesday" : null,
+                        w.Wednesday ? "Wednesday" : null,
+                        w.Thursday ? "Thursday" : null,
+                        w.Friday ? "Friday" : null,
+                        w.Saturday ? "Saturday" : null,
+                        w.Sunday ? "Sunday" : null
+                    }.Where(day => day != null).ToList()).SelectMany(x => x).ToList()
+                };
+            }).ToList();
+
+            return response;
         }
 
-       
+        public async Task<WorkingDaysResponseDtos> GetWorkingDaysByUserId(Guid userId)
+        {
+            var workingDays = await _repo.GetWorkingDaysByUserId(userId);
 
+            if (workingDays == null)
+            {
+                return null;
+            }
+
+            return new WorkingDaysResponseDtos
+            {
+                Id = workingDays.Id,
+                UserId = workingDays.UserId,
+                User_Id = workingDays.User_Id,
+                UserName = workingDays.UserName,
+                Role = workingDays.Role.ToString(),
+                Weekdays = workingDays.WeekDays.Select(w => new List<string>
+                {
+                    w.Monday ? "Monday" : null,
+                    w.Tuesday ? "Tuesday" : null,
+                    w.Wednesday ? "Wednesday" : null,
+                    w.Thursday ? "Thursday" : null,
+                    w.Friday ? "Friday" : null,
+                    w.Saturday ? "Saturday" : null,
+                    w.Sunday ? "Sunday" : null
+                }.Where(day => day != null).ToList()).SelectMany(x => x).ToList()
+            };
+        }
+
+        public async Task<WorkingDaysResponseDtos> UpdateWorkingDays(Guid userId, WorkingDaysRequestDtos requestDtos)
+        {
+            var existingData = await _repo.GetWorkingDaysByUserId(userId);
+            if (existingData == null) return null;
+
+            existingData.WeekDays = requestDtos.Weekdays.Select(day => new WeekDays
+            {
+                Monday = day.Monday,
+                Tuesday = day.Tuesday,
+                Wednesday = day.Wednesday,
+                Thursday = day.Thursday,
+                Friday = day.Friday,
+                Saturday = day.Saturday,
+                Sunday = day.Sunday
+            }).ToList();
+
+            var updatedData = await _repo.UpdateWorkingdays(existingData);
+
+            return new WorkingDaysResponseDtos
+            {
+                Id = updatedData.Id,
+                UserId = updatedData.UserId,
+                User_Id = updatedData.User_Id,
+                UserName = updatedData.UserName,
+                Role = updatedData.Role.ToString(),
+                Weekdays = updatedData.WeekDays.Select(w => new List<string>
+                {
+                    w.Monday ? "Monday" : null,
+                    w.Tuesday ? "Tuesday" : null,
+                    w.Wednesday ? "Wednesday" : null,
+                    w.Thursday ? "Thursday" : null,
+                    w.Friday ? "Friday" : null,
+                    w.Saturday ? "Saturday" : null,
+                    w.Sunday ? "Sunday" : null
+                }.Where(day => day != null).ToList()).SelectMany(x => x).ToList()
+            };
+        }
+
+        public async Task DeleteWorkingDays(Guid id)
+        {
+            await _repo.deleteWorkingDays(id);
+        }
     }
 }

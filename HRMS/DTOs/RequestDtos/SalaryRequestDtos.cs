@@ -5,15 +5,15 @@ namespace HRMS.DTOs.RequestDtos
     public class SalaryRequestDtos
     {
 
-        public decimal BasicSalary { get; set; }
-        public decimal Deduction { get; set; }
-        public decimal Bonus { get; set; }
-   
-        public decimal Allowances { get; set; }
-        public int WorkingDays { get; set; }
- 
+        public decimal? BasicSalary { get; set; }
+        public decimal? Deduction { get; set; }
+        public decimal? Bonus { get; set; }
 
-        public salarystatus SalaryStatus { get; set; } = salarystatus.pending;
+        public decimal? Allowances { get; set; }
+      
+
+
+        public salarystatus? SalaryStatus { get; set; } = salarystatus.pending;
 
 
     }
