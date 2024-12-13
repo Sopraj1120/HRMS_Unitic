@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class init554 : Migration
+    public partial class check : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,19 +16,36 @@ namespace HRMS.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Nic = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MaritalStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MaritalStatus = table.Column<int>(type: "int", nullable: false),
                     Mobile = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    Gender = table.Column<int>(type: "int", nullable: false)
+                    Gender = table.Column<int>(type: "int", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Students", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "superAdmins",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_superAdmins", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -41,12 +58,14 @@ namespace HRMS.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nic = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MerritalStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PassWord = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MerritalStatus = table.Column<int>(type: "int", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    Gender = table.Column<int>(type: "int", nullable: false)
+                    Gender = table.Column<int>(type: "int", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -208,17 +227,43 @@ namespace HRMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "studentAttendances",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StudentId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Student_Id = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    InTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    OutTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_studentAttendances", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_studentAttendances_Students_StudentId",
+                        column: x => x.StudentId,
+                        principalTable: "Students",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "accountDetail",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UsersName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Users_Id = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false),
                     UsersNIC_No = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UsersEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UsersPhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AccountNumber = table.Column<int>(type: "int", nullable: false),
-                    BankName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BranchName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AccountNumber = table.Column<int>(type: "int", nullable: true),
+                    BankName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BranchName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UsersId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -306,6 +351,31 @@ namespace HRMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "userAttendances",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    User_Id = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    InTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    OutTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_userAttendances", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_userAttendances_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "userExperiances",
                 columns: table => new
                 {
@@ -383,6 +453,26 @@ namespace HRMS.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "workingDays",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_workingDays", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_workingDays_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "leaveType",
                 columns: table => new
                 {
@@ -400,6 +490,25 @@ namespace HRMS.Migrations
                         column: x => x.LeaveBalanceId,
                         principalTable: "leaveBalance",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WeekWorkingDays",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    WorkingDaysId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Weekday = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WeekWorkingDays", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_WeekWorkingDays_workingDays_WorkingDaysId",
+                        column: x => x.WorkingDaysId,
+                        principalTable: "workingDays",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -442,18 +551,18 @@ namespace HRMS.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    LeaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false),
                     BasicSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Dedection = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Deduction = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Bonus = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     EPF = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Etf = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Allowenss = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Allowances = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     WorkingDays = table.Column<int>(type: "int", nullable: false),
                     NetSalary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SalaryStatus = table.Column<int>(type: "int", nullable: false)
+                    SalaryStatus = table.Column<int>(type: "int", nullable: false),
+                    LeaveTypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -462,8 +571,7 @@ namespace HRMS.Migrations
                         name: "FK_salary_leaveType_LeaveTypeId",
                         column: x => x.LeaveTypeId,
                         principalTable: "leaveType",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_salary_users_UserId",
                         column: x => x.UserId,
@@ -491,15 +599,11 @@ namespace HRMS.Migrations
                         principalColumn: "Id");
                 });
 
-            migrationBuilder.InsertData(
-                table: "leaveType",
-                columns: new[] { "Id", "CountPerYear", "IsActive", "LeaveBalanceId", "Name" },
-                values: new object[] { new Guid("f3f84548-3232-422b-be0b-1904af8ce518"), 0, true, null, "No Pay Leave" });
-
             migrationBuilder.CreateIndex(
                 name: "IX_accountDetail_UsersId",
                 table: "accountDetail",
-                column: "UsersId");
+                column: "UsersId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Address_StudentId",
@@ -567,6 +671,11 @@ namespace HRMS.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_studentAttendances_StudentId",
+                table: "studentAttendances",
+                column: "StudentId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_userAddresses_UserId",
                 table: "userAddresses",
                 column: "UserId");
@@ -575,6 +684,12 @@ namespace HRMS.Migrations
                 name: "IX_userALevels_userId",
                 table: "userALevels",
                 column: "userId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_userAttendances_UserId",
+                table: "userAttendances",
+                column: "UserId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_userExperiances_UserId",
@@ -590,6 +705,17 @@ namespace HRMS.Migrations
                 name: "IX_userOLevels_UserId",
                 table: "userOLevels",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_WeekWorkingDays_WorkingDaysId",
+                table: "WeekWorkingDays",
+                column: "WorkingDaysId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_workingDays_UserId",
+                table: "workingDays",
+                column: "UserId",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -623,10 +749,19 @@ namespace HRMS.Migrations
                 name: "salary");
 
             migrationBuilder.DropTable(
+                name: "studentAttendances");
+
+            migrationBuilder.DropTable(
+                name: "superAdmins");
+
+            migrationBuilder.DropTable(
                 name: "userAddresses");
 
             migrationBuilder.DropTable(
                 name: "userALevels");
+
+            migrationBuilder.DropTable(
+                name: "userAttendances");
 
             migrationBuilder.DropTable(
                 name: "userExperiances");
@@ -638,10 +773,16 @@ namespace HRMS.Migrations
                 name: "userOLevels");
 
             migrationBuilder.DropTable(
+                name: "WeekWorkingDays");
+
+            migrationBuilder.DropTable(
                 name: "leaveRequest");
 
             migrationBuilder.DropTable(
                 name: "Students");
+
+            migrationBuilder.DropTable(
+                name: "workingDays");
 
             migrationBuilder.DropTable(
                 name: "leaveType");

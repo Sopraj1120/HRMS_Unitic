@@ -5,7 +5,7 @@
 namespace HRMS.Migrations
 {
     /// <inheritdoc />
-    public partial class init546 : Migration
+    public partial class wok252 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -24,6 +24,12 @@ namespace HRMS.Controllers
             var data = await _workingDaysService.AddWorkingDays(UserId, requestDtos);
             return Ok(data);
         }
+        [HttpGet("Get_All_workingDays")]
+        public async Task<IActionResult> GetAllWorkingDays()
+        {
+            var data = await _workingDaysService.GetAllWorkigDays();
+            return Ok(data);
+        }
 
         [HttpGet("Get_WorkingDays_By_ UserId")]
         public async Task<IActionResult>  GetWorkingDaysByUserId(Guid UserId)

@@ -9,5 +9,6 @@ namespace HRMS.IRepository
         Task<AccountDetail> GetAccountByUserId(Guid userId);
         Task<AccountDetail> GetAccountById(Guid id);
         Task<AccountDetail> UpdateAccountDetailsByUserId(AccountDetail accountDetail);
+        Task DeleteAccountById(Guid Id);
     }
 }

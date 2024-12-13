@@ -21,6 +21,11 @@ namespace HRMS.Service
         public async Task<WorkingDaysResponseDtos> AddWorkingDays(Guid UserId, WorkingDaysRequestDtos requestDtos)
         {
             var user = await _userRepo.GetUserById(UserId);
+            if (user == null)
+            {
+
+                throw new Exception($"User with ID {UserId} not found.");
+            }
             var workdays = new WorkingDays
             {
                 Id = Guid.NewGuid(),
@@ -47,6 +52,36 @@ namespace HRMS.Service
             return responce;
         }
 
+        public async Task<List<WorkingDaysResponseDtos>> GetAllWorkigDays()
+        {
+            try
+            {
+                var data = await _repo.GetAllWorkingdays();
+
+                if (data == null || !data.Any())
+                {
+            
+                    return new List<WorkingDaysResponseDtos>();
+                }
+
+                var response = data.Select(a => new WorkingDaysResponseDtos
+                {
+                    Id = a.Id,
+                    UserId = a.UserId,
+                    UserName = a.UserName,
+                    Role = a.Role.ToString() ?? "Unknown",
+                    Weekdays = a.WeekWorkingDays?.Select(b => b.Weekday.ToString()).ToList() ?? new List<string>(),
+                }).ToList();
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+            
+                throw new Exception("An error occurred while retrieving working days", ex);
+            }
+        }
+
         public async Task<WorkingDaysResponseDtos> GetWorkingDaysByUserId(Guid UserId)
         {
             var data = await _repo.GetWorkingDaysByUserId(UserId);
@@ -65,9 +100,9 @@ namespace HRMS.Service
         {
 
             var data = await _repo.GetWorkingDaysByUserId(userId);
-           
 
-           
+
+
             data.WeekWorkingDays = workingDaysRequest.Weekdays.Select(day => new WeekWorkingDays
             {
                 Weekday = day
@@ -91,5 +126,8 @@ namespace HRMS.Service
         {
             await _repo.deleteWorkingDays(Id);
         }
+
+       
+
     }
 }
