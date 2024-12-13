@@ -42,6 +42,7 @@ namespace HRMS.DataBase
 
         public DbSet<SuperAdmin> superAdmins { get; set; }
 
+        public DbSet<SuperAdminRegister> superAdminRegisters { get; set; }
 
 
 
