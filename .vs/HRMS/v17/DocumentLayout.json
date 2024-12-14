@@ -1,10 +1,390 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\",
+  "WorkspaceRootPath": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\ut01286\\desktop\\hrm\\hrms_unitic\\hrms\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Migrations\\20241214034103_init01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HRMS\\Migrations\\20241214034103_init01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\workingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\userloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\userattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\superadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\superadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\studentattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\studentattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\salaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\salaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\leavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\hollydayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\hollydayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\service\\accountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\workingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\userattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\userattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\superadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\superadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\studentattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\studentattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\leavetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\leavetyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\hollydayrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\hollydayrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\repository\\accountdetailsrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iworkingdaysservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\iuserattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iuserattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\isuperadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\isuperadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\isalaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\isalaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\ileavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\ileavetypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\ileaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\ihollydayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\ihollydayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\iservice\\iaccountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\iservice\\iaccountdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iworkingdaysrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\isuperadminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\isuperadminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\istudentattendancerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\istudentattendancerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\ileavetyperepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\ileavetyperepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\ileaverequestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\ileaverequestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\ihollydayrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\ihollydayrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\irepository\\iaccountdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\irepository\\iaccountdetailrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\workingdaysresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\workingdaysresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\userattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\userattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\superadminresponcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\superadminresponcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\studentattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\studentattendanceresponsedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\salaryresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\salaryresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\leavereqresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\leavereqresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\responsedtos\\accountdetailsresponcedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\workingdaysrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\workingdaysrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\weekdaysrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\weekdaysrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\userattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\userattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\useraddressrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\useraddressrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\superadminrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\superadminrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\studentrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\studentrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\studentattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\studentattendancerequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\salaryrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\salaryrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\leavetyperequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leavetyperequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\leaverequestupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leaverequestupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\leavereqestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\leavereqestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\hollydaysrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\hollydaysrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\attendancereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\attendancereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\addressrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\addressrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\requestdtos\\accountdetailsrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\requestdtos\\accountdetailsrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\tokenmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\tokenmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\dtos\\superadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\dtos\\superadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\workingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\workingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\weekworkingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\weekworkingdays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\userattendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\userattendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\userattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\userattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\superadminregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\superadminregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\superadminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\superadminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\superadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\superadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\studentattendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\olevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\olevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\leavebalance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\leavebalance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\hollydays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\hollydays.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\attendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\attendancereportwithstatuscount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\alevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\entities\\accountdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\database\\hrmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\workingdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\userattendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\userattendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\studentattendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\studentattendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\leavetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leavetypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\leavebalancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\leavebalancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|c:\\users\\marif\\onedrive\\desktop\\hrm\\hr\\hrms_unitic\\hrms\\controllers\\hollydaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB1FAD07-AB46-45D7-81E3-D3FD576D265E}|HRMS\\HRMS.csproj|solutionrelative:hrms\\controllers\\hollydaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +399,1156 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20241214034103_init01.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Migrations\\20241214034103_init01.cs",
+              "RelativeDocumentMoniker": "HRMS\\Migrations\\20241214034103_init01.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Migrations\\20241214034103_init01.cs",
+              "RelativeToolTip": "HRMS\\Migrations\\20241214034103_init01.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T03:41:03.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeDocumentMoniker": "HRMS\\Program.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Program.cs",
+              "RelativeToolTip": "HRMS\\Program.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAkwHgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:53:38.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\appsettings.json",
+              "RelativeDocumentMoniker": "HRMS\\appsettings.json",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\appsettings.json",
+              "RelativeToolTip": "HRMS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-13T18:52:06.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "HRMS\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\appsettings.Development.json",
+              "RelativeToolTip": "HRMS\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-13T18:51:50.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WorkingDaysService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\WorkingDaysService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\WorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Service\\WorkingDaysService.cs",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAUwLMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:50:27.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserService.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:50:26.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAUwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:25:14.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserLoginService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserLoginService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserLoginService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserLoginService.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserLoginService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:50:10.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserAttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\UserAttendanceService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\UserAttendanceService.cs",
+              "RelativeToolTip": "HRMS\\Service\\UserAttendanceService.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAUwMsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:49:52.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SuperAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\SuperAdminService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\SuperAdminService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\SuperAdminService.cs",
+              "RelativeToolTip": "HRMS\\Service\\SuperAdminService.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:49:36.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentAttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\StudentAttendanceService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\StudentAttendanceService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\StudentAttendanceService.cs",
+              "RelativeToolTip": "HRMS\\Service\\StudentAttendanceService.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAUwNQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:49:22.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SalaryService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\SalaryService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\SalaryService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\SalaryService.cs",
+              "RelativeToolTip": "HRMS\\Service\\SalaryService.cs",
+              "ViewState": "AQIAAPUAAAAAAAAAAAAiwCEBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:49:07.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LeaveTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\LeaveTypeService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveTypeService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\LeaveTypeService.cs",
+              "RelativeToolTip": "HRMS\\Service\\LeaveTypeService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAADwv24AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:48:51.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LeaveRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\LeaveRequestService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\LeaveRequestService.cs",
+              "RelativeToolTip": "HRMS\\Service\\LeaveRequestService.cs",
+              "ViewState": "AQIAADcBAAAAAAAAAAAUwGIBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:48:25.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HollydayService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\HollydayService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\HollydayService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\HollydayService.cs",
+              "RelativeToolTip": "HRMS\\Service\\HollydayService.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAADwv1sAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:48:11.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Service\\AccountDetailService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Service\\AccountDetailService.cs",
+              "RelativeToolTip": "HRMS\\Service\\AccountDetailService.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAADwv7oAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:47:54.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WorkingDaysRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\WorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\WorkingDaysRepo.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAADkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:47:24.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserAttendanceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\UserAttendanceRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\UserAttendanceRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\UserAttendanceRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\UserAttendanceRepository.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAswEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:47:10Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SuperAdminRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\SuperAdminRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\SuperAdminRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\SuperAdminRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\SuperAdminRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:47:02.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StudentAttendanceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\StudentAttendanceRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\StudentAttendanceRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\StudentAttendanceRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\StudentAttendanceRepository.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:46:47.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LeaveTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\LeaveTypeRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveTypeRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\LeaveTypeRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\LeaveTypeRepository.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAswEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:45:57.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LeaveRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\LeaveRequestRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\LeaveRequestRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\LeaveRequestRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\LeaveRequestRepository.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:45:46.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HollyDayRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\HollyDayRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\HollyDayRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\HollyDayRepository.cs",
+              "RelativeToolTip": "HRMS\\Repository\\HollyDayRepository.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:45:28.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccountDetailsRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Repository\\AccountDetailsRepo.cs",
+              "RelativeToolTip": "HRMS\\Repository\\AccountDetailsRepo.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAswE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:45:14.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IWorkingDaysService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IWorkingDaysService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IWorkingDaysService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:44:50.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUserAttendanceService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IUserAttendanceService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IUserAttendanceService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IUserAttendanceService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IUserAttendanceService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:44:38.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ISuperAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ISuperAdminService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ISuperAdminService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ISuperAdminService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ISuperAdminService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:44:29.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ISalaryService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ISalaryService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ISalaryService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ISalaryService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ISalaryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:44:16.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ILeaveTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveTypeService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ILeaveTypeService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveTypeService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ILeaveTypeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:43:59.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ILeaveRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveRequestService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\ILeaveRequestService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\ILeaveRequestService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\ILeaveRequestService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:43:48.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IHollydayService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IHollydayService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IHollydayService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IHollydayService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IHollydayService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:43:31.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IAccountDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IAccountDetailService.cs",
+              "RelativeDocumentMoniker": "HRMS\\Iservice\\IAccountDetailService.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Iservice\\IAccountDetailService.cs",
+              "RelativeToolTip": "HRMS\\Iservice\\IAccountDetailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:43:19.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IWorkingDaysRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IWorkingDaysRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:43:01.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ISuperAdminRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ISuperAdminRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ISuperAdminRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ISuperAdminRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ISuperAdminRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:42:49.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IStudentAttendanceRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IStudentAttendanceRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IStudentAttendanceRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IStudentAttendanceRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IStudentAttendanceRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:42:40.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ISalaryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ISalaryRepository.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ISalaryRepository.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ISalaryRepository.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ISalaryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:42:26.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ILeaveTypeRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveTypeRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveTypeRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveTypeRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ILeaveTypeRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:42:15.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ILeaveRequestrepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\ILeaveRequestrepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:42:07.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IHollyDayRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IHollyDayRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IHollyDayRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IHollyDayRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IHollyDayRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:41:56.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IAccountDetailRepo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "RelativeDocumentMoniker": "HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "RelativeToolTip": "HRMS\\IRepository\\IAccountDetailRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:41:39.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "WorkingDaysResponseDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\WorkingDaysResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:57.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UserAttendanceResponseDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\UserAttendanceResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:49.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "SuperAdminResponceDto.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SuperAdminResponceDto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\SuperAdminResponceDto.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SuperAdminResponceDto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\SuperAdminResponceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:41.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "StudentAttendanceResponseDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\StudentAttendanceResponseDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\StudentAttendanceResponseDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\StudentAttendanceResponseDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\StudentAttendanceResponseDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:31.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SalaryResponceDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\SalaryResponceDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:19.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "LeaveReqResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\LeaveReqResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:40:08.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AccountDetailsResponceDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\ResponseDtos\\AccountDetailsResponceDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:39:52.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "WorkingDaysRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\WorkingDaysRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:39:27.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "weekdaysRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\weekdaysRequest.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\weekdaysRequest.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\weekdaysRequest.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\weekdaysRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:38:23.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UserAttendanceRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\UserAttendanceRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:38:15.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UserAddressRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAddressRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\UserAddressRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\UserAddressRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\UserAddressRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:38:07.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "SuperAdminRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SuperAdminRequestDto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\SuperAdminRequestDto.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SuperAdminRequestDto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\SuperAdminRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:38:00.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "StudentRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\StudentRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\StudentRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\StudentRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\StudentRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:50.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "StudentAttendanceRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\StudentAttendanceRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\StudentAttendanceRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\StudentAttendanceRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\StudentAttendanceRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:43.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SalaryRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\SalaryRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:29.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "LeaveTypeRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveTypeRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:24.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "LeaveRequestUpdateDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveRequestUpdateDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:15.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "LeaveReqestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\LeaveReqestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:07.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "HollydaysRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\HollydaysRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\HollydaysRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\HollydaysRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\HollydaysRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:37:01.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "AttendanceReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AttendanceReportDto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\AttendanceReportDto.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AttendanceReportDto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\AttendanceReportDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:55.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "AddressRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AddressRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\AddressRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AddressRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\AddressRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:49.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "AccountDetailsRequestDtos.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\RequestDtos\\AccountDetailsRequestDtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:43.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "UserLoginDTo.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\UserLoginDTo.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\UserLoginDTo.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\UserLoginDTo.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\UserLoginDTo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:35.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "TokenModal.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\TokenModal.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\TokenModal.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\TokenModal.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\TokenModal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:31.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "SuperADto.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\SuperADto.cs",
+              "RelativeDocumentMoniker": "HRMS\\DTOs\\SuperADto.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DTOs\\SuperADto.cs",
+              "RelativeToolTip": "HRMS\\DTOs\\SuperADto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:36:18.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "WorkingDays.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\WorkingDays.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\WorkingDays.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\WorkingDays.cs",
+              "RelativeToolTip": "HRMS\\Entities\\WorkingDays.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:34:28.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "WeekWorkingDays.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\WeekWorkingDays.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\WeekWorkingDays.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\WeekWorkingDays.cs",
+              "RelativeToolTip": "HRMS\\Entities\\WeekWorkingDays.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:34:04.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "UserAttendanceReportWithStatusCount.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
+              "RelativeToolTip": "HRMS\\Entities\\UserAttendanceReportWithStatusCount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:33:55.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "UserAttendance.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\UserAttendance.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\UserAttendance.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\UserAttendance.cs",
+              "RelativeToolTip": "HRMS\\Entities\\UserAttendance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:33:43.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "SuperAdminRegister.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdminRegister.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\SuperAdminRegister.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdminRegister.cs",
+              "RelativeToolTip": "HRMS\\Entities\\SuperAdminRegister.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:32:45.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "SuperAdminLogin.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdminLogin.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\SuperAdminLogin.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdminLogin.cs",
+              "RelativeToolTip": "HRMS\\Entities\\SuperAdminLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:31:44.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "SuperAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdmin.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\SuperAdmin.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\SuperAdmin.cs",
+              "RelativeToolTip": "HRMS\\Entities\\SuperAdmin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:31:21.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "StudentAttendance.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\StudentAttendance.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\StudentAttendance.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\StudentAttendance.cs",
+              "RelativeToolTip": "HRMS\\Entities\\StudentAttendance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:31:06.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Salary.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\Salary.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\Salary.cs",
+              "RelativeToolTip": "HRMS\\Entities\\Salary.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:42.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "OLevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\OLevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\OLevel.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\OLevel.cs",
+              "RelativeToolTip": "HRMS\\Entities\\OLevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:39.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "LeaveType.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveType.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveType.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveType.cs",
+              "RelativeToolTip": "HRMS\\Entities\\LeaveType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:35.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveRequest.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveRequest.cs",
+              "RelativeToolTip": "HRMS\\Entities\\LeaveRequest.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:22.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "LeaveBalance.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveBalance.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\LeaveBalance.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\LeaveBalance.cs",
+              "RelativeToolTip": "HRMS\\Entities\\LeaveBalance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:14.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "HollyDays.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\HollyDays.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\HollyDays.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\HollyDays.cs",
+              "RelativeToolTip": "HRMS\\Entities\\HollyDays.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:30:07.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "AttendanceReportWithStatusCount.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
+              "RelativeToolTip": "HRMS\\Entities\\AttendanceReportWithStatusCount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:29:51.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ALevel.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\ALevel.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\ALevel.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\ALevel.cs",
+              "RelativeToolTip": "HRMS\\Entities\\ALevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:29:49.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "AccountDetail.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
+              "RelativeDocumentMoniker": "HRMS\\Entities\\AccountDetail.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\AccountDetail.cs",
+              "RelativeToolTip": "HRMS\\Entities\\AccountDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:29:25.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "HRMDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
+              "RelativeDocumentMoniker": "HRMS\\DataBase\\HRMDBContext.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\DataBase\\HRMDBContext.cs",
+              "RelativeToolTip": "HRMS\\DataBase\\HRMDBContext.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAiwIIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:28:41.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
               "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\HRMS\\Entities\\Address.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\Address.cs",
               "RelativeDocumentMoniker": "HRMS\\Entities\\Address.cs",
-              "ToolTip": "C:\\Users\\UT01286\\Desktop\\HRM\\HRMS_Unitic\\HRMS\\Entities\\Address.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Entities\\Address.cs",
               "RelativeToolTip": "HRMS\\Entities\\Address.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:24:48.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T13:24:48.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "WorkingDaysController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\WorkingDaysController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\WorkingDaysController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:28:21.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "userLogInController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\userLogInController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\userLogInController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\userLogInController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\userLogInController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:28:11.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "UserAttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\UserAttendanceController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\UserAttendanceController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\UserAttendanceController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\UserAttendanceController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:27:08.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\UserController.cs",
+              "ViewState": "AQIAANQAAAAAAAAAAAAYwPwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:27:16.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "SuperAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\SuperAdminController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\SuperAdminController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\SuperAdminController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\SuperAdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:26:57.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAAYwOQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:26:41.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "StudentAttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\StudentAttendanceController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\StudentAttendanceController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\StudentAttendanceController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\StudentAttendanceController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:26:27.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "SalaryController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\SalaryController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\SalaryController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\SalaryController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\SalaryController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAYwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:26:12.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "LeaveTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveTypeController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveTypeController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveTypeController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\LeaveTypeController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:25:59.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "LeaveRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveRequestController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveRequestController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveRequestController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\LeaveRequestController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:25:44.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "LeaveBalanceController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveBalanceController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\LeaveBalanceController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\LeaveBalanceController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\LeaveBalanceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:25:39.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "HollyDayController.cs",
+              "DocumentMoniker": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\HollyDayController.cs",
+              "RelativeDocumentMoniker": "HRMS\\Controllers\\HollyDayController.cs",
+              "ToolTip": "C:\\Users\\marif\\OneDrive\\Desktop\\HRM\\HR\\HRMS_Unitic\\HRMS\\Controllers\\HollyDayController.cs",
+              "RelativeToolTip": "HRMS\\Controllers\\HollyDayController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAYwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T18:25:23.169Z"
             }
           ]
         }
