@@ -16,6 +16,7 @@ namespace HRMS.Repository
 
         public async Task<SuperAdmin> RegisterSuperAdmin (SuperAdmin admin)
         {
+            admin.Role = Role.SuperAdmin;
             var data = await _hRMDBContext.superAdmins.AddAsync (admin);
             await _hRMDBContext.SaveChangesAsync ();
             return data.Entity;

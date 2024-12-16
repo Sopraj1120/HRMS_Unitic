@@ -14,6 +14,9 @@ namespace HRMS.DTOs.ResponseDtos
         public string? OutTime { get; set; }
         public string Status { get; set; }
 
+        public string startDate { get; set; }
+        public string endDate { get; set; }
+
   
     }
 }

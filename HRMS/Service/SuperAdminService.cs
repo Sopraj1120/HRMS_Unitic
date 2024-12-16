@@ -43,6 +43,7 @@ namespace HRMS.Service
                 Email = data.Email,
                 Image = data.Image,
                 Password = data.Password,
+                Role = data.Role.ToString(),
             };
             return Responce;
         }
@@ -68,6 +69,7 @@ namespace HRMS.Service
             claimList.Add(new Claim("Id", superAdmin.Id.ToString()));
             claimList.Add(new Claim("name",superAdmin.Name.ToString()));
             claimList.Add(new Claim("Email", superAdmin.Email.ToString()));
+            claimList.Add( new Claim("Role", superAdmin.Role.ToString()));
 
 
             var key = _configuration["Jwt:Key"];

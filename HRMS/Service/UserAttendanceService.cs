@@ -113,6 +113,9 @@ namespace HRMS.Service
                 InTime = x.InTime.ToString() ?? "",
                 OutTime = x.OutTime.ToString() ?? "",
                 Status = x.Status.ToString(),
+                startDate = startDate.ToString(),
+                endDate = endDate.ToString()
+
 
             }).ToList();
 
