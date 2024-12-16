@@ -309,10 +309,25 @@ namespace HRMS.Migrations
                     b.Property<DateTime>("LeaveDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("LeaveTypeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ReJoinDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserRole")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User_Id")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

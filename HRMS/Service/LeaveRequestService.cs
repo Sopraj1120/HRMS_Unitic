@@ -34,7 +34,7 @@ namespace HRMS.Service
 
           
             var allDates = Enumerable
-                .Range(0, (returnDate - leaveDate).Days + 1) 
+                .Range(0, (returnDate - leaveDate).Days ) 
                 .Select(d => leaveDate.AddDays(d))
                 .ToList();
 
@@ -105,9 +105,13 @@ namespace HRMS.Service
                 leaveCount = leaves,
                 AvailableLeaves = remainingLeave,
                 Comments = leaveReqestDtos.Comments,
-                AproverId = leaveReqestDtos.AproverId,
+                AproverId = null,
                 usersId = UserId,
+                User_Id = user.UsersId,
+                UserName = user.FirstName,
+                UserRole = user.Role,
                 leaveTypeId = LeaveTypeId,
+                LeaveTypeName = leavetype.Name
                
 
             };
@@ -128,13 +132,14 @@ namespace HRMS.Service
                 Comments = data.Comments,
                 status = data.status.ToString(),
                 AproverId = data.AproverId,
-                Users = new UserLeaveResponseDtos
-                {
-                    Id = user.Id,
-                    FirstName = user.FirstName,
-                    PhoneNumber = user.PhoneNumber,
-                    Role = user.Role.ToString()
-                }
+                usersId = data.usersId,
+                User_Id = data.User_Id,
+                UserName = data.UserName,
+                UserRole = data.UserRole.ToString(),
+                leaveTypeId = data.leaveTypeId,
+                LeaveTypeName= data.LeaveTypeName,
+
+               
                 
             };
         }
@@ -159,13 +164,14 @@ namespace HRMS.Service
                     Comments = x.Comments,
                     status = x.status.ToString(),
                     AproverId = x.AproverId,
-                    Users = user != null ? new UserLeaveResponseDtos
-                    {
-                        Id = user.Id,
-                        FirstName = user.FirstName,
-                        PhoneNumber = user.PhoneNumber,
-                        Role = user.Role.ToString()
-                    } : null
+                    usersId = x.usersId,
+                    User_Id = x.User_Id,
+                    UserName = x.UserName,
+                    UserRole = x.UserRole.ToString(),
+                    leaveTypeId = x.leaveTypeId,
+                    LeaveTypeName = x.LeaveTypeName
+
+                   
                 };
                 response.Add(leaveResponse);
             }
@@ -199,13 +205,13 @@ namespace HRMS.Service
                 Comments = data.Comments,
                 status = data.status.ToString(),
                 AproverId = data.AproverId,
-                Users = new UserLeaveResponseDtos
-                {
-                    Id = user.Id,
-                    FirstName = user.FirstName,
-                    PhoneNumber = user.PhoneNumber,
-                    Role = user.Role.ToString()
-                }
+                usersId = data.usersId,
+                User_Id = data.User_Id,
+                UserName = data.UserName,
+                UserRole = data.UserRole.ToString(),
+                leaveTypeId = data.leaveTypeId,
+                LeaveTypeName = data.LeaveTypeName,
+
             };
 
             return resleave;
@@ -229,13 +235,13 @@ namespace HRMS.Service
                 Comments = x.Comments,
                 status = x.status.ToString(),
                 AproverId = x.AproverId,
-                Users = new UserLeaveResponseDtos
-                {
-                    Id = user.Id,
-                    FirstName = user.FirstName,
-                    PhoneNumber = user.PhoneNumber,
-                    Role = user.Role.ToString()
-                }
+                usersId = x.usersId,
+                User_Id = x.User_Id,
+                UserName = x.UserName,
+                UserRole = x.UserRole.ToString(),
+                leaveTypeId = x.leaveTypeId,
+                LeaveTypeName = x.LeaveTypeName
+
             }).ToList();
 
             return response;
@@ -295,13 +301,12 @@ namespace HRMS.Service
                 Comments = updatedData.Comments,
                 status = updatedData.status.ToString(),
                 AproverId = updatedData.AproverId,
-                Users = new UserLeaveResponseDtos
-                {
-                    Id = userResponse.Id,
-                    FirstName = userResponse.FirstName,
-                    PhoneNumber = userResponse.PhoneNumber,
-                    Role = userResponse.Role.ToString()
-                }
+               usersId = updatedData.usersId,
+               User_Id = updatedData.User_Id,
+               UserName = updatedData.UserName,
+               UserRole = updatedData.UserRole.ToString(),
+               leaveTypeId = updatedData.leaveTypeId,
+               LeaveTypeName = updatedData.LeaveTypeName,
             };
 
             return response;

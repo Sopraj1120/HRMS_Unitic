@@ -4218,19 +4218,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UT01286\\.nuget\\packages\\": {}
+    "C:\\Users\\UT01141\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UT01286\\Desktop\\HRM\\HR\\HR\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "projectUniqueName": "X:\\M3_GroupProject\\16_10_2024\\HRMS_Unitic\\HRMS\\HRMS.csproj",
       "projectName": "HRMS",
-      "projectPath": "C:\\Users\\UT01286\\Desktop\\HRM\\HR\\HR\\HRMS_Unitic\\HRMS\\HRMS.csproj",
-      "packagesPath": "C:\\Users\\UT01286\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UT01286\\Desktop\\HRM\\HR\\HR\\HRMS_Unitic\\HRMS\\obj\\",
+      "projectPath": "X:\\M3_GroupProject\\16_10_2024\\HRMS_Unitic\\HRMS\\HRMS.csproj",
+      "packagesPath": "C:\\Users\\UT01141\\.nuget\\packages\\",
+      "outputPath": "X:\\M3_GroupProject\\16_10_2024\\HRMS_Unitic\\HRMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UT01286\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UT01141\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

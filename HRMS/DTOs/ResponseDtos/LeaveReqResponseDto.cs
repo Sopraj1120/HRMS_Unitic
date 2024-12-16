@@ -15,8 +15,14 @@ namespace HRMS.DTOs.ResponseDtos
         public string? Comments { get; set; }
         public string status { get; set; } = "pending";
         public Guid usersId { get; set; }
+   
+        public string UserName { get; set; }
+        public string UserRole { get; set; }
+        public string User_Id { get; set; }
+       
         public Guid leaveTypeId { get; set; }
-        public UserLeaveResponseDtos? Users { get; set; }
+        public string LeaveTypeName {  get; set; }
+   
 
     }
 }

@@ -16,8 +16,12 @@ namespace HRMS.Entities
         public status status { get; set; } = status.pending;
 
         public Guid usersId { get; set; }
+        public string UserName { get; set; }
+        public Role UserRole { get; set; }
+        public string User_Id {  get; set; }
         public Users? users { get; set; }
         public Guid leaveTypeId {  get; set; }  
+        public string LeaveTypeName { get; set; }
         public LeaveType? leaveType { get; set; }
         public ICollection<HollyDays>? HollyDays { get; set; }
 
