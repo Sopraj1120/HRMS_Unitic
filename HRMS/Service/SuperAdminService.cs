@@ -70,6 +70,8 @@ namespace HRMS.Service
             claimList.Add(new Claim("name",superAdmin.Name.ToString()));
             claimList.Add(new Claim("Email", superAdmin.Email.ToString()));
             claimList.Add( new Claim("Role", superAdmin.Role.ToString()));
+            claimList.Add(new Claim("Image", superAdmin.Image));
+
 
 
             var key = _configuration["Jwt:Key"];
