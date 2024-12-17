@@ -78,7 +78,7 @@ namespace HRMS.Service
             var Responce = new UserAttendanceResponseDtos
             {
                 Id = data.Id,
-                UserId = data.Id,
+                UserId = data.UserId,
                 User_Id = data.User_Id,
                 Name = data.Name,
                 Role = data.Role.ToString(),

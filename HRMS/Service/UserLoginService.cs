@@ -39,6 +39,7 @@ namespace HRMS.Service
             claimList.Add(new Claim("UserName",user.FirstName));
             claimList.Add(new Claim("Email",user.Email));
             claimList.Add(new Claim("Role", user.Role.ToString()));
+            claimList.Add(new Claim("Image", user.Image.ToString()));
 
             var key = _configuration["Jwt:Key"];
             var secKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));

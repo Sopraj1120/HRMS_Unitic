@@ -16,28 +16,28 @@ namespace HRMS.Controllers
             _leaveType = leaveType;
         }
 
-        [HttpPost]
+        [HttpPost("Add_LeaveType")]
         public async Task<IActionResult> AddLeaveType(LeaveTypeRequestDtos leaveTypeRequestDtos)
         {
             var data = await _leaveType.AddLeaveType(leaveTypeRequestDtos);
             return Ok(data);
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet("GetAll_LeaveType")]
         public async Task<IActionResult> GetAllLeaveTypes()
         {
             var data = await _leaveType.GetAllLeaveTypes();
             return Ok(data);
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("Get_Leavetype_Id")]
         public async Task<IActionResult> GetLeaveTypeById(Guid Id)
         {
             var data = await _leaveType.GetLeaveTypeById(Id);
             return Ok(data);
         }
 
-        [HttpPut]
+        [HttpPut("Update_LeaveType")]
 
         public async Task<IActionResult> UpdateLeaveType(Guid Id, LeaveTypeRequestDtos leaveTypeRequestDtos)
         {
@@ -46,7 +46,7 @@ namespace HRMS.Controllers
         }
 
 
-        [HttpDelete]
+        [HttpDelete("Delete_LeaveType")]
         public async Task<IActionResult> DeleteleaveTypes(Guid Id)
         {
             await _leaveType.DeleteLeaveType(Id);
