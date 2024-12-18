@@ -14,13 +14,25 @@ namespace HRMS.Repository
             _hRMDBContext = hRMDBContext;
         }
 
-        public async Task<SuperAdmin> RegisterSuperAdmin (SuperAdmin admin)
+        public async Task<SuperAdmin> RegisterSuperAdmin(SuperAdmin admin)
         {
+       
+            bool superAdminExists = await _hRMDBContext.superAdmins.AnyAsync(sa => sa.Role == Role.SuperAdmin);
+
+            if (superAdminExists)
+            {
+                throw new InvalidOperationException("A SuperAdmin already exists.");
+            }
+
+           
             admin.Role = Role.SuperAdmin;
-            var data = await _hRMDBContext.superAdmins.AddAsync (admin);
-            await _hRMDBContext.SaveChangesAsync ();
+
+            var data = await _hRMDBContext.superAdmins.AddAsync(admin);
+            await _hRMDBContext.SaveChangesAsync();
+
             return data.Entity;
         }
+
 
         public async Task<SuperAdmin> LoginSuperAdmin(string Email)
         {
